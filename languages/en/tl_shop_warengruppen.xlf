@@ -1,0 +1,169 @@
+<?xml version="1.0" ?><xliff version="1.1">
+	<file datatype="php" original="system/modules/acquistoShop/languages/de/tl_shop_warengruppen.php" source-language="de_DE">
+		<body>
+			<trans-unit id="tl_shop_warengruppen.title_legend">
+				<source>Allgemein</source>
+				<target>General</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_warengruppen.seo_options">
+				<source>SEO Optionen</source>
+				<target>SEO options</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_warengruppen.weiterleitungsziel">
+				<source>Weiterleitungsziel</source>
+				<target>Forwarding destination</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_warengruppen.state">
+				<source>Status</source>
+				<target>State</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_warengruppen.expert_legend">
+				<source>Experten-Einstellungen</source>
+				<target>Expert settings</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_warengruppen.title.0">
+				<source>Bezeichnung</source>
+				<target>Title</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_warengruppen.title.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_shop_warengruppen.alias.0">
+				<source>Alias</source>
+				<target>Alias</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_warengruppen.alias.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_shop_warengruppen.type.0">
+				<source>Type</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_warengruppen.type.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_shop_warengruppen.beschreibung.0">
+				<source>Beschreibung</source>
+				<target>Description</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_warengruppen.beschreibung.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_shop_warengruppen.imageSrc.0">
+				<source>Warengruppenbild</source>
+				<target>Categorie image</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_warengruppen.imageSrc.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_shop_warengruppen.seo_keywords.0">
+				<source>SEO Keywords (Schlüsselwörter)</source>
+				<target>SEO keywords</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_warengruppen.seo_keywords.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_shop_warengruppen.seo_description.0">
+				<source>SEO Description (Beschreibung)</source>
+				<target>SEO description</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_warengruppen.seo_description.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_shop_warengruppen.jumpToPage.0">
+				<source>Weiterleitungsseite</source>
+				<target>Redirect page</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_warengruppen.jumpToPage.1">
+				<source>Wählen Sie das Weiterleitungsziel.</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_warengruppen.published.0">
+				<source>Veröffentlichen</source>
+				<target>Publish</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_warengruppen.published.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_shop_warengruppen.member_groups.0">
+				<source>Mitgliedergruppen</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_warengruppen.member_groups.1">
+				<source>Hier können Sie die Ansicht auf verschiedene Mitgliedergruppen einschränken.</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_warengruppen.cssID.0">
+				<source>CSS-ID/Klasse</source>
+				<target>CSS-ID/Class</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_warengruppen.cssID.1">
+				<source>Hier können Sie eine ID und beliebig viele Klassen eingeben.</source>
+				<target>You can enter an ID and multiple classes.</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_warengruppen.new.0">
+				<source>Neue Warengruppe</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_warengruppen.new.1">
+				<source>Eine neue Warengruppe erstellen</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_warengruppen.edit.0">
+				<source>Bearbeiten</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_warengruppen.edit.1">
+				<source>Warengruppe ID %s bearbeiten</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_warengruppen.cut.0">
+				<source>Verschieben</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_warengruppen.cut.1">
+				<source>Warengruppe ID %s verschieben</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_warengruppen.copy.0">
+				<source>Duplizieren</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_warengruppen.copy.1">
+				<source>Warengruppe ID %s duplizieren</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_warengruppen.delete.0">
+				<source>Löschen</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_warengruppen.delete.1">
+				<source>Warengruppe ID %s löschen</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_warengruppen.show.0">
+				<source>Details</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_warengruppen.show.1">
+				<source>Die Details der Warengruppe ID %s anzeigen</source>
+				
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

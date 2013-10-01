@@ -1,0 +1,79 @@
+<?xml version="1.0" ?><xliff version="1.1">
+	<file datatype="php" original="system/modules/acquistoShop/languages/de/tl_shop_steuersaetze.php" source-language="de_DE">
+		<body>
+			<trans-unit id="tl_shop_steuersaetze.settings">
+				<source>Einstellungen</source>
+				<target>Settings</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_steuersaetze.satz.0">
+				<source>Steuersatz</source>
+				<target>Tax rate</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_steuersaetze.satz.1">
+				<source>Geben Sie hier den Steuersatz ein.</source>
+				<target>Please enter the tax rate here</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_steuersaetze.gueltig_ab.0">
+				<source>Gültig ab</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_steuersaetze.gueltig_ab.1">
+				<source>Ab wann ist der Steuersatz gültig.</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_steuersaetze.new.0">
+				<source>Neuen Steuersatz</source>
+				<target>New tax rate</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_steuersaetze.new.1">
+				<source>Einen neuen Steuersatz erstellen</source>
+				<target>Create a new tax rate</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_steuersaetze.edit.0">
+				<source>Bearbeiten</source>
+				<target>Edit</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_steuersaetze.edit.1">
+				<source>Steuersatz ID %s bearbeiten</source>
+				<target>Edit tax rate ID %s</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_steuersaetze.copy.0">
+				<source>Duplizieren</source>
+				<target>Duplicate</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_steuersaetze.copy.1">
+				<source>Steuersatz ID %s duplizieren</source>
+				<target>Duplicate tax rate ID %s</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_steuersaetze.delete.0">
+				<source>Löschen</source>
+				<target>Delete</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_steuersaetze.delete.1">
+				<source>Steuersatz ID %s löschen</source>
+				<target>Delete tax rate ID %s</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_steuersaetze.show.0">
+				<source>Details</source>
+				<target>Details</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_steuersaetze.show.1">
+				<source>Die Details des Steuersatz ID %s anzeigen</source>
+				<target>Show details of  tax rate ID %s</target>
+				
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

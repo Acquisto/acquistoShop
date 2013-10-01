@@ -1,0 +1,85 @@
+<div class="<?php echo $this->class; ?>"<?php echo $this->cssID; ?><?php if ($this->style): ?> style="<?php echo $this->style; ?>"<?php endif; ?>>
+    <?php if($this->headline): ?>
+    <<?php echo $this->hl; ?>><?php echo $this->headline; ?> - Zahlung und Versand</<?php echo $this->hl; ?>>
+    <?php endif; ?>
+
+    <div class="steps">
+        <ul>
+            <li class="first"><a href="<?php echo $this->WarenkorbUrl; ?>">Warenkorb</a></li>
+            <li><a href="<?php echo $this->WarenkorbUrl; ?>?do=customer">Kundendaten</a></li>
+            <li><a href="<?php echo $this->WarenkorbUrl; ?>?do=payment-and-shipping">Zahlung und Versand</a></li>
+            <li><a href="<?php echo $this->WarenkorbUrl; ?>?do=agb">AGB</a></li>
+            <li class="last active">Kasse</li>
+        </ul>
+    </div>
+
+    <div class="paymentandshipping">
+        <form method="get" name="formshipping">
+            <input type="hidden" name="FORM_SUBMIT" value="tl_acquistoShop_warenkorb">
+            <input type="hidden" name="REQUEST_TOKEN" value="<?php echo REQUEST_TOKEN; ?>">
+            <input type="hidden" name="do" value="key">
+            <input type="hidden" name="function" value="DoExpressCheckoutPayment">
+            <input type="hidden" name="template" value="mod_warenkorb_pay">
+            
+            <fieldset>
+                <legend>Zahlungsvorgang</legend>
+                
+           <table>
+            <tr>
+                <td><b>Gesamtpreis:</b></td>
+                <td>
+                  <?php echo $this->Data['paymentAmount']?> <?php echo $this->Data['currencyCodeType']; ?></td>
+            </tr>
+			<tr>
+			    <td ><b>Kundendaten: </b></td>
+			</tr>
+            <tr>
+                <td >
+                    Stra&szlig;e:</td>
+                <td>
+                   <?php echo $this->Data['SHIPTOSTREET'] ?></td>
+
+            </tr>
+            <tr>
+                <td >
+                    Stra&szlig;e 2:</td>
+                <td><?php echo $this->Data['SHIPTOSTREET2'] ?>
+                </td>
+            </tr>
+            <tr>
+                <td >
+                    Stadt:</td>
+
+                <td>
+                    <?php echo $this->Data['SHIPTOCITY'] ?></td>
+            </tr>
+            <tr>
+                <td >
+                    Bundesland:</td>
+                <td>
+                    <?php echo $this->Data['SHIPTOSTATE'] ?></td>
+            </tr>
+            <tr>
+                <td >
+                    Postleitzahl:</td>
+
+                <td>
+                    <?php echo $this->Data['SHIPTOZIP'] ?></td>
+            </tr>
+            <tr>
+                <td >
+                    Land:</td>
+                <td>
+                     <?php echo $this->Data['SHIPTOCOUNTRYNAME'] ?></td>
+            </tr>
+            <tr>
+                <td class="thinfield">
+                     <input type="submit" value="Zahlung ausf&uuml;hren" />
+                </td>
+            </tr>
+        </table>                
+                
+            </fieldset>    
+        </form>
+    </div>
+</div>

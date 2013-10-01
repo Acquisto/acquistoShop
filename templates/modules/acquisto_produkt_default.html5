@@ -1,0 +1,99 @@
+    <h1><?php echo $this->Produkt->bezeichnung; ?></h1>
+
+    <?php if (!$this->Produkt->preview_image->addBefore): ?>
+        <div class="produktnummer">Artikelnummer: <?php echo $this->Produkt->produktnummer; ?></div>
+        <div class="text"><?php echo $this->Produkt->beschreibung; ?></div>
+    <?php endif; ?>
+
+    <?php if ($this->Produkt->preview_image->addImage): ?>
+        <div class="image_container<?php echo $this->Produkt->preview_image->floatClass; ?>"<?php if ($this->Produkt->preview_image->margin || $this->Produkt->preview_image->float): ?> style="<?php echo trim($this->Produkt->preview_image->margin . $this->Produkt->preview_image->float); ?>"<?php endif; ?>>
+        <?php if ($this->Produkt->preview_image->href): ?>
+        <a data-lightbox="" href="<?php echo $this->Produkt->preview_image->href; ?>"<?php echo $this->Produkt->preview_image->attributes; ?> title="<?php echo $this->Produkt->preview_image->alt; ?>">
+        <?php endif; ?>
+            <img src="<?php echo $this->Produkt->preview_image->src; ?>"<?php echo $this->Produkt->preview_image->imgSize; ?> alt="<?php echo $this->Produkt->preview_image->alt; ?>">
+        <?php if ($this->Produkt->preview_image->href): ?>
+        </a>
+        <?php endif; ?>
+        <?php if ($this->Produkt->preview_image->caption): ?>
+        <div class="caption"><?php echo $this->Produkt->preview_image->caption; ?></div>
+        <?php endif; ?>
+        </div>
+
+        <?php if($this->Produkt->galerie): ?>
+          <div class="galerie">
+          <?php foreach($this->Produkt->galerie as $item): ?>
+            <div class="image_container<?php echo $item->floatClass; ?>"<?php if ($item->margin || $item->float): ?> style="<?php echo trim($item->margin . $item->float); ?>"<?php endif; ?>>
+              <?php if ($item->href): ?>
+              <a href="<?php echo $item->href; ?>"<?php echo $item->attributes; ?> title="<?php echo $item->alt; ?>">
+              <?php endif; ?>
+                <img src="<?php echo $item->src; ?>"<?php echo $item->imgSize; ?> alt="<?php echo $item->alt; ?>">
+              <?php if ($item->href): ?>
+              </a>
+              <?php endif; ?>
+              <?php if ($item->caption): ?>
+                <div class="caption"><?php echo $item->caption; ?></div>
+              <?php endif; ?>
+            </div>
+        <?php endforeach; ?>
+        </div>
+        <?php endif; ?>
+
+
+    <?php endif; ?>
+
+    <?php if ($this->Produkt->preview_image->addBefore): ?>
+        <div class="produktnummer">Artikelnummer: <?php echo $this->Produkt->produktnummer; ?></div>
+        <div class="text"><?php echo $this->Produkt->beschreibung; ?></div>
+    <?php endif; ?>
+
+    <div class="formBasket">
+        <form method="post">
+            <div class="formbody">
+                <input type="hidden" name="action" value="tl_shop_orders">
+                <input type="hidden" name="REQUEST_TOKEN" value="<?php echo REQUEST_TOKEN; ?>">
+                <input type="hidden" name="attributes" value="<?php echo $this->Produkt->attribute; ?>">
+                <input type="hidden" name="id" value="<?php echo $this->Produkt->id; ?>">
+
+                <?php echo $this->Produkt->add2form; ?>
+
+                <?php if(!$this->Produkt->catalogMode): ?>
+                <p>
+                    <label for="menge">Menge:</label>
+                    <input type="text" id="ctrl_menge" name="menge" value="1">
+                </p>
+                <?php endif; ?>
+
+                <?php if(!$this->Produkt->catalogMode OR ($this->Produkt->catalogMode && $this->Produkt->catalogMoney)): ?>
+
+                <p>
+                    <div class="preis">        
+                        <div class="preis">Preis: <span class="<?php if($this->Produkt->getCosts(0)->special): ?>old_price<?php else: ?>default_price<?php endif;?>"><?php echo $this->Produkt->getCosts(0)->costs; ?> <?php echo $this->Produkt->getCosts(0)->pricelist->currency->iso_code; ?></span><?php if($this->Produkt->getCosts(0)->special): ?> nur <span class="special_price"><?php echo $this->Produkt->getCosts(0)->special; ?> <?php echo $this->Produkt->getCosts(0)->pricelist->currency->iso_code; ?></span><?php endif; ?></div>
+                        <small>        
+                            <?php if($this->Produkt->getCosts(0)->pricelist->type == 'brutto'): ?>inkl.<?php else: ?>zzgl.<?php endif; ?> <?php echo $this->Produkt->getCosts(0)->tax; ?>% MwSt. zzgl. <a href="<?php echo $this->Versand; ?>">Versandkosten</a><br>
+                            <?php if($this->Produkt->getCosts(0)->basecosts): ?>Grundpreis auf <?php echo $this->Produkt->berechnungsmenge; ?><?php echo $this->Produkt->mengeneinheit; ?> sind <?php echo sprintf("%01.2f", $this->Produkt->getCosts(0)->basecosts); ?> <?php echo $this->Produkt->getCosts(0)->pricelist->currency->iso_code; ?>.<?php endif; ?>
+                        </small>
+                    </div>                
+                </p>
+                <!--                
+                    <?php if(is_array($this->Produkt->preise)): ?>
+                	  <?php foreach($this->Produkt->preise as $value): ?>
+                	  <?php if($value->menge != 0): ?>
+            	    
+            	    ab <?php echo $value->menge; ?> Stk. <?php echo $value->preis; ?> <?php echo $this->Produkt->getCosts(0)->pricelist->currency; ?><br>
+            	    <?php endif; ?>
+                  <?php endforeach; ?>
+                  <?php endif; ?>
+                -->    
+                    
+
+
+                <?php endif; ?>
+
+                <?php if(!$this->Produkt->catalogMode): ?>
+                <p>
+                    <input type="submit" name="send" value="In Warenkorb legen">
+                </p>
+                <?php endif; ?>                
+            </div>            
+        </form>
+    </div>

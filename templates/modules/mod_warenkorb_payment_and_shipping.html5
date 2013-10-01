@@ -1,0 +1,53 @@
+<div class="<?php echo $this->class; ?>"<?php echo $this->cssID; ?><?php if ($this->style): ?> style="<?php echo $this->style; ?>"<?php endif; ?>>
+    <?php if($this->headline): ?>
+    <<?php echo $this->hl; ?>><?php echo $this->headline; ?> - Zahlung und Versand</<?php echo $this->hl; ?>>
+    <?php endif; ?>
+
+    <div class="steps">
+        <ul>
+            <li class="first"><a href="<?php echo $this->WarenkorbUrl; ?>">Warenkorb</a></li>
+            <li><a href="<?php echo $this->WarenkorbUrl; ?>?do=customer">Kundendaten</a></li>
+            <li class="active">Zahlung und Versand</li>
+            <li>AGB</li>
+            <li class="last">Kasse</li>
+        </ul>
+    </div>
+
+    <div class="paymentandshipping">
+        <form method="post" name="formshipping">
+            <input type="hidden" name="FORM_SUBMIT" value="tl_acquistoShop_warenkorb">
+            <input type="hidden" name="REQUEST_TOKEN" value="<?php echo REQUEST_TOKEN; ?>">
+            <fieldset>
+                <legend>Versandart</legend>
+                <?php if($this->Versandzonen): ?>
+                <?php foreach($this->Versandzonen as $item): ?>
+                <p>
+                    <input type="radio" name="shippingMethod" value="<?php echo $item['id']; ?>" id="radio_sm_<?php echo $item['id']; ?>"<?php if($this->sel_sm == $item['id']): ?> checked="checked"<?php endif; ?> onchange="document.formshipping.submit();">
+                    <label for="radio_sm_<?php echo $item['id']; ?>"><?php echo $item['bezeichnung']; ?></label>
+                </p>
+                <?php endforeach; ?>
+                <?php endif; ?>
+            </fieldset>
+        </form>
+
+        <form method="post" name="paymentandshipping">
+            <input type="hidden" name="FORM_SUBMIT" value="tl_acquistoShop_warenkorb">
+            <input type="hidden" name="REQUEST_TOKEN" value="<?php echo REQUEST_TOKEN; ?>">
+            <input type="hidden" name="shippingMethod" value="<?php echo $this->sel_sm; ?>">
+            <fieldset>
+                <legend>Zahlungsart <?php echo $this->sel_pm; ?></legend>
+                <?php if($this->Zahlungsarten): ?>
+                <?php foreach($this->Zahlungsarten as $item): ?>
+                <p>
+                    <input type="radio" name="paymentMethod" value="<?php echo $item['sendID']; ?>" id="radio_pm_<?php echo $item['sendID']; ?>"<?php if($this->sel_pm == $item['sendID']): ?> checked="checked"<?php endif; ?>>
+                    <label for="radio_pm_<?php echo $item['sendID']; ?>"><?php echo $item['bezeichnung']; ?> (<?php echo sprintf("%01.2f", $item['preis']); ?> <?php echo $this->Currency->iso_code; ?>)</label>
+                </p>
+                <?php endforeach; ?>
+                <?php endif; ?>
+            </fieldset>
+
+            <input type="button" value="&laquo; Zur&uuml;ck zu Kundendaten" onclick="location.href = '<?php echo $this->WarenkorbUrl; ?>?do=customer';">
+            <input type="submit" value="Weiter zu den Allgemeine Gesch&auml;ftsbedingungen &raquo;" name="action">
+        </form>
+    </div>
+</div>

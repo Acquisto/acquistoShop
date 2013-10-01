@@ -1,0 +1,45 @@
+<?php if($this->Produkte): foreach($this->Produkte as $Produkt): ?>
+<div class="<?php echo $Produkt->css; ?>element">
+    <h2><?php echo $Produkt->bezeichnung; ?></h2>
+
+    <?php if (!$Produkt->preview_image->addBefore): ?>
+        <div class="text"><?php echo $Produkt->teaser; ?></div>
+    <?php endif; ?>
+
+    <?php if ($Produkt->preview_image->addImage): ?>
+        <div class="image_container<?php echo $Produkt->preview_image->floatClass; ?>"<?php if ($Produkt->preview_image->margin || $Produkt->preview_image->float): ?> style="<?php echo trim($Produkt->preview_image->margin . $Produkt->preview_image->float); ?>"<?php endif; ?>>
+        <?php if ($Produkt->preview_image->href): ?>
+        <a href="<?php echo $Produkt->preview_image->href; ?>"<?php echo $Produkt->preview_image->attributes; ?> title="<?php echo $Produkt->preview_image->alt; ?>">
+        <?php endif; ?>
+            <img src="<?php echo $Produkt->preview_image->src; ?>"<?php echo $Produkt->preview_image->imgSize; ?> alt="<?php echo $Produkt->preview_image->alt; ?>">
+        <?php if ($Produkt->preview_image->href): ?>
+        </a>
+        <?php endif; ?>
+        <?php if ($Produkt->preview_image->caption): ?>
+        <div class="caption"><?php echo $Produkt->preview_image->caption; ?></div>
+        <?php endif; ?>
+        </div>
+    <?php endif; ?>
+
+    <?php if ($Produkt->preview_image->addBefore): ?>
+        <div class="text"><?php echo $Produkt->teaser; ?></div>
+    <?php endif; ?>
+
+
+    <?php if(!$this->Catalog OR ($this->Catalog && $this->CatalogMoney)): ?>    
+    <div class="preis">        
+        <div class="preis">Preis: <span class="<?php if($Produkt->getCosts(0)->special): ?>old_price<?php else: ?>default_price<?php endif;?>"><?php echo $Produkt->getCosts(0)->costs; ?> <?php echo $Produkt->getCosts(0)->pricelist->currency->iso_code; ?></span><?php if($Produkt->getCosts(0)->special): ?> nur <span class="special_price"><?php echo $Produkt->getCosts(0)->special; ?> <?php echo $Produkt->getCosts(0)->pricelist->currency->iso_code; ?></span><?php endif; ?></div>
+        <small>        
+            <?php if($Produkt->getCosts(0)->pricelist->type == 'brutto'): ?>inkl.<?php else: ?>zzgl.<?php endif; ?> <?php echo $Produkt->getCosts(0)->tax; ?>% MwSt. zzgl. <a href="<?php echo $this->Versand; ?>">Versandkosten</a><br>
+            <?php if($Produkt->getCosts(0)->basecosts): ?>Grundpreis auf <?php echo $Produkt->berechnungsmenge; ?><?php echo $Produkt->mengeneinheit; ?> sind <?php echo sprintf("%01.2f", $Produkt->getCosts(0)->basecosts); ?> <?php echo $Produkt->getCosts(0)->pricelist->currency->iso_code; ?>.<?php endif; ?>
+        </small>
+    </div>
+    <?php endif; ?>
+
+    <div class="details">
+        <a href="<?php echo $Produkt->url; ?>">Details</a>
+    </div>
+
+    <div style="clear: both;"></div>
+</div>
+<?php endforeach; endif; ?>

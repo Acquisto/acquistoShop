@@ -1,0 +1,102 @@
+WARENKORB
+
+<?php if(is_array($this->Shopping)): foreach($this->Shopping as $produkt): ?>
+Artikelnummer: <?php echo $produkt['produktnummer']; ?>
+
+<?php echo $produkt['kaufmenge']; ?>x <?php echo $produkt['bezeichnung']; ?>
+
+<?php if($produkt['attributelist']): ?>
+<?php foreach($produkt['attributelist'] as $attribute): ?>
+<?php echo $attribute->title; ?>: <?php echo $attribute->selection; ?>
+
+<?php endforeach; ?>
+<?php endif; ?>
+
+<?php echo $produkt['kaufpreis']; ?> <?php echo $GLOBALS['TL_CONFIG']['currency_symbol']; ?> inkl. <?php echo $produkt['steuersatz']; ?>% MwSt. zzgl. Versandkosten
+-----------------------------------------------------
+<?php endforeach; endif; ?>
+<?php if($this->Gutscheine): foreach($this->Gutscheine as $Gutschein): ?>
+Gutschein: <?php echo $Gutschein->code; ?>
+
+-<?php echo $Gutschein->preis; ?> <?php echo $GLOBALS['TL_CONFIG']['currency_symbol']; ?>
+
+-----------------------------------------------------
+<?php endforeach; endif; ?>
+
+<?php if(is_array($this->Endpreis['steuer'])): foreach($this->Endpreis['steuer'] as $steuersatz => $werte): ?>
+<?php if($this->Versand['calculate_tax'] == 'N'): ?>
+abzgl. der enth. MwSt. <?php echo $steuersatz; ?>% auf <?php echo $werte['gesamt']; ?> <?php echo $GLOBALS['TL_CONFIG']['currency_symbol']; ?>: -<?php echo $werte['steuer']; ?> <?php echo $GLOBALS['TL_CONFIG']['currency_symbol']; ?>
+<? else: ?>
+enth. MwSt. <?php echo $steuersatz; ?>% auf <?php echo $werte['gesamt']; ?> <?php echo $GLOBALS['TL_CONFIG']['currency_symbol']; ?>: <?php echo $werte['steuer']; ?> <?php echo $GLOBALS['TL_CONFIG']['currency_symbol']; ?>
+<?php endif; ?>
+<?php endforeach; endif; ?>
+
+Zwischensumme: <?php echo $this->Endpreis['zwischensumme']; ?> <?php echo $GLOBALS['TL_CONFIG']['currency_symbol']; ?>
+
+Lieferung nach: <?php echo $this->Versand['versandzone']; ?>
+
+Zahlungsart: <?php echo $this->Versand['zahlungsart']; ?>
+
+Versandkosten: <?php echo $this->Versand['versandkosten']; ?> <?php echo $GLOBALS['TL_CONFIG']['currency_symbol']; ?>
+
+Gesamtpreis: <?php echo $this->Endpreis['endpreis']; ?> <?php echo $GLOBALS['TL_CONFIG']['currency_symbol']; ?>
+
+
+KUNDENINFORMATIONEN
+<?php echo $this->Customer['firstname']; ?> <?php echo $this->Customer['lastname']; ?>
+
+<?php echo $this->Customer['street']; ?>
+
+<?php echo $this->Customer['postal']; ?> <?php echo $this->Customer['city']; ?>
+
+E-Mail <?php echo $this->Customer['email']; ?>
+
+
+BANKVERBINDUNG
+Bank: <?php echo $this->Settings['bank']; ?>
+
+Inhaber: <?php echo $this->Settings['bank_inhaber']; ?>
+
+Bankleitzahl: <?php echo $this->Settings['blz']; ?>
+
+Kontonummer: <?php echo $this->Settings['kto']; ?>
+
+
+
+<?php echo $this->Settings['firmenname']; ?>
+
+<?php echo $this->Settings['strasse']; ?>
+
+<?php echo $this->Settings['postleitzahl']; ?> <?php echo $this->Settings['ort']; ?>
+
+
+Telefon: <?php echo $this->Settings['telefax']; ?>
+
+Telefax: <?php echo $this->Settings['telefon']; ?>
+
+E-Mail: <?php echo $this->Settings['bestell_email']; ?>
+
+Rechtsform: <?php echo $this->Settings['firmentyp']; ?>
+
+Inhaber: <?php echo $this->Settings['inhaber']; ?>
+
+Gewerberegister:
+Steuer Nr.: <?php echo $this->Settings['steuernummer']; ?>
+
+<?php if($this->Settings['umsatzsteuerindent']):?>
+UStID-Nr.: <?php echo $this->Settings['umsatzsteuerindent']; ?>
+
+<?php endif; ?>
+<?php if($this->Settings['handelsregister']):?>
+HRB-Eintrag: <?php echo $this->Settings['handelsregister']; ?>
+
+<?php endif; ?>
+
+<?php if($this->Settings['iban']):?>
+IBAN: <?php echo $this->Settings['iban']; ?>
+
+<?php endif; ?>
+<?php if($this->Settings['bic']):?>
+BIC: <?php echo $this->Settings['bic']; ?>
+
+<?php endif; ?>

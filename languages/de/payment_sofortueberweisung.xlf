@@ -1,0 +1,31 @@
+<?xml version="1.0" ?>
+<xliff version="1.1">
+	<file datatype="php" original="system/modules/acquistoShop/languages/de/payment_sofortueberweisung.php" source-language="de_DE">
+		<body>
+			<trans-unit id="payment_sofortueberweisung.user_id.0">
+				<source>Kunden-Nr.</source>
+				<target>Kunden-Nr.</target>
+			</trans-unit>
+			<trans-unit id="payment_sofortueberweisung.user_id.1">
+				<source></source>
+				<target></target>
+			</trans-unit>
+			<trans-unit id="payment_sofortueberweisung.project_id.0">
+				<source>Projekt-ID:</source>
+				<target>Projekt-ID:</target>
+			</trans-unit>
+			<trans-unit id="payment_sofortueberweisung.project_id.1">
+				<source></source>
+				<target></target>
+			</trans-unit>
+			<trans-unit id="payment_sofortueberweisung.api_key.0">
+				<source>API-Key</source>
+				<target>API-Key</target>
+			</trans-unit>
+			<trans-unit id="payment_sofortueberweisung.api_key.1">
+				<source></source>
+				<target></target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

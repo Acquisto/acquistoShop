@@ -1,0 +1,71 @@
+<?xml version="1.0" ?>
+<xliff version="1.1">
+	<file datatype="php" original="system/modules/acquistoShop/languages/de/tl_shop_produkte_varianten.php" source-language="de_DE">
+		<body>
+			<trans-unit id="tl_shop_produkte_varianten.title_legend">
+				<source>Allgemein</source>
+				<target>Allgemein</target>
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte_varianten.costs_legend">
+				<source>Preise</source>
+				<target>Preise</target>
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte_varianten.bezeichnung.0">
+				<source>Bezeichnung</source>
+				<target>Bezeichnung</target>
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte_varianten.bezeichnung.1">
+				<source></source>
+				<target></target>
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte_varianten.produkt_attribut_id.0">
+				<source>Abhängigkeit</source>
+				<target>Abhängigkeit</target>
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte_varianten.produkt_attribut_id.1">
+				<source>Wählen Sie von welcher Variante diese Abhängig ist.</source>
+				<target>Wählen Sie von welcher Variante diese Abhängig ist.</target>
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte_varianten.new.0">
+				<source>Neue Variante anlegen</source>
+				<target>Neue Variante anlegen</target>
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte_varianten.new.1">
+				<source></source>
+				<target></target>
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte_varianten.edit.0">
+				<source>Variante bearbeiten</source>
+				<target>Variante bearbeiten</target>
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte_varianten.edit.1">
+				<source></source>
+				<target></target>
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte_varianten.copy.0">
+				<source></source>
+				<target></target>
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte_varianten.copy.1">
+				<source></source>
+				<target></target>
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte_varianten.delete.0">
+				<source></source>
+				<target></target>
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte_varianten.delete.1">
+				<source></source>
+				<target></target>
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte_varianten.show.0">
+				<source></source>
+				<target></target>
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte_varianten.show.1">
+				<source></source>
+				<target></target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

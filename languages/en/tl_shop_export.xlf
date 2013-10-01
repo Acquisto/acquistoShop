@@ -1,0 +1,115 @@
+<?xml version="1.0" ?><xliff version="1.1">
+	<file datatype="php" original="system/modules/acquistoShop/languages/de/tl_shop_export.php" source-language="de_DE">
+		<body>
+			<trans-unit id="tl_shop_export.allgemein">
+				<source>Allgemein</source>
+				<target>General</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_export.settings">
+				<source>Einstellungen</source>
+				<target>Settings</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_export.redirect">
+				<source>Weiterleitungsziel</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_export.bezeichnung.0">
+				<source>Bezeichnung</source>
+				<target>Title</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_export.bezeichnung.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_shop_export.exportModule.0">
+				<source>Export-Modul</source>
+				<target>Export module</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_export.exportModule.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_shop_export.exportFile.0">
+				<source>Export-Datei</source>
+				<target>Exported file</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_export.exportFile.1">
+				<source>Geben Sie den Namen der Export-Datei ohne Endung ein.</source>
+				<target>Enter the name for the exported file without the file extension</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_export.produktDetails.0">
+				<source>Produktdetails</source>
+				<target>Product details</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_export.produktDetails.1">
+				<source>Wählen Sie die hier bitte die Seite für die Produktdetails aus.</source>
+				<target>Please choose the detail page for the products</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_export.new.0">
+				<source>Neues Export-Module</source>
+				<target>New export module</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_export.new.1">
+				<source>Einen neues Export-Module erstellen</source>
+				<target>Create a new export module</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_export.edit.0">
+				<source>Bearbeiten</source>
+				<target>Edit</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_export.edit.1">
+				<source>Export-Module ID %s bearbeiten</source>
+				<target>Edit export module ID %s</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_export.copy.0">
+				<source>Duplizieren</source>
+				<target>Duplicate</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_export.copy.1">
+				<source>Export-Module ID %s duplizieren</source>
+				<target>Duplicate export module ID %s</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_export.delete.0">
+				<source>Löschen</source>
+				<target>Delete</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_export.delete.1">
+				<source>Export-Module ID %s löschen</source>
+				<target>Delete export module ID %s</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_export.show.0">
+				<source>Details</source>
+				<target>Details</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_export.show.1">
+				<source>Die Details des Export-Modules ID %s anzeigen</source>
+				<target>Show details of export module ID %s</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_export.export.0">
+				<source>Jetzt Exportieren</source>
+				<target>Export now</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_export.export.1">
+				<source>Export-Module ID %s exportieren</source>
+				
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

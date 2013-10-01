@@ -1,0 +1,8 @@
+<p>
+<label for="attr_<?php echo $this->ID; ?>"><?php echo $this->Bezeichnung; ?></label>
+    <?php if($this->Options): ?>
+    <?php foreach($this->Options as $Option): ?>
+    <input type="radio" name="attribute[<?php echo $this->ID; ?>]" value="<?php echo $Option->id; ?>" onchange="document.atttibute.submit();"<?php if($Option->selected): ?> checked="checked"<?php endif; ?>> <?php echo $Option->bezeichnung; ?>
+    <?php endforeach; ?>
+    <?php endif; ?>
+</p>

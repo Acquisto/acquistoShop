@@ -1,0 +1,80 @@
+<?xml version="1.0" ?><xliff version="1.1">
+	<file datatype="php" original="system/modules/acquistoShop/languages/de/tl_shop_attribute.php" source-language="de_DE">
+		<body>
+			<trans-unit id="tl_shop_attribute.title_legend">
+				<source>Allgemein</source>
+				<target>General</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_attribute.bezeichnung.0">
+				<source>Bezeichnung</source>
+				<target>Title</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_attribute.bezeichnung.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_shop_attribute.feldtyp.0">
+				<source>Anzeigetyp</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_attribute.feldtyp.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_shop_attribute.preisberechnung.0">
+				<source>Preisberechnung</source>
+				<target>Price calculation</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_attribute.preisberechnung.1">
+				<source>Wählen Sie ob der eingegebene Preis addiert werden soll oder ob es sich um den Endprei</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_attribute.new.0">
+				<source>Neues Attribut</source>
+				<target>New attribute</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_attribute.new.1">
+				<source>Ein neues Attribut erstellen</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_attribute.edit.0">
+				<source>Bearbeiten</source>
+				<target>Edit</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_attribute.edit.1">
+				<source>Attribut ID %s bearbeiten</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_attribute.copy.0">
+				<source>Duplizieren</source>
+				<target>Duplicate</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_attribute.copy.1">
+				<source>Attribut ID %s duplizieren</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_attribute.delete.0">
+				<source>Löschen</source>
+				<target>Delete</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_attribute.delete.1">
+				<source>Attribut ID %s löschen</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_attribute.show.0">
+				<source>Details</source>
+				<target>Details</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_attribute.show.1">
+				<source>Die Details des Attributs ID %s anzeigen</source>
+				
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

@@ -1,0 +1,94 @@
+<div class="<?php echo $this->class; ?>"<?php echo $this->cssID; ?><?php if ($this->style): ?> style="<?php echo $this->style; ?>"<?php endif; ?>>
+    <?php if($this->headline): ?>
+    <<?php echo $this->hl; ?>><?php echo $this->headline; ?> - &Uuml;bersicht</<?php echo $this->hl; ?>>
+    <?php endif; ?>
+    <div class="steps">
+        <ul>
+            <li class="active">Warenkorb</li>
+            <li>Kundendaten</li>
+            <li>Zahlung und Versand</li>
+            <li>AGB</li>
+            <li class="last">Kasse</li>
+        </ul>
+        <div class="clear"></div>
+    </div>
+
+    <div class="basket">
+        <fieldset>
+            <legend>Ihr Warenkorb</legend>
+
+            <form method="post" action="<?php echo $this->WarenkorbUrl; ?>">            
+                <input type="hidden" name="FORM_SUBMIT" value="tl_acquistoShop_warenkorb_update">
+                <input type="hidden" name="REQUEST_TOKEN" value="<?php echo REQUEST_TOKEN; ?>">
+                <table cellspacing="0" cellpadding="0">
+                    <tr>
+                        <th class="title_row">Artikel</th>
+                        <th class="menge_row">Menge</th>
+                        <th class="price_row">Preis</th>
+                        <th class="summe_row">Summe</th>
+                        <th class="update_row"></th>
+                        <th class="remove_row"></th>
+                    </tr>
+                    <?php if($this->Produktliste): ?>
+                    <?php foreach($this->Produktliste as $key => $item): ?>
+                    <tr>
+                        <td class="title_row"><?php if($item['url']): ?><a href="<?php echo $item['url']; ?>"><?php endif; ?><?php echo $item['bezeichnung']; ?><?php if($item['url']): ?></a><?php endif; ?></td>
+                        <td class="menge_row"><input type="text" size="5" name="menge[<?php echo $key; ?>]" value="<?php echo $item['menge']; ?>"></td>
+                        <td class="price_row"><?php echo sprintf("%01.2f", $item['preis']); ?> <?php echo $GLOBALS['TL_CONFIG']['currency_symbol']; ?></td>
+                        <td class="summe_row"><?php echo sprintf("%01.2f", $item['summe']); ?> <?php echo $GLOBALS['TL_CONFIG']['currency_symbol']; ?></td>
+                        <td class="update_row"><input type="submit" name="update" value="Aktualisieren"></td>
+                        <td class="remove_row"><input type="button" value="L&ouml;schen" onclick="location.href = '<?php echo $this->WarenkorbUrl; ?>?remove=<?php echo $key; ?>';"></td>
+                    </tr>
+                    <?php if($item['attributelist']): ?>
+                    <tr>
+                        <td colspan="5">
+                            <ul>
+                                <?php foreach($item['attributelist'] as $attribute): ?>
+                                    <li><span class="attributeTitle"><?php echo $attribute->title; ?>:</span> <?php echo $attribute->selection; ?></li>
+                                <?php endforeach; ?>
+                            </ul>
+                        </td>
+                    </tr>
+                    <?php endif; ?>
+                    <?php endforeach; ?>
+                    <?php if($this->Gutscheine): foreach($this->Gutscheine as $Gutschein): ?>
+                    <tr>
+                        <td class="title_row" colspan="3">Gutschein: <?php echo $Gutschein->code; ?></td>
+                        <td class="summe_row">-<?php echo $Gutschein->preis; ?> <?php echo $GLOBALS['TL_CONFIG']['currency_symbol']; ?></td>
+                        <td></td>
+                    </tr>
+                    <?php endforeach; endif; ?>
+                    <?php if($this->Steuern): ?>
+                    <?php foreach($this->Steuern as $item): ?>
+                    <tr>
+                        <td colspan="3" class="tax_row">enth. MwSt. <?php echo $item['satz']; ?>% auf <?php echo sprintf("%01.2f", $item['summe']); ?> <?php echo $GLOBALS['TL_CONFIG']['currency_symbol']; ?>:</td>
+                        <td class="summe_row"><?php echo sprintf("%01.2f", $item['wert']); ?> <?php echo $GLOBALS['TL_CONFIG']['currency_symbol']; ?></td>
+                    </tr>
+                    <?php endforeach; ?>
+                    <?php endif; ?>
+                    <tr>
+                        <td colspan="3" class="checkout_row">Endpreis</td>
+                        <td class="summe_row"><?php echo sprintf("%01.2f", $this->Endpreis); ?> <?php echo $GLOBALS['TL_CONFIG']['currency_symbol']; ?></td>
+                    </tr>
+                    <?php endif; ?>
+                </table>
+            </form>
+        </fieldset>
+
+
+        <form method="post" action="<?php echo $this->WarenkorbUrl; ?>?do=customer">
+            <div class="formbody">
+                <?php if($this->Bestellwert): ?>
+                <input type="hidden" name="FORM_SUBMIT" value="tl_acquistoShop_warenkorb">
+                <input type="hidden" name="REQUEST_TOKEN" value="<?php echo REQUEST_TOKEN; ?>">
+                <?php if($this->Produktliste): ?>
+                <input type="submit" value="Weiter zu Zahlung und Versand &raquo;">
+                <?php endif; ?>
+                <?php elseif($this->productsInBasket): ?>
+                <input type="button" value="&laquo; Weiter Einkaufen" onclick="history.back();">
+                <p class="error">Der Mindestbestellwert wurde nicht erreicht. Dieser betr&auml;gt <?php echo sprintf("%01.2f", $this->Bestellzahl); ?> <?php echo $GLOBALS['TL_CONFIG']['currency_symbol']; ?>.</p>
+                <?php endif; ?>
+            </div>
+        </form>
+    </div>
+</div>

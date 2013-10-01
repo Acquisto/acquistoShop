@@ -1,0 +1,151 @@
+<?xml version="1.0" ?><xliff version="1.1">
+	<file datatype="php" original="system/modules/acquistoShop/languages/de/tl_shop_hersteller.php" source-language="de_DE">
+		<body>
+			<trans-unit id="tl_shop_hersteller.title_legend">
+				<source>Allgemein</source>
+				<target>General</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_hersteller.address_legend">
+				<source>Adressdaten</source>
+				<target> Address details</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_hersteller.contact_legend">
+				<source>Kontaktdaten</source>
+				<target> Contact details</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_hersteller.bezeichnung.0">
+				<source>Bezeichnung</source>
+				<target>Title</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_hersteller.bezeichnung.1">
+				<source>Geben Sie den Namen des Herstellers ein.</source>
+				<target>Please enter the manufacturer's name.</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_hersteller.street.0">
+				<source>Straße</source>
+				<target>Street</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_hersteller.street.1">
+				<source>Bitte geben Sie den Straßennamen und die Hausnummer ein.</source>
+				<target>Please enter the street name and number.</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_hersteller.postal.0">
+				<source>Postleitzahl</source>
+				<target>Postal code</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_hersteller.postal.1">
+				<source>Bitte geben Sie die Postleitzahl ein.</source>
+				<target>Please enter the postal code.</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_hersteller.city.0">
+				<source>Ort</source>
+				<target>City</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_hersteller.city.1">
+				<source>Bitte geben Sie den Namen des Ortes ein.</source>
+				<target>Please enter the name of the city.</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_hersteller.phone.0">
+				<source>Telefon</source>
+				<target>Phone</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_hersteller.phone.1">
+				<source>Bitte geben Sie die Telefonnummer ein.</source>
+				<target>Please enter the phone number.</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_hersteller.fax.0">
+				<source>Faxnummer</source>
+				<target>Fax number</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_hersteller.fax.1">
+				<source>Bitte geben Sie die Faxnummer ein.</source>
+				<target>Please enter the fax number.</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_hersteller.email.0">
+				<source>E-Mail Adresse</source>
+				<target>E-Mail address</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_hersteller.email.1">
+				<source>Bitte geben Sie eine gültige E-Mail-Adresse ein.</source>
+				<target>Please enter a valid e-mail address.</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_hersteller.website.0">
+				<source>Webseite</source>
+				<target>Website</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_hersteller.website.1">
+				<source>Hier können Sie eine Web-Adresse eingeben.</source>
+				<target>Here you can enter a web address.</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_hersteller.new.0">
+				<source>Neuer Hersteller</source>
+				<target>New Manufactor</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_hersteller.new.1">
+				<source>Einen neuen Hersteller erstellen</source>
+				<target>Create a new manufacturer</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_hersteller.edit.0">
+				<source>Bearbeiten</source>
+				<target>Edit</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_hersteller.edit.1">
+				<source>Hersteller ID %s bearbeiten</source>
+				<target>Edit manufacturer ID %s </target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_hersteller.copy.0">
+				<source>Duplizieren</source>
+				<target>Duplicate</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_hersteller.copy.1">
+				<source>Hersteller ID %s duplizieren</source>
+				<target>Duplicate manufacturer ID %s</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_hersteller.delete.0">
+				<source>Löschen</source>
+				<target>Delete</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_hersteller.delete.1">
+				<source>Hersteller ID %s löschen</source>
+				<target>Delete manufacturer ID %s</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_hersteller.show.0">
+				<source>Details</source>
+				<target>Details</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_hersteller.show.1">
+				<source>Die Details des Herstellers ID %s anzeigen</source>
+				<target>Show details of manufacturer ID %s</target>
+				
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

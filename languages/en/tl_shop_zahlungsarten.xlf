@@ -1,0 +1,119 @@
+<?xml version="1.0" ?><xliff version="1.1">
+	<file datatype="php" original="system/modules/acquistoShop/languages/de/tl_shop_zahlungsarten.php" source-language="de_DE">
+		<body>
+			<trans-unit id="tl_shop_zahlungsarten.title_legend">
+				<source>Allgemein</source>
+				<target>General</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_zahlungsarten.configuration">
+				<source>Konfiguration</source>
+				<target>Configuration</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_zahlungsarten.useable">
+				<source>Anzeigen für</source>
+				<target>Show for</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_zahlungsarten.bezeichnung.0">
+				<source>Bezeichnung</source>
+				<target>Title</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_zahlungsarten.bezeichnung.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_shop_zahlungsarten.payment_module.0">
+				<source>Zahlungsmodul</source>
+				<target>Payment module</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_zahlungsarten.payment_module.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_shop_zahlungsarten.steuer.0">
+				<source>Steuersatz</source>
+				<target>Tax rate</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_zahlungsarten.steuer.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_shop_zahlungsarten.guests.0">
+				<source>Gäste</source>
+				<target>Guests</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_zahlungsarten.guests.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_shop_zahlungsarten.groups.0">
+				<source>Mitgliedergruppen</source>
+				<target>Member groups</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_zahlungsarten.groups.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_shop_zahlungsarten.infotext.0">
+				<source>Infotext</source>
+				<target>Information</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_zahlungsarten.infotext.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_shop_zahlungsarten.new.0">
+				<source>Neue Zahlungsart</source>
+				<target>New payment method</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_zahlungsarten.new.1">
+				<source>Eine neue Zahlungsart erstellen</source>
+				<target>Create a new payment method</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_zahlungsarten.edit.0">
+				<source>Bearbeiten</source>
+				<target>Edit</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_zahlungsarten.edit.1">
+				<source>Zahlungsart ID %s bearbeiten</source>
+				<target>Edit payment method ID %s</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_zahlungsarten.copy.0">
+				<source>Duplizieren</source>
+				<target>Duplicate</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_zahlungsarten.copy.1">
+				<source>Zahlungsart ID %s duplizieren</source>
+				<target>Duplicate payment method ID %s</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_zahlungsarten.delete.0">
+				<source>Löschen</source>
+				<target>Delete</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_zahlungsarten.delete.1">
+				<source>Zahlungsart ID %s löschen</source>
+				<target>Delete payment method ID %s</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_zahlungsarten.show.0">
+				<source>Details</source>
+				<target>Details</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_zahlungsarten.show.1">
+				<source>Die Details der Zahlungsart ID %s anzeigen</source>
+				<target>Show details of payment method ID %s</target>
+				
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

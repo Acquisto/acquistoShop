@@ -1,0 +1,10 @@
+<p>
+<label for="additionalBasket[<?php echo $this->ID; ?>]"><?php echo $this->Bezeichnung; ?></label>
+<select name="additionalBasket[<?php echo $this->ID; ?>]" onchange="document.atttibute.submit();">
+    <?php if($this->Options): ?>
+    <?php foreach($this->Options as $Option): ?>
+    <option value="<?php echo $Option->id; ?>"<?php if($Option->selected): ?> selected="selected"<?php endif; ?>> <?php echo $Option->bezeichnung; ?></option>
+    <?php endforeach; ?>
+    <?php endif; ?>
+</select>
+</p>

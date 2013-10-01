@@ -1,0 +1,151 @@
+<div class="<?php echo $this->class; ?>"<?php echo $this->cssID; ?><?php if ($this->style): ?> style="<?php echo $this->style; ?>"<?php endif; ?>>
+    <?php if($this->headline): ?>
+    <<?php echo $this->hl; ?>><?php echo $this->headline; ?> - Abschlie&szlig;en</<?php echo $this->hl; ?>>
+    <?php endif; ?>
+
+    <div class="steps">
+        <ul>
+            <li class="first"><a href="<?php echo $this->WarenkorbUrl; ?>">Warenkorb</a></li>
+            <li><a href="<?php echo $this->WarenkorbUrl; ?>?do=customer">Kundendaten</a></li>
+            <li><a href="<?php echo $this->WarenkorbUrl; ?>?do=payment-and-shipping">Zahlung und Versand</a></li>
+            <li><a href="<?php echo $this->WarenkorbUrl; ?>?do=agb">AGB</a></li>
+            <li class="last active">Kasse</li>
+        </ul>
+    </div>
+
+
+    <p>Bitte &uuml;berpr&uuml;fen Sie Ihre Eingaben. Sie k&ouml;nnen Ihre Eingaben durch einen Klick auf den entsprechenden Schritt korrigieren. Wenn alle Eingaben richtig sind, klicken Sie den Button "Kaufen" um die Ware zahlungspflichtig zu bestellen.</p>
+
+    <div>
+        <fieldset>
+            <legend>AGB / Widerrufsbelehrung <a href="<?php echo $this->WarenkorbUrl; ?>?do=agb">&auml;ndern</a></legend>
+            <ul>
+                <li>Die <a href="<?php echo $this->WarenkorbUrl; ?>?do=agb">AGB</a> habe ich zur Kenntnis genommen und diese akzeptiert.</li>
+                <li>Die <a href="<?php echo $this->WarenkorbUrl; ?>?do=agb">Widerrufsbelehrung</a> habe ich zur Kenntnis genommen.</li>
+            </ul>                
+        </fieldset> 
+    </div>
+    
+    <div>
+        <fieldset>
+            <legend>Rechnungsadresse <a href="<?php echo $this->WarenkorbUrl; ?>?do=customer">&auml;ndern</a></legend>
+            <?php echo $this->Customer->firstname; ?> <?php echo $this->Customer->lastname; ?><br>
+            <?php echo $this->Customer->street; ?><br>
+            <?php echo $this->Customer->postal; ?> <?php echo $this->Customer->city; ?><br>
+            <?php echo $this->Customer->email; ?>
+        </fieldset>
+    </div>
+    <?php if($this->Customer->deliver_street): ?>
+    <div>
+        <fieldset>
+            <legend>Lieferadresse <a href="<?php echo $this->WarenkorbUrl; ?>?do=customer">&auml;ndern</a></legend>
+            <?php if($this->Customer->deliver_company): ?>
+            <?php echo $this->Customer->deliver_company; ?><br>
+            <?php endif; ?>
+            <?php if($this->Customer->deliver_firstname OR $this->Customer->deliver_lastname): ?>
+            <?php echo $this->Customer->deliver_firstname; ?> <?php echo $this->Customer->deliver_lastname; ?><br>
+            <?php endif; ?>
+            <?php echo $this->Customer->deliver_street; ?><br>
+            <?php echo $this->Customer->deliver_postal; ?> <?php echo $this->Customer->deliver_city; ?>
+         </fieldset>    
+    </div>
+    <?php endif; ?>
+
+    <?php if($this->Custom): ?>
+    <div>
+        <fieldset>
+            <legend>Zusatzinformationen <a href="<?php echo $this->WarenkorbUrl; ?>?do=customer">&auml;ndern</a></legend>
+            <ul>
+                <?php foreach($this->Custom as $Custom): ?>
+                <?php if($Custom->selected): ?>
+                <li><?php echo $Custom->fieldtitle; ?>: <?php echo $Custom->selected; ?></li>
+                <?php endif; ?>
+                <?php endforeach; ?>
+            </ul>
+        </fieldset>    
+    </div>
+    <?php endif; ?>
+    
+    <div>
+        <fieldset>
+            <legend>Versand- &amp; Zahlungsart <a href="<?php echo $this->WarenkorbUrl; ?>?do=payment-and-shipping">&auml;ndern</a></legend>
+            <ul>
+                <li>Zahlungsart: <?php echo $this->Zahlungsart->bezeichnung; ?></li>
+                <li>Versandart: <?php echo $this->Versandzone->bezeichnung; ?></li>
+            </ul>
+        </fieldset>    
+    </div>
+
+    <div class="basket">
+        <fieldset>
+            <legend>Gesamt&uuml;bersicht</legend>
+
+            <table cellspacing="0" cellpadding="0">
+                <tr>
+                    <th class="title_row">Artikel</th>
+                    <th class="menge_row">Menge</th>
+                    <th class="price_row">Preis</th>
+                    <th class="summe_row">Summe</th>
+                </tr>
+                <?php if($this->Produktliste): ?>
+                <?php foreach($this->Produktliste as $key => $item): ?>
+                <tr>
+                    <td class="title_row"><?php if($item['url']): ?><a href="<?php echo $item['url']; ?>"><?php endif; ?><?php echo $item['bezeichnung']; ?><?php if($item['url']): ?></a><?php endif; ?></td>
+                    <td class="menge_row"><?php echo $item['menge']; ?></td>
+                    <td class="price_row"><?php echo sprintf("%01.2f", $item['preis']); ?> <?php echo $GLOBALS['TL_CONFIG']['currency_symbol']; ?></td>
+                    <td class="summe_row"><?php echo sprintf("%01.2f", $item['summe']); ?> <?php echo $GLOBALS['TL_CONFIG']['currency_symbol']; ?></td>
+                </tr>
+                <?php if($item['attributelist']): ?>
+                <tr>
+                    <td colspan="5">
+                        <ul>
+                            <?php foreach($item['attributelist'] as $attribute): ?>
+                                <li><span class="attributeTitle"><?php echo $attribute->title; ?>:</span> <?php echo $attribute->selection; ?></li>
+                            <?php endforeach; ?>
+                        </ul>
+                    </td>
+                </tr>
+                <?php endif; ?>
+                <?php endforeach; ?>
+                <?php if($this->Gutscheine): foreach($this->Gutscheine as $Gutschein): ?>
+                <tr>
+                    <td class="title_row" colspan="3">Gutschein: <?php echo $Gutschein->code; ?></td>
+                    <td class="summe_row">-<?php echo $Gutschein->preis; ?> <?php echo $GLOBALS['TL_CONFIG']['currency_symbol']; ?></td>
+                </tr>
+                <?php endforeach; endif; ?>
+                <?php if($this->Steuern): ?>
+                <?php foreach($this->Steuern as $item): ?>
+                <tr>
+                    <?php if($this->Versandzone->calculate_tax == 'N'): ?>
+                    <td colspan="3">abzgl. der enth. MwSt. <?php echo $item['satz']; ?>% auf <?php echo sprintf("%01.2f", $item['summe']); ?> <?php echo $GLOBALS['TL_CONFIG']['currency_symbol']; ?>:</td>
+                    <td class="summe_row" align="right">-<?php echo sprintf("%01.2f", $item['wert']); ?> <?php echo $GLOBALS['TL_CONFIG']['currency_symbol']; ?></td>
+                    <?php else: ?>
+                    <td colspan="3">enth. MwSt. <?php echo $item['satz']; ?>% auf <?php echo sprintf("%01.2f", $item['summe']); ?> <?php echo $GLOBALS['TL_CONFIG']['currency_symbol']; ?>:</td>
+                    <td class="summe_row" align="right"><?php echo sprintf("%01.2f", $item['wert']); ?> <?php echo $GLOBALS['TL_CONFIG']['currency_symbol']; ?></td>
+                    <?php endif; ?>
+                </tr>
+                <?php endforeach; ?>
+                <?php endif; ?>
+                <tr>
+                    <td colspan="3">Gesamtpreis:</td>
+                    <td class="summe_row" align="right"><?php echo sprintf("%01.2f", $this->Gesamtpreis); ?> <?php echo $GLOBALS['TL_CONFIG']['currency_symbol']; ?></td>
+                </tr>
+                <tr>
+                    <td colspan="3">Versandkosten (<?php echo $this->Versandzone->bezeichnung; ?>):</td>
+                    <td class="summe_row" align="right"><?php echo sprintf("%01.2f", $this->Versandpreis); ?> <?php echo $GLOBALS['TL_CONFIG']['currency_symbol']; ?></td>
+                </tr>
+                <tr>
+                    <td colspan="3">Endpreis inkl. Versand:</td>
+                    <td class="summe_row" align="right"><?php echo sprintf("%01.2f", $this->Endpreis); ?> <?php echo $GLOBALS['TL_CONFIG']['currency_symbol']; ?></td>
+                </tr>
+                <?php endif; ?>
+            </table>
+        </fieldset>
+
+        <div class="paymentForm">
+            <div class="formbody">
+                <?php echo $this->paymentModule; ?>
+            </div>
+        </div>
+    </div>
+</div>

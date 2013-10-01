@@ -1,0 +1,21 @@
+<div class="<?php echo $this->class; ?>"<?php echo $this->cssID; ?><?php if ($this->style): ?> style="<?php echo $this->style; ?>"<?php endif; ?>>
+    <?php if($this->headline): ?>
+    <<?php echo $this->hl; ?>><?php echo $this->headline; ?></<?php echo $this->hl; ?>>
+    <?php endif; ?>
+
+    <?php if(is_array($this->Versandkosten)): ?><?php foreach($this->Versandkosten as $Versandzonen): ?>    
+    <h2><?php echo $Versandzonen['bezeichnung']; ?><?php if($Versandzonen['laender']): ?> <span class="laender">(<?php echo $Versandzonen['laender']; ?>)</span><?php endif; ?></h2>
+    <p><?php echo $Versandzonen['description']; ?></p>
+    <?php if(is_array($Versandzonen['zahlungsarten'])): foreach($Versandzonen['zahlungsarten'] as $Zahlungsarten): ?>
+    <h3><?php echo $Zahlungsarten['bezeichnung']; ?></h3>
+    <?php if($Zahlungsarten['infotext']): ?>
+    <div class="infotext">
+    <?php echo $Zahlungsarten['infotext']; ?>
+    </div>
+    <?php endif; ?>
+    <?php if(is_array($Zahlungsarten['versandkosten'])): foreach($Zahlungsarten['versandkosten'] as $Versandkosten): ?>
+    <p>ab <?php echo $Versandkosten['ab_einkaufspreis']; ?> <?php echo $this->Currency->iso_code; ?> Einkaufwert <?php echo $Versandkosten['preis']; ?> <?php echo $this->Currency->iso_code; ?> Versandkosten</p>
+    <?php endforeach; endif; ?>
+    <?php endforeach; endif; ?>
+    <?php endforeach; endif; ?>
+</div>

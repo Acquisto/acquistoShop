@@ -1,0 +1,20 @@
+<div class="<?php echo $this->class; ?>"<?php echo $this->cssID; ?><?php if ($this->style): ?> style="<?php echo $this->style; ?>"<?php endif; ?>>
+    <?php if($this->headline): ?>
+    <<?php echo $this->hl; ?>><?php echo $this->headline; ?></<?php echo $this->hl; ?>>
+    <?php endif; ?>
+    
+    <form method="post" action="<?php echo $this->JumpTo; ?>" name="ModuleClubSelection">
+        <div class="formbody"> 
+            <input type="hidden" name="REQUEST_TOKEN" value="<?php echo REQUEST_TOKEN; ?>">
+            <input type="hidden" name="FORM_SUBMIT" value="tl_shop_currency">                   
+            
+            <select name="Currency">
+                <?php foreach($this->Currency as $Currency): ?>
+                <option value="<?php echo $Currency->id; ?>"<?php if($Currency->active): ?> selected="selected"<?php endif; ?>><?php echo $Currency->title; ?></option>
+                <?php endforeach; ?>
+            </select>
+            
+            <input type="submit" value="Ausw&auml;hlen">
+        </div>
+    </form>
+</div>

@@ -1,0 +1,71 @@
+<?xml version="1.0" ?><xliff version="1.1">
+	<file datatype="php" original="system/modules/acquistoShop/languages/de/tl_shop_steuer.php" source-language="de_DE">
+		<body>
+			<trans-unit id="tl_shop_steuer.title_legend">
+				<source>Allgemein</source>
+				<target>General</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_steuer.bezeichnung.0">
+				<source>Bezeichnung</source>
+				<target>Title</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_steuer.bezeichnung.1">
+				<source>Geben Sie hier die Bezeichnung des Steuertyps ein.</source>
+				<target>Enter the name of the tax type.</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_steuer.new.0">
+				<source>Neuen Steuertyp</source>
+				<target>New tax type</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_steuer.new.1">
+				<source>Einen neuen Steuertyp erstellen</source>
+				<target>Create a new tax type</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_steuer.edit.0">
+				<source>Bearbeiten</source>
+				<target>Edit</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_steuer.edit.1">
+				<source>Steuertyp ID %s bearbeiten</source>
+				<target>Edit tax type ID %s</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_steuer.copy.0">
+				<source>Duplizieren</source>
+				<target>Duplicate</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_steuer.copy.1">
+				<source>Steuertyp ID %s duplizieren</source>
+				<target>Duplicate tax type ID %s</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_steuer.delete.0">
+				<source>Löschen</source>
+				<target>Delete</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_steuer.delete.1">
+				<source>Steuertyp ID %s löschen</source>
+				<target>Delete tax type ID %s</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_steuer.show.0">
+				<source>Details</source>
+				<target>Details</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_steuer.show.1">
+				<source>Die Details des Steuertyp ID %s anzeigen</source>
+				<target>Show details to tax type ID %s</target>
+				
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

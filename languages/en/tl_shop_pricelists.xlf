@@ -1,0 +1,128 @@
+<?xml version="1.0" ?><xliff version="1.1">
+	<file datatype="php" original="system/modules/acquistoShop/languages/de/tl_shop_pricelists.php" source-language="de_DE">
+		<body>
+			<trans-unit id="tl_shop_pricelists.title_legend">
+				<source>Allgemein</source>
+				<target>General</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_pricelists.config_legend">
+				<source>Einstellungen</source>
+				<target>Settings</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_pricelists.show_legend">
+				<source>Anzeigeeinstellungen</source>
+				<target>Display options</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_pricelists.title.0">
+				<source>Bezeichnung</source>
+				<target>Title</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_pricelists.title.1">
+				<source>Geben Sie eine Bezeichnung für diese Preisliste ein.</source>
+				<target>Enter a descrition for this price list</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_pricelists.default_list.0">
+				<source>Standard</source>
+				<target>Default</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_pricelists.default_list.1">
+				<source>Definieren Sie ob diese Preisliste die Standardpreisliste ist.</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_pricelists.type.0">
+				<source>Preislisten-Typ</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_pricelists.type.1">
+				<source>Geben Sie eine Bezeichnung für diese Preisliste ein.</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_pricelists.currency.0">
+				<source>Währung</source>
+				<target>Currency</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_pricelists.currency.1">
+				<source>Wählen Sie den Währungstyp aus.</source>
+				<target>Choose a currency</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_pricelists.guests.0">
+				<source>Gäste</source>
+				<target>Guests</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_pricelists.guests.1">
+				<source>Ist diese Preisliste für Gäste sichrbar?</source>
+				<target>Should this price list be visible for guests?</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_pricelists.groups.0">
+				<source>Mitgliedergruppen</source>
+				<target>Member groups</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_pricelists.groups.1">
+				<source>Welche Mitgliedergruppen haben Zugriff auf diese Preisliste?</source>
+				<target>Which member groups should have access to this price list?</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_pricelists.new.0">
+				<source>Neue Preisliste</source>
+				<target>Add Pricelist</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_pricelists.new.1">
+				<source>Eine neue Preisliste erstellen</source>
+				<target>Create a new price list</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_pricelists.edit.0">
+				<source>Bearbeiten</source>
+				<target>Edit</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_pricelists.edit.1">
+				<source>Preisliste ID %s bearbeiten</source>
+				<target>Edit price list ID %s</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_pricelists.copy.0">
+				<source>Duplizieren</source>
+				<target>Duplicate</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_pricelists.copy.1">
+				<source>Preisliste ID %s duplizieren</source>
+				<target>Duplicate price list ID %s</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_pricelists.delete.0">
+				<source>Löschen</source>
+				<target>Delete</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_pricelists.delete.1">
+				<source>Preisliste ID %s löschen</source>
+				<target>Delete price list ID %s</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_pricelists.show.0">
+				<source>Details</source>
+				<target>Details</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_pricelists.show.1">
+				<source>Die Details der Preisliste ID %s anzeigen</source>
+				<target>Show details of price list ID %s</target>
+				
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

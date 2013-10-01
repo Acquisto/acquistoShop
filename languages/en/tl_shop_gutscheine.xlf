@@ -1,0 +1,151 @@
+<?xml version="1.0" ?><xliff version="1.1">
+	<file datatype="php" original="system/modules/acquistoShop/languages/de/tl_shop_gutscheine.php" source-language="de_DE">
+		<body>
+			<trans-unit id="tl_shop_gutscheine.allgemein">
+				<source>Allgemein</source>
+				<target>General</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_gutscheine.config_legend">
+				<source>Experten-Einstellungen</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_gutscheine.state">
+				<source>Status</source>
+				<target>State</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_gutscheine.code.0">
+				<source>Code</source>
+				<target>Code</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_gutscheine.code.1">
+				<source>Geben Sie bitte den Gutscheincode ein.</source>
+				<target>Please enter the coupon code</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_gutscheine.preis.0">
+				<source>Preis</source>
+				<target>Value</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_gutscheine.preis.1">
+				<source>Geben Sie bitte den Wert des Gutscheins ein.</source>
+				<target>Please enter the coupon's value</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_gutscheine.kunden_id.0">
+				<source>Kunde</source>
+				<target>Customer</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_gutscheine.kunden_id.1">
+				<source>Hier können Sie den Gutschein an einen Kunden binden.</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_gutscheine.gueltig_von.0">
+				<source>Gültig von</source>
+				<target>Valid from</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_gutscheine.gueltig_von.1">
+				<source>Wählen Sie ein Datum aus ab dem der Gutschein gültig ist.</source>
+				<target>Choose a start date for the coupon to be valid</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_gutscheine.gueltig_bis.0">
+				<source>Gültig bis</source>
+				<target>Valid until</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_gutscheine.gueltig_bis.1">
+				<source>Wählen Sie ein Datum aus ab dem der Gutschein nicht mehr gültig ist.</source>
+				<target>Choose a end date for the coupon to be valid</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_gutscheine.aktiv.0">
+				<source>Aktiv</source>
+				<target>Active</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_gutscheine.aktiv.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_shop_gutscheine.zeitgrenze.0">
+				<source>Zeitlich begrenzen</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_gutscheine.zeitgrenze.1">
+				<source>Hier können Sie den Gültigkeitszeitraum begrenzen.</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_gutscheine.using_counter.0">
+				<source>Anzahl limitieren</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_gutscheine.using_counter.1">
+				<source>Hier können Sie die Nutzung des Gutscheins limitieren.</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_gutscheine.max_using.0">
+				<source>Nutzung maximal</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_gutscheine.max_using.1">
+				<source>Geben Sie bitte ein wie oft der Gutschein genutzt werden darf</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_gutscheine.new.0">
+				<source>Neuen Gutschein</source>
+				<target>New coupon</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_gutscheine.new.1">
+				<source>Einen neuen Gutschein erstellen</source>
+				<target>Create a new coupon</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_gutscheine.edit.0">
+				<source>Bearbeiten</source>
+				<target>Edit</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_gutscheine.edit.1">
+				<source>Gutschein ID %s bearbeiten</source>
+				<target>Edit coupon ID %s</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_gutscheine.copy.0">
+				<source>Duplizieren</source>
+				<target>Duplicate</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_gutscheine.copy.1">
+				<source>Gutschein ID %s duplizieren</source>
+				<target>Duplicate coupon ID %s</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_gutscheine.delete.0">
+				<source>Löschen</source>
+				<target>Delete</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_gutscheine.delete.1">
+				<source>Gutschein ID %s löschen</source>
+				<target>Delete coupon ID %s</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_gutscheine.show.0">
+				<source>Details</source>
+				<target>Details</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_gutscheine.show.1">
+				<source>Die Details des Gutschein ID %s anzeigen</source>
+				<target>Show details of coupon ID %s</target>
+				
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

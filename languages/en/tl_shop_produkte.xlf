@@ -1,0 +1,398 @@
+<?xml version="1.0" ?><xliff version="1.1">
+	<file datatype="php" original="system/modules/acquistoShop/languages/de/tl_shop_produkte.php" source-language="de_DE">
+		<body>
+			<trans-unit id="tl_shop_produkte.new.0">
+				<source>Neues Produkt</source>
+				<target>New Product</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte.new.1">
+				<source>Ein neues Produkt erstellen</source>
+				<target>Create a new product</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte.edit.0">
+				<source>Bearbeiten</source>
+				<target>Edit</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte.edit.1">
+				<source>Produkt ID %s bearbeiten</source>
+				<target>Edit product ID %s</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte.copy.0">
+				<source>Duplizieren</source>
+				<target>Duplicate</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte.copy.1">
+				<source>Produkt ID %s duplizieren</source>
+				<target>Duplicate product ID %s</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte.delete.0">
+				<source>Löschen</source>
+				<target>Delete</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte.delete.1">
+				<source>Produkt ID %s löschen</source>
+				<target>Delete product ID %s</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte.show.0">
+				<source>Details</source>
+				<target>Details</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte.show.1">
+				<source>Die Details des Produkts ID %s anzeigen</source>
+				<target>Show details of product ID %s</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte.title">
+				<source>Allgemein</source>
+				<target>General</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte.digital">
+				<source>Digital</source>
+				<target>Digital</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte.groups">
+				<source>Warengruppen</source>
+				<target>Categories</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte.images">
+				<source>Produktbilder</source>
+				<target>Product images</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte.state">
+				<source>Status</source>
+				<target>State</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte.staffelpreise">
+				<source>Preise / Staffelpreise</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte.grundpreis">
+				<source>Grundpreis</source>
+				<target>Basic price</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte.extended_options">
+				<source>Erweiterte Einstellungen</source>
+				<target>Advanced settings</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte.catalog_legend">
+				<source>Katalog</source>
+				<target>Catalog</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte.type.0">
+				<source>Produkttyp</source>
+				<target>Product type</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte.type.1">
+				<source>Wählen Sie einen Produkttypen aus.</source>
+				<target>Choose a product type</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte.bezeichnung.0">
+				<source>Bezeichnung</source>
+				<target>Title</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte.bezeichnung.1">
+				<source>Geben Sie die Bezeichnung des Produktes ein.</source>
+				<target>Enter the product title</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte.produktnummer.0">
+				<source>Produktnummer</source>
+				<target>Productnumber</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte.produktnummer.1">
+				<source>Geben Sie die Produktnummer des Produktes ein.</source>
+				<target>Enter the product number</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte.template.0">
+				<source>Template</source>
+				<target>Template</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte.template.1">
+				<source>Wählen Sie ein Template aus.</source>
+				<target>Choose a template</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte.alias.0">
+				<source>Alias</source>
+				<target>Alias</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte.alias.1">
+				<source>Geben Sie einen URL-Alias für das Produkt ein.</source>
+				<target>Please enter a URL-alias for this product</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte.ean.0">
+				<source>EAN-Code</source>
+				<target>EAN-Code</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte.ean.1">
+				<source>Geben Sie den EAN-Code für das Produkt ein.</source>
+				<target>Enter the product EAN-Code</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte.teaser.0">
+				<source>Teaser</source>
+				<target>Teaser</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte.teaser.1">
+				<source>Geben Sie einen Teaser ein der in der Produktliste angezeigt wird.</source>
+				<target>Enter a teaser that will be displayed in the product list</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte.beschreibung.0">
+				<source>Beschreibung</source>
+				<target>Description</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte.beschreibung.1">
+				<source>Geben Sie eine Beschreibung ein diese wird in den Produktdetails angezeigt.</source>
+				<target>Enter a description that will be displayed in the product details</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte.aktiv.0">
+				<source>Produkt veröffentlichen</source>
+				<target>Publish this product</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte.aktiv.1">
+				<source>Mächten Sie dieses Produkt veröffentlichen?</source>
+				<target>Do you want to publish this product?</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte.steuer.0">
+				<source>Steuersatz</source>
+				<target>Tax rate</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte.steuer.1">
+				<source>Wählen Sie einen Steuersatz aus.</source>
+				<target>Choose a tax rate.</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte.warengruppen.0">
+				<source>Warengruppen</source>
+				<target>Categories</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte.warengruppen.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte.preview_image.0">
+				<source>Vorschaubild</source>
+				<target>Preview image</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte.preview_image.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte.galerie.0">
+				<source>Bildgalerie</source>
+				<target>Image gallery</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte.galerie.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte.hersteller.0">
+				<source>Hersteller</source>
+				<target>Manufacturer</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte.hersteller.1">
+				<source>Wählen Sie einen Hersteller aus.</source>
+				<target>Choose a manufacturer</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte.marked.0">
+				<source>Hervorheben</source>
+				<target>Highlight product</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte.marked.1">
+				<source>Das Produkt erhält eine hervorhebung.</source>
+				<target>This product will be highlighted</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte.digital_product.0">
+				<source>Downloads auswählen</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte.digital_product.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte.preise.0">
+				<source>Geben Sie bitte den Preis / die Preise für das Produkt ein.</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte.preise.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte.mengeneinheit.0">
+				<source>Mengeneinheit</source>
+				<target>Unit</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte.mengeneinheit.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte.inhalt.0">
+				<source>Inhalt</source>
+				<target>Content</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte.inhalt.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte.berechnungsmenge.0">
+				<source>Berechnungsmenge</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte.berechnungsmenge.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte.tags.0">
+				<source>Tags</source>
+				<target>Tags</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte.tags.1">
+				<source>Sie müssen die Tags komma getrennt eingeben. Bsp. Tag 1, Tag 2, Tag 3</source>
+				<target>You need to enter the tags separated by a comma. E.g. tag 1, tag 2, tag 3</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte.zustand.0">
+				<source>Produktzustand</source>
+				<target>Product's condition</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte.zustand.1">
+				<source>Definieren Sie den Produktzustand.</source>
+				<target>Define the product's condition.</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte.gewicht.0">
+				<source>Gewicht</source>
+				<target>Weight</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte.gewicht.1">
+				<source>Geben Sie das Gewicht des Produktes in Kilogramm ein.</source>
+				<target>Enter the product's weight</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte.catalogMode.0">
+				<source>Katalog</source>
+				<target>Catalog</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte.catalogMode.1">
+				<source>Dieses Produkt kann nicht gekauft werden.</source>
+				<target>This product can not be bought.</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte.catalogMoney.0">
+				<source>Preise im Katalog</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte.catalogMoney.1">
+				<source>Im Katalog sollen Preise angezeigt werden.</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte.startDate.0">
+				<source>Startdatum</source>
+				<target>Startdate</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte.startDate.1">
+				<source>Bitte geben Sie das Startdatum gemäß des globalen Datumsformats ein.</source>
+				<target>Please enter the startdate according to the global date format</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte.endDate.0">
+				<source>Enddatum</source>
+				<target>Enddate</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte.endDate.1">
+				<source>Bitte geben Sie das Enddatum gemäß des globalen Datumsformats ein.</source>
+				<target>Please enter the enddate according to the global date format</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte.preise_value.0">
+				<source>Menge</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte.preise_value.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte.preise_label.0">
+				<source>Preis</source>
+				<target>Price</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte.preise_label.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte.preise_specialcosts.0">
+				<source>Sonderpreis</source>
+				<target>Special price</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte.preise_specialcosts.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte.preise_pricelist.0">
+				<source>Preisliste</source>
+				<target>Price list</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte.preise_pricelist.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte.importData.0">
+				<source>Importieren</source>
+				<target>Import</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte.importData.1">
+				<source>Produktdaten importieren</source>
+				<target>Import product details</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte.attr.0">
+				<source>Attribute</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte.attr.1">
+				<source>Attribute des Produkts ID %s bearbeiten</source>
+				
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

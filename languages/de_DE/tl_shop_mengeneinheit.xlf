@@ -1,0 +1,67 @@
+<?xml version="1.0" ?>
+<xliff version="1.1">
+	<file datatype="php" original="system/modules/acquistoShop/languages/de/tl_shop_mengeneinheit.php" source-language="de_DE">
+		<body>
+			<trans-unit id="tl_shop_mengeneinheit.allgemein">
+				<source>Einstellungen</source>
+				<target>Einstellungen</target>
+			</trans-unit>
+			<trans-unit id="tl_shop_mengeneinheit.bezeichnung.0">
+				<source>Bezeichnung</source>
+				<target>Bezeichnung</target>
+			</trans-unit>
+			<trans-unit id="tl_shop_mengeneinheit.bezeichnung.1">
+				<source></source>
+				<target></target>
+			</trans-unit>
+			<trans-unit id="tl_shop_mengeneinheit.einheit.0">
+				<source>Einheit</source>
+				<target>Einheit</target>
+			</trans-unit>
+			<trans-unit id="tl_shop_mengeneinheit.einheit.1">
+				<source></source>
+				<target></target>
+			</trans-unit>
+			<trans-unit id="tl_shop_mengeneinheit.new.0">
+				<source>Neue Mengeneinheit</source>
+				<target>Neue Mengeneinheit</target>
+			</trans-unit>
+			<trans-unit id="tl_shop_mengeneinheit.new.1">
+				<source>Eine neue Mengeneinheit erstellen</source>
+				<target>Eine neue Mengeneinheit erstellen</target>
+			</trans-unit>
+			<trans-unit id="tl_shop_mengeneinheit.edit.0">
+				<source>Bearbeiten</source>
+				<target>Bearbeiten</target>
+			</trans-unit>
+			<trans-unit id="tl_shop_mengeneinheit.edit.1">
+				<source>Mengeneinheit ID %s bearbeiten</source>
+				<target>Mengeneinheit ID %s bearbeiten</target>
+			</trans-unit>
+			<trans-unit id="tl_shop_mengeneinheit.copy.0">
+				<source>Duplizieren</source>
+				<target>Duplizieren</target>
+			</trans-unit>
+			<trans-unit id="tl_shop_mengeneinheit.copy.1">
+				<source>Mengeneinheit ID %s duplizieren</source>
+				<target>Mengeneinheit ID %s duplizieren</target>
+			</trans-unit>
+			<trans-unit id="tl_shop_mengeneinheit.delete.0">
+				<source>Löschen</source>
+				<target>Löschen</target>
+			</trans-unit>
+			<trans-unit id="tl_shop_mengeneinheit.delete.1">
+				<source>Mengeneinheit ID %s löschen</source>
+				<target>Mengeneinheit ID %s löschen</target>
+			</trans-unit>
+			<trans-unit id="tl_shop_mengeneinheit.show.0">
+				<source>Details</source>
+				<target>Details</target>
+			</trans-unit>
+			<trans-unit id="tl_shop_mengeneinheit.show.1">
+				<source>Die Details der Mengeneinheit ID %s anzeigen</source>
+				<target>Die Details der Mengeneinheit ID %s anzeigen</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

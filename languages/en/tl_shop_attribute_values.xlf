@@ -1,0 +1,134 @@
+<?xml version="1.0" ?><xliff version="1.1">
+	<file datatype="php" original="system/modules/acquistoShop/languages/de/tl_shop_attribute_values.php" source-language="de_DE">
+		<body>
+			<trans-unit id="tl_shop_attribute_values.title_legend">
+				<source>Allgemein</source>
+				<target>General</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_attribute_values.costs_legend">
+				<source>Preise / Preisstaffeln</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_attribute_values.counter_legend">
+				<source>Zählereinstellungen</source>
+				<target>Counter settings</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_attribute_values.item">
+				<source>Wert</source>
+				<target>Value</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_attribute_values.counter">
+				<source>Zähler</source>
+				<target>Counter</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_attribute_values.type.0">
+				<source>Typ</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_attribute_values.type.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_shop_attribute_values.bezeichnung.0">
+				<source>Bezeichnung</source>
+				<target>Title</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_attribute_values.bezeichnung.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_shop_attribute_values.preise.0">
+				<source>Preise</source>
+				<target>Prices</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_attribute_values.preise.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_shop_attribute_values.from_value.0">
+				<source>Von</source>
+				<target>from</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_attribute_values.from_value.1">
+				<source>Geben Sie hier den Startwert ein.</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_attribute_values.to_value.0">
+				<source>Bis</source>
+				<target>till</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_attribute_values.to_value.1">
+				<source>Geben Sie hier den Endwert ein.</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_attribute_values.steps_value.0">
+				<source>Schritt</source>
+				<target>Step</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_attribute_values.steps_value.1">
+				<source>Geben Sie hier die Schrittgröße ein.</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_attribute_values.dezimal.0">
+				<source>Dezimalstellen</source>
+				<target>decimal</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_attribute_values.dezimal.1">
+				<source>Geben Sie hier die Dezimalstellen ein.</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_attribute_values.new.0">
+				<source>Neuen Wert</source>
+				<target>New value</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_attribute_values.new.1">
+				<source>Einen neuen Wert erstellen</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_attribute_values.edit.0">
+				<source>Bearbeiten</source>
+				<target>Edit</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_attribute_values.edit.1">
+				<source>Wert ID %s bearbeiten</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_attribute_values.copy.0">
+				<source>Duplizieren</source>
+				<target>Duplicate</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_attribute_values.copy.1">
+				<source>Wert ID %s duplizieren</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_attribute_values.delete.0">
+				<source>Löschen</source>
+				<target>Delete</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_attribute_values.delete.1">
+				<source>Wert ID %s löschen</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_attribute_values.show.0">
+				<source>Details</source>
+				<target>Details</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_attribute_values.show.1">
+				<source>Die Details des Wert ID %s anzeigen</source>
+				
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

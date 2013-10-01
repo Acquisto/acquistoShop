@@ -1,0 +1,115 @@
+<?xml version="1.0" ?>
+<xliff version="1.1">
+	<file datatype="php" original="system/modules/acquistoShop/languages/de/tl_shop_currency.php" source-language="de_DE">
+		<body>
+			<trans-unit id="tl_shop_currency.title_legend">
+				<source>Allgemein</source>
+				<target>Allgemein</target>
+			</trans-unit>
+			<trans-unit id="tl_shop_currency.config_legend">
+				<source>Einstellungen</source>
+				<target>Einstellungen</target>
+			</trans-unit>
+			<trans-unit id="tl_shop_currency.show_legend">
+				<source>Anzeigeeinstellungen</source>
+				<target>Anzeigeeinstellungen</target>
+			</trans-unit>
+			<trans-unit id="tl_shop_currency.title.0">
+				<source>Bezeichnung</source>
+				<target>Bezeichnung</target>
+			</trans-unit>
+			<trans-unit id="tl_shop_currency.title.1">
+				<source>Geben Sie eine Bezeichnung für diese Preisliste ein.</source>
+				<target>Geben Sie eine Bezeichnung für diese Preisliste ein.</target>
+			</trans-unit>
+			<trans-unit id="tl_shop_currency.default_currency.0">
+				<source>Standard</source>
+				<target>Standard</target>
+			</trans-unit>
+			<trans-unit id="tl_shop_currency.default_currency.1">
+				<source>Definieren Sie ob diese Währung die Standardwährung ist.</source>
+				<target>Definieren Sie ob diese Währung die Standardwährung ist.</target>
+			</trans-unit>
+			<trans-unit id="tl_shop_currency.iso_code.0">
+				<source>ISO-Code</source>
+				<target>ISO-Code</target>
+			</trans-unit>
+			<trans-unit id="tl_shop_currency.iso_code.1">
+				<source>Geben Sie eine Bezeichnung für diese Preisliste ein.</source>
+				<target>Geben Sie eine Bezeichnung für diese Preisliste ein.</target>
+			</trans-unit>
+			<trans-unit id="tl_shop_currency.currency.0">
+				<source>Währung</source>
+				<target>Währung</target>
+			</trans-unit>
+			<trans-unit id="tl_shop_currency.currency.1">
+				<source>Wählen Sie den Währungstyp aus.</source>
+				<target>Wählen Sie den Währungstyp aus.</target>
+			</trans-unit>
+			<trans-unit id="tl_shop_currency.guests.0">
+				<source>Gäste</source>
+				<target>Gäste</target>
+			</trans-unit>
+			<trans-unit id="tl_shop_currency.guests.1">
+				<source>Ist diese Währung für Gäste sichrbar?</source>
+				<target>Ist diese Währung für Gäste sichrbar?</target>
+			</trans-unit>
+			<trans-unit id="tl_shop_currency.groups.0">
+				<source>Mitgliedergruppen</source>
+				<target>Mitgliedergruppen</target>
+			</trans-unit>
+			<trans-unit id="tl_shop_currency.groups.1">
+				<source>Welche Mitgliedergruppen haben Zugriff auf diese Preisliste?</source>
+				<target>Welche Mitgliedergruppen haben Zugriff auf diese Preisliste?</target>
+			</trans-unit>
+			<trans-unit id="tl_shop_currency.exchange_ratio.0">
+				<source>Umrechnungsfaktor</source>
+				<target>Umrechnungsfaktor</target>
+			</trans-unit>
+			<trans-unit id="tl_shop_currency.exchange_ratio.1">
+				<source>Geben Sie den Umrechnungsfaktor zur Standartwährung ein.</source>
+				<target>Geben Sie den Umrechnungsfaktor zur Standartwährung ein.</target>
+			</trans-unit>
+			<trans-unit id="tl_shop_currency.new.0">
+				<source>Neue Währung</source>
+				<target>Neue Währung</target>
+			</trans-unit>
+			<trans-unit id="tl_shop_currency.new.1">
+				<source>Eine neue Währung erstellen</source>
+				<target>Eine neue Währung erstellen</target>
+			</trans-unit>
+			<trans-unit id="tl_shop_currency.edit.0">
+				<source>Bearbeiten</source>
+				<target>Bearbeiten</target>
+			</trans-unit>
+			<trans-unit id="tl_shop_currency.edit.1">
+				<source>Währung ID %s bearbeiten</source>
+				<target>Währung ID %s bearbeiten</target>
+			</trans-unit>
+			<trans-unit id="tl_shop_currency.copy.0">
+				<source>Duplizieren</source>
+				<target>Duplizieren</target>
+			</trans-unit>
+			<trans-unit id="tl_shop_currency.copy.1">
+				<source>Währung ID %s duplizieren</source>
+				<target>Währung ID %s duplizieren</target>
+			</trans-unit>
+			<trans-unit id="tl_shop_currency.delete.0">
+				<source>Löschen</source>
+				<target>Löschen</target>
+			</trans-unit>
+			<trans-unit id="tl_shop_currency.delete.1">
+				<source>Währung ID %s löschen</source>
+				<target>Währung ID %s löschen</target>
+			</trans-unit>
+			<trans-unit id="tl_shop_currency.show.0">
+				<source>Details</source>
+				<target>Details</target>
+			</trans-unit>
+			<trans-unit id="tl_shop_currency.show.1">
+				<source>Die Details der Währung ID %s anzeigen</source>
+				<target>Die Details der Währung ID %s anzeigen</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

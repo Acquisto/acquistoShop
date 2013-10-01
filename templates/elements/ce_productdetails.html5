@@ -1,0 +1,19 @@
+<div class="<?php echo $this->class; ?>"<?php echo $this->cssID; ?><?php if ($this->style): ?> style="<?php echo $this->style; ?>"<?php endif; ?>>
+    <?php echo $this->produktTemplate; ?>
+
+    <?php if($this->Facebook OR $this->Twitter): ?>
+    <div class="socialMedia">
+        <?php if($this->Twitter): ?>
+        <div class="twitter social">
+            <a href="https://twitter.com/share" class="twitter-share-button" data-url="<?php echo $this->Twitter; ?>" data-count="horizontal" data-lang="de">Twittern</a><script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+        </div>
+        <?php endif; ?>
+        <?php if($this->Facebook): ?>
+        <div class="facebook social">
+        <iframe src="http://www.facebook.com/plugins/like.php?href=<?php echo $this->Facebook; ?>&amp;layout=button_count&amp;show_faces=true&amp;width=450&amp;action=like&amp;colorscheme=light&amp;height=80" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100%; height:80px;" allowTransparency="true"></iframe>
+        </div>
+        <?php endif; ?>
+        <div class="clear"></div>
+    </div>
+    <?php endif; ?>    
+</div>

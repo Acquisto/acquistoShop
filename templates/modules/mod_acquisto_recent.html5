@@ -1,0 +1,64 @@
+<div class="<?php echo $this->class; ?>"<?php echo $this->cssID; ?><?php if ($this->style): ?> style="<?php echo $this->style; ?>"<?php endif; ?>>
+    <?php if($this->headline): ?>
+    <<?=$this->hl;?>><?=$this->headline;?></<?=$this->hl;?>>
+    <?php endif; ?>
+
+    <?php if(is_array($this->Viewed)): ?>
+    <ul>
+    <?php foreach($this->Viewed as $Produkt): ?>
+    <li class="<?=$Produkt->css;?>element">
+        <?php if (!$Produkt->preview_image->addBefore): ?>
+        <div class="text">
+            <a href="<?=$Produkt->url;?>"><?=$Produkt->bezeichnung;?></a><br>
+            <span class="preis"></span>
+        </div>
+        <?php endif; ?>
+
+        <?php if ($Produkt->preview_image->addImage): ?>
+            <div class="image_container<?php echo $Produkt->preview_image->floatClass; ?>"<?php if ($Produkt->preview_image->margin || $Produkt->preview_image->float): ?> style="<?php echo trim($Produkt->preview_image->margin . $Produkt->preview_image->float); ?>"<?php endif; ?>>
+            <?php if ($Produkt->preview_image->href): ?>
+            <a href="<?php echo $Produkt->preview_image->href; ?>"<?php echo $Produkt->preview_image->attributes; ?> title="<?php echo $Produkt->preview_image->alt; ?>">
+            <?php endif; ?>
+                <img src="<?php echo $Produkt->preview_image->src; ?>"<?php echo $Produkt->preview_image->imgSize; ?> alt="<?php echo $Produkt->preview_image->alt; ?>">
+            <?php if ($Produkt->preview_image->href): ?>
+            </a>
+            <?php endif; ?>
+            <?php if ($Produkt->preview_image->caption): ?>
+            <div class="caption"><?php echo $Produkt->preview_image->caption; ?></div>
+            <?php endif; ?>
+            </div>
+        <?php endif; ?>
+
+        <?php if ($Produkt->preview_image->addBefore): ?>
+        <div class="text">
+            <a href="<?=$Produkt->url;?>"><?=$Produkt->bezeichnung;?></a><br>
+            <?php if($Produkt->getCosts(0)->pricelist->type == "netto"): ?>
+
+            <div class="preis">Preis: <span class="<?php if($Produkt->getCosts(0)->special_netto): ?>old_price<?php else: ?>default_price<?php endif;?>"><?php echo $Produkt->getCosts(0)->costs_netto; ?> <?php echo $GLOBALS['TL_CONFIG']['currency_symbol']; ?></span><?php if($Produkt->getCosts(0)->special_netto): ?> nur <span class="special_price"><?php echo $Produkt->getCosts(0)->special_netto; ?> <?php echo $Produkt->getCosts(0)->pricelist->currency; ?></span><?php endif; ?></div>
+            <small>
+                zzgl. <?php echo $Produkt->getCosts(0)->steuersatz; ?>% MwSt. zzgl <a href="<?php echo $this->Versand; ?>">Versandkosten</a><br>
+                <?php if($Produkt->getCosts(0)->basecosts_netto): ?>Grundpreis auf <?php echo $Produkt->berechnungsmenge; ?><?php echo $Produkt->mengeneinheit; ?> sind <?php echo sprintf("%01.2f", $Produkt->getCosts(0)->basecosts_netto); ?> <?php echo $Produkt->getCosts(0)->pricelist->currency; ?>.<?php endif; ?>
+            </small>
+
+            <?php elseif($Produkt->getCosts(0)->pricelist->type == "brutto"): ?>
+
+            <div class="preis">Preis: <span class="<?php if($Produkt->getCosts(0)->special_brutto): ?>old_price<?php else: ?>default_price<?php endif;?>"><?php echo $Produkt->getCosts(0)->costs_brutto; ?> <?php echo $GLOBALS['TL_CONFIG']['currency_symbol']; ?></span><?php if($Produkt->getCosts(0)->special_brutto): ?> nur <span class="special_price"><?php echo $Produkt->getCosts(0)->special_brutto; ?> <?php echo $Produkt->getCosts(0)->pricelist->currency; ?></span><?php endif; ?></div>
+            <small>
+                zzgl. <?php echo $Produkt->getCosts(0)->steuersatz; ?>% MwSt. zzgl <a href="<?php echo $this->Versand; ?>">Versandkosten</a><br>
+                <?php if($Produkt->getCosts(0)->basecosts_brutto): ?>Grundpreis auf <?php echo $Produkt->berechnungsmenge; ?><?php echo $Produkt->mengeneinheit; ?> sind <?php echo sprintf("%01.2f", $Produkt->getCosts(0)->basecosts_brutto); ?> <?php echo $Produkt->getCosts(0)->pricelist->currency; ?>.<?php endif; ?>
+            </small>
+
+            <?php endif; ?>
+            
+        </div>
+        <?php endif; ?>
+    </li>
+    <?php endforeach; ?>
+    </ul>
+    <?php else: ?>
+    <div class="no_recentViews">
+        Keine Produkte in der Liste.
+    </div>
+    <?php endif; ?>
+    <div style="clear: both;"></div>
+</div>

@@ -1,0 +1,20 @@
+<div class="<?php echo $this->class; ?>"<?php echo $this->cssID; ?><?php if ($this->style): ?> style="<?php echo $this->style; ?>"<?php endif; ?>>
+    <?php if($this->headline): ?>
+    <<?php echo $this->hl; ?>><?php echo $this->headline; ?></<?php echo $this->hl; ?>>
+    <?php endif; ?>
+
+    <div id="inCard">
+    <?php if($this->Menge): ?>
+    Es befinden sich <span class="menge"><?php echo $this->Menge; ?> Produkte</span> im Warenkorb
+    <?php else: ?>
+    Keine Produkte im Warenkorb
+    <?php endif; ?>
+    </div>
+    <div id="valueCard">
+    Warenwert <span class="preis"><?php echo sprintf("%01.2f", $this->Endpreis); ?> <?php echo $this->Currency->iso_code; ?></span> <?php if($this->Pricelist->type == 'brutto'): ?>inkl.<?php elseif($this->Pricelist->type == 'netto'): ?>zzgl.<?php endif; ?> MwSt.
+    </div>
+    
+    <p>
+        <a href="<?php echo $this->WarenkorbUrl; ?>">Warenkorb anzeigen</a>
+    </p>
+</div>

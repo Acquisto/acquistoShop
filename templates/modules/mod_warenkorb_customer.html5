@@ -1,0 +1,70 @@
+<div class="<?php echo $this->class; ?>"<?php echo $this->cssID; ?><?php if ($this->style): ?> style="<?php echo $this->style; ?>"<?php endif; ?>>
+    <?php if($this->headline): ?>
+    <<?php echo $this->hl; ?>><?php echo $this->headline; ?> - Kundendaten</<?php echo $this->hl; ?>>
+    <?php endif; ?>
+
+    <div class="steps">
+        <ul>
+            <li class="first"><a href="<?php echo $this->WarenkorbUrl; ?>">Warenkorb</a></li>
+            <li class="active">Kundendaten</li>
+            <li>Zahlung und Versand</li>
+            <li>AGB</li>
+            <li class="last">Kasse</li>
+        </ul>
+    </div>
+
+    <div class="customer">
+        <form method="post">
+            <div class="formbody">
+                <input type="hidden" name="FORM_SUBMIT" value="tl_acquistoShop_warenkorb">
+                <input type="hidden" name="REQUEST_TOKEN" value="<?php echo REQUEST_TOKEN; ?>">
+                <fieldset>
+                    <legend>Kundendaten</legend>
+                    <?php if(is_array($this->Fields)): ?>
+                    <?php foreach($this->Fields as $Field): ?>
+                    <p<?php if($Field->error): ?> class="error"<?php endif; ?>>
+                        <label for="customer_<?php echo $Field->key; ?>"><?php echo $Field->label; ?><?php if($Field->mandatory): ?>*<?php endif; ?></label>
+                        <input type="text" id="customer_<?php echo $Field->key; ?>" name="customer[<?php echo $Field->key; ?>]" value="<?php echo $this->Member[$Field->key]; ?>">
+                        <?php if($Field->infoMessage): ?><div class="info"><?php echo $Field->infoMessage; ?></div><?php endif; ?>
+                        <?php if($Field->error): ?><div class="error"><?php echo $Field->errorMessage; ?></div><?php endif; ?>
+                    </p>
+                    <?php endforeach; ?>
+                    <?php endif; ?>
+                </fieldset>
+                
+                <?php if(is_array($this->addonFields)): ?>
+                <fieldset>
+                    <legend>Zusatzinformationen</legend>
+                    <?php foreach($this->addonFields as $Field): ?>
+                    <p<?php if($Field->error): ?> class="error"<?php endif; ?>>
+                        <?php echo $Field->html->label; ?>
+                        <?php echo $Field->html->input; ?>
+                    </p>
+                    <?php endforeach; ?>
+                </fieldset>
+                <?php endif; ?>                
+
+                <?php if(is_array($this->deliverFields)): ?>
+                <fieldset>
+                    <legend>Lieferadresse</legend>
+                    <p>
+                        <label for="">Alternative Lieferadresse</label>
+                        <input type="checkbox" id="" name="deliver[alternate]" value="1"<?php if($this->alternateAddress): ?> checked="checked"<?php endif; ?>>
+                    </p>
+                    
+                    <?php foreach($this->deliverFields as $Field): ?>
+                    <p<?php if($Field->error): ?> class="error"<?php endif; ?>>
+                        <label for="deliver_<?php echo $Field->key; ?>"><?php echo $Field->label; ?><?php if($Field->mandatory): ?>*<?php endif; ?></label>
+                        <input type="text" id="deliver_<?php echo $Field->key; ?>" name="deliver[<?php echo $Field->key; ?>]" value="<?php echo $this->Deliver[$Field->key]; ?>">
+                        <?php if($Field->infoMessage): ?><div class="info"><?php echo $Field->infoMessage; ?></div><?php endif; ?>
+                        <?php if($Field->error): ?><div class="error"><?php echo $Field->errorMessage; ?></div><?php endif; ?>
+                    </p>
+                    <?php endforeach; ?>
+                </fieldset>
+                <?php endif; ?>
+                <input type="button" value="&laquo; Zur&uuml;ck zu Warenkorb" onclick="location.href = '<?php echo $this->WarenkorbUrl; ?>';">
+                <input type="submit" value="Weiter zu Zahlung und Versand &raquo;" name="action">
+            </div>
+        </form>
+    </div>
+</div>

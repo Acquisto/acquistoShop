@@ -1,0 +1,23 @@
+/* CSS Document */
+#tl_acquisto_messages, #tl_acquisto_news {
+  margin-bottom: 24px;
+}
+
+#main #tl_acquisto_news h2, #main #tl_acquisto_messages h2 {
+  -moz-border-bottom-colors: none;
+  -moz-border-image: none;
+  -moz-border-left-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-top-colors: none;
+  background: none repeat scroll 0 0 #F6F6F6;
+  border-color: #E9E9E9;
+  border-style: solid;
+  border-width: 1px 0;
+  margin: 18px 0 6px;
+  padding: 2px 6px 3px;
+}
+
+#main span.label {
+    display: inline-block;
+    width: 100px;
+}

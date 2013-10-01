@@ -1,0 +1,83 @@
+<?xml version="1.0" ?>
+<xliff version="1.1">
+	<file datatype="php" original="system/modules/acquistoShop/languages/de/tl_shop_orders.php" source-language="de_DE">
+		<body>
+			<trans-unit id="tl_shop_orders.title_legend">
+				<source>Allgemein</source>
+				<target>Allgemein</target>
+			</trans-unit>
+			<trans-unit id="tl_shop_orders.customer">
+				<source>Rechnungsadresse</source>
+				<target>Rechnungsadresse</target>
+			</trans-unit>
+			<trans-unit id="tl_shop_orders.deliver">
+				<source>Versandadresse</source>
+				<target>Versandadresse</target>
+			</trans-unit>
+			<trans-unit id="tl_shop_orders.order_id.0">
+				<source>Bestellnummer</source>
+				<target>Bestellnummer</target>
+			</trans-unit>
+			<trans-unit id="tl_shop_orders.order_id.1">
+				<source></source>
+				<target></target>
+			</trans-unit>
+			<trans-unit id="tl_shop_orders.versandzonen_id.0">
+				<source>Versandzone</source>
+				<target>Versandzone</target>
+			</trans-unit>
+			<trans-unit id="tl_shop_orders.versandzonen_id.1">
+				<source></source>
+				<target></target>
+			</trans-unit>
+			<trans-unit id="tl_shop_orders.zahlungsart_id.0">
+				<source>Zahlungsart</source>
+				<target>Zahlungsart</target>
+			</trans-unit>
+			<trans-unit id="tl_shop_orders.zahlungsart_id.1">
+				<source></source>
+				<target></target>
+			</trans-unit>
+			<trans-unit id="tl_shop_orders.payed.0">
+				<source>Bezahlt</source>
+				<target>Bezahlt</target>
+			</trans-unit>
+			<trans-unit id="tl_shop_orders.payed.1">
+				<source></source>
+				<target></target>
+			</trans-unit>
+			<trans-unit id="tl_shop_orders.calculate_tax.0">
+				<source>Steuern berechnen</source>
+				<target>Steuern berechnen</target>
+			</trans-unit>
+			<trans-unit id="tl_shop_orders.calculate_tax.1">
+				<source>Wählen Sie ob die Steuer in diees Land berechnet werden soll.</source>
+				<target>Wählen Sie ob die Steuer in diees Land berechnet werden soll.</target>
+			</trans-unit>
+			<trans-unit id="tl_shop_orders.edit.0">
+				<source>Bearbeiten</source>
+				<target>Bearbeiten</target>
+			</trans-unit>
+			<trans-unit id="tl_shop_orders.edit.1">
+				<source>Bestellung ID %s bearbeiten</source>
+				<target>Bestellung ID %s bearbeiten</target>
+			</trans-unit>
+			<trans-unit id="tl_shop_orders.delete.0">
+				<source>Löschen</source>
+				<target>Löschen</target>
+			</trans-unit>
+			<trans-unit id="tl_shop_orders.delete.1">
+				<source>Bestellung ID %s löschen</source>
+				<target>Bestellung ID %s löschen</target>
+			</trans-unit>
+			<trans-unit id="tl_shop_orders.show.0">
+				<source>Details</source>
+				<target>Details</target>
+			</trans-unit>
+			<trans-unit id="tl_shop_orders.show.1">
+				<source>Details der Bestellung ID %s anzeigen</source>
+				<target>Details der Bestellung ID %s anzeigen</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

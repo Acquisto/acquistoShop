@@ -1,0 +1,63 @@
+<?xml version="1.0" ?>
+<xliff version="1.1">
+	<file datatype="php" original="system/modules/acquistoShop/languages/de/tl_shop_import.php" source-language="de_DE">
+		<body>
+			<trans-unit id="tl_shop_import.satz.0">
+				<source>Steuersatz</source>
+				<target>Steuersatz</target>
+			</trans-unit>
+			<trans-unit id="tl_shop_import.satz.1">
+				<source>Geben Sie hier den Steuersatz ein.</source>
+				<target>Geben Sie hier den Steuersatz ein.</target>
+			</trans-unit>
+			<trans-unit id="tl_shop_import.gueltig_ab.0">
+				<source>Gültig ab</source>
+				<target>Gültig ab</target>
+			</trans-unit>
+			<trans-unit id="tl_shop_import.gueltig_ab.1">
+				<source>Ab wann ist der Steuersatz gültig.</source>
+				<target>Ab wann ist der Steuersatz gültig.</target>
+			</trans-unit>
+			<trans-unit id="tl_shop_import.new.0">
+				<source>Neuen Steuersatz</source>
+				<target>Neuen Steuersatz</target>
+			</trans-unit>
+			<trans-unit id="tl_shop_import.new.1">
+				<source>Einen neuen Steuersatz erstellen</source>
+				<target>Einen neuen Steuersatz erstellen</target>
+			</trans-unit>
+			<trans-unit id="tl_shop_import.edit.0">
+				<source>Bearbeiten</source>
+				<target>Bearbeiten</target>
+			</trans-unit>
+			<trans-unit id="tl_shop_import.edit.1">
+				<source>Steuersatz ID %s bearbeiten</source>
+				<target>Steuersatz ID %s bearbeiten</target>
+			</trans-unit>
+			<trans-unit id="tl_shop_import.copy.0">
+				<source>Duplizieren</source>
+				<target>Duplizieren</target>
+			</trans-unit>
+			<trans-unit id="tl_shop_import.copy.1">
+				<source>Steuersatz ID %s duplizieren</source>
+				<target>Steuersatz ID %s duplizieren</target>
+			</trans-unit>
+			<trans-unit id="tl_shop_import.delete.0">
+				<source>Löschen</source>
+				<target>Löschen</target>
+			</trans-unit>
+			<trans-unit id="tl_shop_import.delete.1">
+				<source>Steuersatz ID %s löschen</source>
+				<target>Steuersatz ID %s löschen</target>
+			</trans-unit>
+			<trans-unit id="tl_shop_import.show.0">
+				<source>Details</source>
+				<target>Details</target>
+			</trans-unit>
+			<trans-unit id="tl_shop_import.show.1">
+				<source>Die Details des Steuersatz ID %s anzeigen</source>
+				<target>Die Details des Steuersatz ID %s anzeigen</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

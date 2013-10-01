@@ -1,0 +1,34 @@
+<div class="<?php echo $this->class; ?>"<?php echo $this->cssID; ?><?php if ($this->style): ?> style="<?php echo $this->style; ?>"<?php endif; ?>>
+    <?php if($this->headline): ?>
+    <<?php echo $this->hl; ?>><?php echo $this->headline; ?></<?php echo $this->hl; ?>>
+    <?php endif; ?>
+
+    <div class="basket">
+        <fieldset>
+            <legend>Meine Bestellungen</legend>
+
+            <table cellpadding="0" cellspacing="0">
+                <tr>
+                    <th class="title_row">Bestelldatum</th>
+                    <th class="title_row">Versandzone</th>
+                    <th class="title_row">Zahlungsart</th>
+                    <th class="title_row">Bezahlt</th>
+                    <th class="price_row">Versandkosten</th>
+                    <th class="summe_row">Gesamtpreis</th>
+                    <th class="button_row"></th>
+                </tr>
+                <?php if($this->Bestellungen): foreach($this->Bestellungen as $bestellung): ?>
+                <tr class="<?php echo $bestellung->css; ?>">
+                    <td class="title_row"><?php echo $bestellung->tstamp; ?></td>
+                    <td class="title_row"><?php echo $bestellung->versandzone; ?></td>
+                    <td class="title_row"><?php echo $bestellung->zahlungsart; ?></td>
+                    <td class="title_row"><?php if($bestellung->payed == 'Y'): ?>Ja<?php else: ?>Nein<?php endif; ?></td>
+                    <td class="price_row"><?php echo $bestellung->versandpreis; ?> <?php echo $GLOBALS['TL_CONFIG']['currency_symbol']; ?></td>
+                    <td class="summe_row"><?php echo $bestellung->endpreis; ?> <?php echo $GLOBALS['TL_CONFIG']['currency_symbol']; ?></td>
+                    <td class="button_row"><a href="<?php echo $bestellung->url; ?>">Details</a></td>
+                </tr>
+                <?php endforeach; endif; ?>
+            </table>
+        </fieldset>
+    </div>
+</div>
