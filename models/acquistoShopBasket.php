@@ -403,16 +403,13 @@ class acquistoShopBasket extends \Controller
         }     
 
         $mailTemplate = new \FrontendTemplate($mailTemplate);
-        $mailTemplate->Gutscheine = $cardData['templateVars']['Gutscheine'];
-        $mailTemplate->Shopping   = $cardData['templateVars']['Shopping'];
-        $mailTemplate->Customer   = $cardData['templateVars']['Customer'];
-        $mailTemplate->Deliver    = $cardData['templateVars']['Deliver'];
-        $mailTemplate->Addon      = $cardData['templateVars']['Addon'];
-        $mailTemplate->Taxes      = $cardData['templateVars']['Taxes'];
-        $mailTemplate->Total      = $cardData['templateVars']['Total'];
-        $mailTemplate->Settings   = $cardData['templateVars']['Settings'];
-        $mailTemplate->Shipping   = $cardData['templateVars']['Shipping'];
-        $mailTemplate->Payment    = $cardData['templateVars']['Payment'];
+        if(is_array($cardData['templateVars']) && count($cardData['templateVars']))
+        {
+            foreach($cardData['templateVars'] as $key => $values)
+            {
+                $mailTemplate->$key = $values;
+            }
+        }
 
         $objEmail = new \Email();
         
