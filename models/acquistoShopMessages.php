@@ -47,40 +47,57 @@ class acquistoShopMessages extends \Backend
          * Basisdatensätze anlegen
          */
         
-        $objSummary = $this->Database->prepare("SELECT COUNT(*) AS total FROM tl_shop_currency WHERE id=?")->execute(1);
-        if(!$objSummary->total)
-        { 
-            $this->Database->prepare("INSERT INTO tl_shop_currency (id, tstamp, title, iso_code, exchange_ratio, default_currency, guests) VALUES(1, NOW(), 'Euro', 'EUR', 0, 1, 1)")->execute();
-            $this->log('Added A new Currency', __CLASS__.'::'.__FUNCTION__, TL_CONFIGURATION);
-            $html .= '<p class="tl_info">Es wurde eine neue W&auml;hrung angelegt.</p>';        
+        
+        $objSummary = $this->Database->prepare("SHOW TABLES LIKE 'tl_shop_currency'")->execute();
+        if($objSummary->count())
+        {        
+            $objSummary = $this->Database->prepare("SELECT COUNT(*) AS total FROM tl_shop_currency WHERE id=?")->execute(1);
+            if(!$objSummary->total)
+            { 
+                $this->Database->prepare("INSERT INTO tl_shop_currency (id, tstamp, title, iso_code, exchange_ratio, default_currency, guests) VALUES(1, NOW(), 'Euro', 'EUR', 0, 1, 1)")->execute();
+                $this->log('Added A new Currency', __CLASS__.'::'.__FUNCTION__, TL_CONFIGURATION);
+                $html .= '<p class="tl_info">Es wurde eine neue W&auml;hrung angelegt.</p>';        
+            }
         }
         
-        $objSummary = $this->Database->prepare("SELECT COUNT(*) AS total FROM tl_shop_pricelists WHERE id=?")->execute(1);
-        if(!$objSummary->total)
-        { 
-            $this->Database->prepare("INSERT INTO tl_shop_pricelists (id, tstamp, title, type, guests, currency, default_list) VALUES(1, NOW(), 'Standard', 'brutto', 1, 1, 1)")->execute();        
-            $this->log('Added a new Pricelist', __CLASS__.'::'.__FUNCTION__, TL_CONFIGURATION);
-            $html .= '<p class="tl_info">Es wurde eine neue Preisliste angelegt.</p>';        
+        $objSummary = $this->Database->prepare("SHOW TABLES LIKE 'tl_shop_pricelists'")->execute();
+        if($objSummary->count())
+        {        
+            $objSummary = $this->Database->prepare("SELECT COUNT(*) AS total FROM tl_shop_pricelists WHERE id=?")->execute(1);
+            if(!$objSummary->total)
+            { 
+                $this->Database->prepare("INSERT INTO tl_shop_pricelists (id, tstamp, title, type, guests, currency, default_list) VALUES(1, NOW(), 'Standard', 'brutto', 1, 1, 1)")->execute();        
+                $this->log('Added a new Pricelist', __CLASS__.'::'.__FUNCTION__, TL_CONFIGURATION);
+                $html .= '<p class="tl_info">Es wurde eine neue Preisliste angelegt.</p>';        
+            }
         }
+
         
-        $objSummary = $this->Database->prepare("SELECT COUNT(*) AS total FROM tl_shop_produkte WHERE calculateTax = ''")->execute();
+        $objSummary = $this->Database->prepare("SHOW FIELDS FROM tl_shop_orders WHERE Field LIKE 'calculateTax'")->execute();
+        if($objSummary->count())
+        {
+            $objSummary = $this->Database->prepare("SELECT COUNT(*) AS total FROM tl_shop_produkte WHERE calculateTax = ''")->execute();
+            if($objSummary->total)
+            {
+    
+                \AcquistoShop\Helper\AcquistoUpdate::taxProducts();
+                $this->log('Calculate tax', __CLASS__.'::'.__FUNCTION__, TL_CONFIGURATION);
+                $html .= '<p class="tl_info">Die Produkte wurden manipuliert (Preise sind Netto).</p>';        
+            }
+        }
+
+        $objSummary = $this->Database->prepare("SHOW FIELDS FROM tl_shop_orders WHERE Field LIKE 'currency_default'")->execute();
         if($objSummary->total)
         {
-
-            \AcquistoShop\Helper\AcquistoUpdate::taxProducts();
-            $this->log('Calculate tax', __CLASS__.'::'.__FUNCTION__, TL_CONFIGURATION);
-            $html .= '<p class="tl_info">Die Produkte wurden manipuliert (Preise sind Netto).</p>';        
-        }
-
-        $objSummary = $this->Database->prepare("SELECT COUNT(*) AS total FROM tl_shop_orders WHERE currency_default = '' OR currency_selected = ''")->execute();
-        if($objSummary->total)
-        {
-
-            \AcquistoShop\Helper\AcquistoUpdate::cardCurrency();
-            $this->log('Orders updatet', __CLASS__.'::'.__FUNCTION__, TL_CONFIGURATION);
-            $html .= '<p class="tl_info">Bestellungen wurden aktualisiet.</p>';        
-        }
-        
+            $objSummary = $this->Database->prepare("SELECT COUNT(*) AS total FROM tl_shop_orders WHERE currency_default = '' OR currency_selected = ''")->execute();
+            if($objSummary->total)
+            {
+    
+                \AcquistoShop\Helper\AcquistoUpdate::cardCurrency();
+                $this->log('Orders updatet', __CLASS__.'::'.__FUNCTION__, TL_CONFIGURATION);
+                $html .= '<p class="tl_info">Bestellungen wurden aktualisiet.</p>';        
+            }
+        }        
         
         if(!$GLOBALS['TL_CONFIG']['agb']) {
             $html .= '<p class="tl_error">Sie haben noch keine Allgemeinen Gesch&auml;ftsbedingungen eingegeben <a href="' . ampersand($this->Environment->request) . '?do=acquistoShopEinstellungen">(bearbeiten)</a>.</p>';        

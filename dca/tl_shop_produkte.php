@@ -490,14 +490,26 @@ class tl_shop_produkte extends Backend
 
     public function changeButton($row, $href, $label, $title, $icon, $attributes)
     {
-        $objProdukt = new $GLOBALS['ACQUISTO_PCLASS'][$row['type']][0]($row['id']);
-
-        if($objProdukt->hasAttributes) {
-            return '<a title="edit" href="' . $this->addToUrl(str_replace("act=edit", "table=tl_shop_produkte_attribute", $href)) . "&id=" . $row['id'] . '"><img width="12" height="16" alt="' . $label . '" title="' . $title . '" src="system/themes/default/images/' . $icon . '"></a>&nbsp;';
-        } elseif($objProdukt->subTable) {
-            return '<a title="edit" href="' . $this->addToUrl(str_replace("act=edit", "table=" . $objProdukt->subTable, $href)) . "&id=" . $row['id'] . '"><img width="12" height="16" alt="' . $label . '" title="' . $title . '" src="system/themes/default/images/' . $icon . '"></a>&nbsp;';
-        } else {
-            return '<a title="edit" href="' . $this->addToUrl($href) . "&id=" . $row['id'] . '"><img width="12" height="16" alt="' . $label . '" title="' . $title . '" src="system/themes/default/images/' . $icon . '"></a>&nbsp;';
+        if($GLOBALS['ACQUISTO_PCLASS'][$row['type']][0]) 
+        {        
+            $objProdukt = new $GLOBALS['ACQUISTO_PCLASS'][$row['type']][0]($row['id']);
+    
+            if($objProdukt->hasAttributes) 
+            {
+                return '<a title="edit" href="' . $this->addToUrl(str_replace("act=edit", "table=tl_shop_produkte_attribute", $href)) . "&id=" . $row['id'] . '"><img width="12" height="16" alt="' . $label . '" title="' . $title . '" src="system/themes/default/images/' . $icon . '"></a>&nbsp;';
+            } 
+            elseif($objProdukt->subTable) 
+            {
+                return '<a title="edit" href="' . $this->addToUrl(str_replace("act=edit", "table=" . $objProdukt->subTable, $href)) . "&id=" . $row['id'] . '"><img width="12" height="16" alt="' . $label . '" title="' . $title . '" src="system/themes/default/images/' . $icon . '"></a>&nbsp;';
+            } 
+            else 
+            {
+                return '<a title="edit" href="' . $this->addToUrl($href) . "&id=" . $row['id'] . '"><img width="12" height="16" alt="' . $label . '" title="' . $title . '" src="system/themes/default/images/' . $icon . '"></a>&nbsp;';
+            }
+        }
+        else
+        {
+            return '<a title="edit" href="' . $this->addToUrl($href) . "&id=" . $row['id'] . '"><img width="12" height="16" alt="' . $label . '" title="' . $title . '" src="system/themes/default/images/' . $icon . '"></a>&nbsp;';        
         }
     }
 
