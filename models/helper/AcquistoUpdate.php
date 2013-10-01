@@ -76,28 +76,35 @@ class AcquistoUpdate {
             $newCosts   = array();
             $Tax   = $objDatabase->prepare("SELECT * FROM tl_shop_steuersaetze WHERE pid=? ORDER  BY tstamp ASC")->limit(1)->execute($objProdukte->steuer);           
             
-            foreach($arrayCosts as $Costs)
+            if(is_array($arrayCosts))
             {
-                $Costs = (object) $Costs; 
-                $pricelist = false;
-                            
-                if(!$Costs->group == 0 OR !$Costs->group) 
+                foreach($arrayCosts as $Costs)
                 {
-                    $pricelist = 1;
+                    $Costs = (object) $Costs; 
+                    $pricelist = false;
+                                
+                    if(!$Costs->group == 0 OR !$Costs->group) 
+                    {
+                        $pricelist = 1;
+                    }
+                                
+                    if($pricelist)
+                    {            
+                        $newCosts[] = array(
+                            'value'        => $Costs->value,
+                            'label'        => round($Costs->label / (($Tax->satz + 100) / 100), 2),          
+                            'specialcosts' => self::calculate($Tax->satz, $Costs->specialcosts),
+                            'pricelist'    => $pricelist
+                        );                
+                    }
+                    
+                    $objDatabase->prepare("UPDATE tl_shop_produkte SET preise = ?, calculateTax = '1' WHERE id = ?")->execute(serialize($newCosts), $objProdukte->id);
                 }
-                            
-                if($pricelist)
-                {            
-                    $newCosts[] = array(
-                        'value'        => $Costs->value,
-                        'label'        => round($Costs->label / (($Tax->satz + 100) / 100), 2),          
-                        'specialcosts' => self::calculate($Tax->satz, $Costs->specialcosts),
-                        'pricelist'    => $pricelist
-                    );                
-                }
-                
-                $objDatabase->prepare("UPDATE tl_shop_produkte SET preise = ?, calculateTax = '1' WHERE id = ?")->execute(serialize($newCosts), $objProdukte->id);
             }
+            else
+            {
+                $objDatabase->prepare("UPDATE tl_shop_produkte SET calculateTax = '1' WHERE id = ?")->execute($objProdukte->id);
+            }            
         }                                      
     } 
     

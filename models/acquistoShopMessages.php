@@ -82,13 +82,12 @@ class acquistoShopMessages extends \Backend
         }
 
         
-        $objSummary = $this->Database->prepare("SHOW FIELDS FROM tl_shop_orders WHERE Field LIKE 'calculateTax'")->execute();
+        $objSummary = $this->Database->prepare("SHOW FIELDS FROM tl_shop_produkte WHERE Field LIKE 'calculateTax'")->execute();
         if($objSummary->count())
         {
             $objSummary = $this->Database->prepare("SELECT COUNT(*) AS total FROM tl_shop_produkte WHERE calculateTax = ''")->execute();
             if($objSummary->total)
             {
-    
                 \AcquistoShop\Helper\AcquistoUpdate::taxProducts();
                 $this->log('Calculate tax', __CLASS__.'::'.__FUNCTION__, TL_CONFIGURATION);
                 $html .= '<p class="tl_info">Die Produkte wurden manipuliert (Preise sind Netto).</p>';        
@@ -105,7 +104,6 @@ class acquistoShopMessages extends \Backend
             $objSummary = $this->Database->prepare("SELECT COUNT(*) AS total FROM tl_shop_orders WHERE currency_default = '' OR currency_selected = ''")->execute();
             if($objSummary->total)
             {
-    
                 \AcquistoShop\Helper\AcquistoUpdate::cardCurrency();
                 $this->log('Orders updatet', __CLASS__.'::'.__FUNCTION__, TL_CONFIGURATION);
                 $html .= '<p class="tl_info">Bestellungen wurden aktualisiet.</p>';        
