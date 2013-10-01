@@ -160,7 +160,7 @@ $GLOBALS['TL_HOOKS']['getSystemMessages']['loadSystemmessages'] = array('Acquist
 $GLOBALS['TL_HOOKS']['executePreActions']['loadCategorietree']  = array('AcquistoShop\acquistoShopAjax', 'PRECategorieActions');
 $GLOBALS['TL_HOOKS']['executePostActions']['loadCategorietree'] = array('AcquistoShop\acquistoShopAjax', 'POSTCategorieActions');
 
-$GLOBALS['TL_CONFIG']['acquistoShopVersion'] = '1.3.2';
+$GLOBALS['TL_CONFIG']['acquistoShopVersion'] = '1.3.3';
 
 if (TL_MODE == 'BE') {
     $GLOBALS['TL_CSS'][] = 'system/modules/acquistoShop/assets/css/backend.css|all';

@@ -557,19 +557,6 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['contaoShop_referencePage'] = array
     'sql'                     => "int(10) NOT NULL default '0'"
 );
 
-
-
-
-//$GLOBALS['TL_DCA']['tl_module']['fields']['contaoShop_Template'] = array
-//(
-//    'label'                   => &$GLOBALS['TL_LANG']['tl_module']['contaoShop_Template'],
-//    'default'                 => 'contaoshop_produktliste_',
-//    'exclude'                 => true,
-//    'inputType'               => 'select',
-//    'options_callback'        => array('tl_module_contaoShop', 'get_contaoShopTemplates'),
-//    'eval'                    => array('cols'=>4, 'tl_class'=>'w50')
-//);
-
 class tl_module_acquistoShop extends Backend
 {
     public function __construct()
