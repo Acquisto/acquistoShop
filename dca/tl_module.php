@@ -578,22 +578,13 @@ class tl_module_acquistoShop extends Backend
         $this->import('BackendUser', 'User');
     }
     
-    public function get_basketFields($id) {
-#        $this->loadLanguageFile('tl_acquisto_basketfields');
-#        if(is_array($GLOBALS['TL_ACQCONF']['FIELDS'])) {
-            #foreach($GLOBALS['TL_ACQCONF']['FIELDS'] as $key => $label) {
-#            foreach($GLOBALS['TL_DCA']['tl_module']['fields']['acquistoShop_selFields'] as $key => $label) {
-#            
-#                $arrFields[$key] = isset($GLOBALS['TL_LANG']['tl_acquisto_basketfields'][$key][0]) ? $GLOBALS['TL_LANG']['tl_acquisto_basketfields'][$key][0] : $label; 
-#            }
-#        }
-#        return $arrFields;    
-    }
-
-    public function listPClasses() {
+    public function listPClasses() 
+    {
         $this->loadLanguageFile('tl_acquisto_pclasses');
-        if(is_array($GLOBALS['ACQUISTO_PCLASS'])) {
-            foreach($GLOBALS['ACQUISTO_PCLASS'] as $key => $value) {
+        if(is_array($GLOBALS['ACQUISTO_PCLASS'])) 
+        {
+            foreach($GLOBALS['ACQUISTO_PCLASS'] as $key => $value) 
+            {
                 $arrPClasses[$key] = $GLOBALS['TL_LANG']['tl_acquisto_pclasses'][$key][0];
             }
         }
