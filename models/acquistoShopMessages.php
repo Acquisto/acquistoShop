@@ -37,7 +37,8 @@ class acquistoShopMessages extends \Backend
 
     public function checkAcquistoState() {
         $this->clear();
-
+        $dbUpdate = false;
+        
         $objDatabase = $this->Database->prepare("SELECT COUNT(*) as totalSum FROM tl_module WHERE type = '?'")->execute('acquistoShop_Warenkorb');         
         if($objDatabase->totalSum) {
             $html .= '<p class="tl_error">Wir haben das Modul acquistoShop_Warenkorb in ModuleAcquistoBasket umbenannt, bitte aktualisieren Sie dieses.';
@@ -59,6 +60,10 @@ class acquistoShopMessages extends \Backend
                 $html .= '<p class="tl_info">Es wurde eine neue W&auml;hrung angelegt.</p>';        
             }
         }
+        else
+        {
+            $dbUpdate = true;
+        }
         
         $objSummary = $this->Database->prepare("SHOW TABLES LIKE 'tl_shop_pricelists'")->execute();
         if($objSummary->count())
@@ -70,6 +75,10 @@ class acquistoShopMessages extends \Backend
                 $this->log('Added a new Pricelist', __CLASS__.'::'.__FUNCTION__, TL_CONFIGURATION);
                 $html .= '<p class="tl_info">Es wurde eine neue Preisliste angelegt.</p>';        
             }
+        }
+        else
+        {
+            $dbUpdate = true;
         }
 
         
@@ -85,9 +94,13 @@ class acquistoShopMessages extends \Backend
                 $html .= '<p class="tl_info">Die Produkte wurden manipuliert (Preise sind Netto).</p>';        
             }
         }
+        else
+        {
+            $dbUpdate = true;
+        }
 
         $objSummary = $this->Database->prepare("SHOW FIELDS FROM tl_shop_orders WHERE Field LIKE 'currency_default'")->execute();
-        if($objSummary->total)
+        if($objSummary->count())
         {
             $objSummary = $this->Database->prepare("SELECT COUNT(*) AS total FROM tl_shop_orders WHERE currency_default = '' OR currency_selected = ''")->execute();
             if($objSummary->total)
@@ -98,6 +111,15 @@ class acquistoShopMessages extends \Backend
                 $html .= '<p class="tl_info">Bestellungen wurden aktualisiet.</p>';        
             }
         }        
+        else
+        {
+            $dbUpdate = true;
+        }
+        
+        if($dbUpdate)
+        {
+            $html .= '<p class="tl_error">Ein Datenbank update steht aus! Bitte besuchen Sie Erweiterungsverwaltung &raquo; Datenbank aktualisieren.</p>';                
+        }
         
         if(!$GLOBALS['TL_CONFIG']['agb']) {
             $html .= '<p class="tl_error">Sie haben noch keine Allgemeinen Gesch&auml;ftsbedingungen eingegeben <a href="' . ampersand($this->Environment->request) . '?do=acquistoShopEinstellungen">(bearbeiten)</a>.</p>';        
