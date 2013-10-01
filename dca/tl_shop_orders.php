@@ -300,27 +300,30 @@ class tl_shop_orders extends Backend {
         $html .= '        <td align="right"><b>Summe</b></td>';
         $html .= '    </tr>';
 
-        foreach($objOrder->items as $Item) {
-            $Item->attribute = unserialize($Item->attribute);
-            $objProdukt  = $this->Produkt->load($Item->produkt_id, $Item->attribute);
-            
-            $html .= '    <tr>';
-            $html .= '        <td>' . $Item->bezeichnung . '</td>';
-            $html .= '        <td align="right">' . $Item->menge . '</td>';
-            $html .= '        <td align="right">' . sprintf("%01.2f", $Item->preis) . ' ' . $objOrder->currency_default->iso_code . '</td>';
-            $html .= '        <td align="right">' . sprintf("%01.2f", ($Item->menge * $Item->preis)) . ' ' . $objOrder->currency_default->iso_code . '</td>';
-            $html .= '    </tr>';
-            
-            if(is_array($objProdukt->attribute_list)) {
+        if(is_array($objOrder->items))
+        {
+            foreach($objOrder->items as $Item) {
+                $Item->attribute = unserialize($Item->attribute);
+                $objProdukt  = $this->Produkt->load($Item->produkt_id, $Item->attribute);
+                
                 $html .= '    <tr>';
-                $html .= '        <td colspan="4">';
-                foreach($objProdukt->attribute_list as $item) {
-                    $html .= '- ' . $item->title . ': ' . $item->selection . '<br>';                    
-                }                            
-
-                $html .= '        </td>';
+                $html .= '        <td>' . $Item->bezeichnung . '</td>';
+                $html .= '        <td align="right">' . $Item->menge . '</td>';
+                $html .= '        <td align="right">' . sprintf("%01.2f", $Item->preis) . ' ' . $objOrder->currency_default->iso_code . '</td>';
+                $html .= '        <td align="right">' . sprintf("%01.2f", ($Item->menge * $Item->preis)) . ' ' . $objOrder->currency_default->iso_code . '</td>';
                 $html .= '    </tr>';
-            } 
+                
+                if(is_array($objProdukt->attribute_list)) {
+                    $html .= '    <tr>';
+                    $html .= '        <td colspan="4">';
+                    foreach($objProdukt->attribute_list as $item) {
+                        $html .= '- ' . $item->title . ': ' . $item->selection . '<br>';                    
+                    }                            
+    
+                    $html .= '        </td>';
+                    $html .= '    </tr>';
+                } 
+            }
         }
 
         $html .= '    <tr>';

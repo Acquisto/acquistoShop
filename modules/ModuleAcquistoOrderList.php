@@ -1,43 +1,21 @@
-<?php if (!defined('TL_ROOT')) die('You cannot access this file directly!');
-
+<?php 
 
 /**
- * Contao Open Source CMS
- * Copyright (C) 2005-2011 Leo Feyer
- *
- * Formerly known as TYPOlight Open Source CMS.
- *
- * This program is free software: you can redistribute it and/or
- * modify it under the terms of the GNU Lesser General Public
- * License as published by the Free Software Foundation, either
- * version 3 of the License, or (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * Lesser General Public License for more details.
- *
- * You should have received a copy of the GNU Lesser General Public
- * License along with this program. If not, please visit the Free
- * Software Foundation website at <http://www.gnu.org/licenses/>.
- *
+ * The AcquistoShop extension allows to create an online 
+ * store with the OpenSource Contao CMS. If you have
+ * questions visit our website: http://www.contao-acquisto.de  
+*
  * PHP version 5
- * @copyright  Leo Feyer 2005-2011
- * @author     Leo Feyer <http://www.contao.org>
- * @package    Backend
- * @license    LGPL
+ * @package	   AcquistoShop
+ * @subpackage Frontend
+ * @author     Sascha Brandhoff <brandhoff@contao-acquisto.de>
+ * @copyright  AcquistoShop
+ * @license    LGPL.
  * @filesource
  */
 
-/**
- * Class mod_acquistoShop_AGB
- *
- * Front end module "mod_acquistoShop_AGB".
- * @copyright  Sascha Brandhoff 2011
- * @author     Sascha Brandhoff <http://www.contao-acquisto.org>
- * @package    Controller
- */
-
+namespace AcquistoShop\Frontend;
+ 
 class ModuleAcquistoOrderList extends \Module
 {
 
@@ -67,7 +45,8 @@ class ModuleAcquistoOrderList extends \Module
             return $objTemplate->parse();
         }
 
-        if (!FE_USER_LOGGED_IN) {
+        if (!FE_USER_LOGGED_IN) 
+        {
             return '';
         }
 
