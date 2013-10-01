@@ -409,7 +409,7 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['acquistoShop_selFields'] = array
         				'label'                 => &$GLOBALS['TL_LANG']['tl_module']['acquistoShop_selFields_field'],
         				'exclude'               => true,
         				'inputType'             => 'select',
-        				'options_callback'      => array('tl_module', 'getEditableMemberProperties'),
+        				'options_callback'      => array('tl_module_acquistoShop', 'getEditableMemberProperties'),
         				'eval' 			            => array('style' => 'width:150px', 'includeBlankOption'=>true)
       			),
       			'mandatory' => array
@@ -452,7 +452,7 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['acquistoShop_selDeliver'] = array
         				'label'                 => &$GLOBALS['TL_LANG']['tl_module']['acquistoShop_selFields_field'],
         				'exclude'               => true,
         				'inputType'             => 'select',
-        				'options_callback'      => array('tl_module', 'getEditableMemberProperties'),
+        				'options_callback'      => array('tl_module_acquistoShop', 'getEditableMemberProperties'),
         				'eval' 			            => array('style' => 'width:150px', 'includeBlankOption'=>true)
       			),
       			'mandatory' => array
@@ -629,6 +629,19 @@ class tl_module_acquistoShop extends Backend
         
         return $returnVal;       
     }
+    
+  	public function getEditableMemberProperties()
+  	{
+        $objModule = new tl_module();
+        $arrFields = $objModule->getEditableMemberProperties();
+        
+        unset($arrFields['groups']);
+        unset($arrFields['username']);
+        unset($arrFields['password']);
+        unset($arrFields['newsletter']);
+        
+        return $arrFields;
+  	}     
 }
 
 ?>
