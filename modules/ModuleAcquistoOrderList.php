@@ -36,7 +36,7 @@ class ModuleAcquistoOrderList extends \Module
         {
             $objTemplate = new BackendTemplate('be_wildcard');
 
-            $objTemplate->wildcard = '### ACQUISTO BESTELLLISTE ###';
+            $objTemplate->wildcard = '### ACQUISTO ORDERLIST ###';
             $objTemplate->title = $this->headline;
             $objTemplate->id = $this->id;
             $objTemplate->link = $this->name;
@@ -59,46 +59,37 @@ class ModuleAcquistoOrderList extends \Module
      */
     protected function compile()
     {
-        if (FE_USER_LOGGED_IN) {
+        if (FE_USER_LOGGED_IN) 
+        {
             $this->import('FrontendUser', 'User');
-            $objBestellungen = $this->Database->prepare("SELECT * FROM tl_shop_orders WHERE member_id = ? ORDER BY tstamp DESC")->execute($this->User->id);
+            $this->import('AcquistoShop\acquistoShopOrders', 'Order');
+
+            $objBestellungen = $this->Database->prepare("SELECT id FROM tl_shop_orders WHERE member_id = ? ORDER BY tstamp DESC")->execute($this->User->id);
 
             $objPage = $this->Database->prepare("SELECT id, alias FROM tl_page WHERE id=?")->limit(1)->execute($this->contaoShop_jumpTo);
             $strUrl = $this->generateFrontendUrl($objPage->fetchAssoc(), '/order/%s');
 
-            while($objBestellungen->next()) {
+            while($objBestellungen->next()) 
+            {
                 $intCounter++;
+                $objBestellung = $this->Order->getComplettOrder($objBestellungen->id);
+                $objSummary    = $this->Order->getSummary($objBestellungen->id);
+                
+                $objBestellung->url = sprintf($strUrl, $objBestellungen->id);
 
-                $objPositionen   = $this->Database->prepare("SELECT SUM(menge * preis) AS endpreis FROM tl_shop_orders_items WHERE pid = ?")->execute($objBestellungen->id);
-                $objZahlungsart  = $this->Database->prepare("SELECT * FROM tl_shop_zahlungsarten WHERE id = ?")->execute($objBestellungen->zahlungsart_id);
-                $objVersandzonen = $this->Database->prepare("SELECT * FROM tl_shop_versandzonen WHERE id = ?")->execute($objBestellungen->versandzonen_id);
-
-                $arrBestellung = $objBestellungen->row();
-                $arrBestellung['versandpreis'] = sprintf("%01.2f", $arrBestellung['versandpreis']);
-                $arrBestellung['versandzone']  = $objVersandzonen->bezeichnung;
-                $arrBestellung['tstamp']       = $this->parseDate($GLOBALS['TL_CONFIG']['dateFormat'], $arrBestellung['tstamp']);
-                $arrBestellung['zahlungsart']  = $objZahlungsart->bezeichnung;
-                $arrBestellung['url']          = sprintf($strUrl, $arrBestellung['id']);
-
-                if($arrBestellung['gutscheine']) {
-                    $arrGutscheine = unserialize($arrBestellung['gutscheine']);
-                    $dblGutscheine = 0;
-                    if(is_array($arrGutscheine)) {
-
-                        foreach($arrGutscheine as $objGutschein) {
-                            $dblGutscheine = $dblGutscheine + $objGutschein->preis;
-                        }
-                    }
+                if(($intCounter % 2) == 1) 
+                {
+                    $objBestellung->css = 'even';
+                } 
+                else 
+                {
+                    $objBestellung->css = 'odd';
                 }
 
-                if(($intCounter % 2) == 1) {
-                    $arrBestellung['css']  = 'even';
-                } else {
-                    $arrBestellung['css']  = 'odd';
-                }
-
-                $arrBestellung['endpreis']     = sprintf("%01.2f", ($objPositionen->endpreis + $arrBestellung['versandpreis']) - $dblGutscheine);
-                $arrBestellungen[] = (object) $arrBestellung;
+                $arrBestellungen[] = (object) array(
+                    'Order'   => $objBestellung,
+                    'Summary' => $objSummary
+                );
             }
 
             $this->Template->Bestellungen = $arrBestellungen;

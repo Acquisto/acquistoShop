@@ -372,10 +372,10 @@ $GLOBALS['TL_DCA']['tl_shop_produkte'] = array
             'inputType'               => 'fileTree',
             'exclude'                 => true,
             'search'                  => false,
-            'eval'                    => array('multiple'=>true, 'orderField'=>'orderSRC', 'mandatory'=>false,'fieldType'=>'checkbox', 'files'=>true, 'filesOnly'=>true,'extensions'=>'jpg,png,gif'),
+            'eval'                    => array('multiple'=>true, 'orderField'=>'orderSRC_galerie', 'mandatory'=>false,'fieldType'=>'checkbox', 'files'=>true, 'filesOnly'=>true,'extensions'=>'jpg,png,gif'),
       			'sql'                     => "blob NULL"
         ),
-    		'orderSRC' => array
+    		'orderSRC_galerie' => array
     		(
     			'label'                   => &$GLOBALS['TL_LANG']['tl_content']['orderSRC'],
     			'sql'                     => "text NULL"
@@ -386,9 +386,14 @@ $GLOBALS['TL_DCA']['tl_shop_produkte'] = array
             'inputType'               => 'fileTree',
             'exclude'                 => true,
             'search'                  => false,
-            'eval'                    => array('mandatory'=>false,'fieldType'=>'checkbox', 'files'=>true,'filesOnly'=>true,'extensions'=>strtolower($GLOBALS['TL_CONFIG']['allowedDownload'])),
+            'eval'                    => array('multiple'=>true, 'orderField'=>'orderSRC_digital', 'mandatory'=>false,'fieldType'=>'checkbox', 'files'=>true,'filesOnly'=>true,'extensions'=>strtolower($GLOBALS['TL_CONFIG']['allowedDownload'])),
       			'sql'                     => "blob NOT NULL"
         ),
+    		'orderSRC_digital' => array
+    		(
+    			'label'                   => &$GLOBALS['TL_LANG']['tl_content']['orderSRC'],
+    			'sql'                     => "text NULL"
+    		),        
         'marked' => array
         (
             'label'                   => &$GLOBALS['TL_LANG']['tl_shop_produkte']['marked'],

@@ -55,7 +55,7 @@
                     <?php foreach($this->deliverFields as $Field): ?>
                     <p<?php if($Field->error): ?> class="error"<?php endif; ?>>
                         <label for="deliver_<?php echo $Field->key; ?>"><?php echo $Field->label; ?><?php if($Field->mandatory): ?>*<?php endif; ?></label>
-                        <input type="text" id="deliver_<?php echo $Field->key; ?>" name="deliver[<?php echo $Field->key; ?>]" value="<?php echo $this->Member['deliver_' . $Field->key]; ?>">
+                        <input type="text" id="deliver_<?php echo $Field->key; ?>" name="deliver[<?php echo $Field->key; ?>]" value="<?php echo $this->Deliver[$Field->key]; ?>">
                         <?php if($Field->infoMessage): ?><div class="info"><?php echo $Field->infoMessage; ?></div><?php endif; ?>
                         <?php if($Field->error): ?><div class="error"><?php echo $Field->errorMessage; ?></div><?php endif; ?>
                     </p>

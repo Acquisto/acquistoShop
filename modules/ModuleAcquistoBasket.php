@@ -56,7 +56,7 @@ class ModuleAcquistoBasket extends \Module
         $this->Import('AcquistoShop\acquistoShopBasket',        'Basket');
         $this->Import('AcquistoShop\acquistoShopPayment',       'Payment');
         $this->Import('AcquistoShop\acquistoShopProduktLoader', 'Produkt');
-        $this->Import('AcquistoShop\acquistoShopGutschein',     'Gutschein');
+//         $this->Import('AcquistoShop\acquistoShopGutschein',     'Gutschein');
         $this->Import('AcquistoShop\acquistoShopOrders',        'Orders');
         $this->import('FrontendUser',                           'Member');
         

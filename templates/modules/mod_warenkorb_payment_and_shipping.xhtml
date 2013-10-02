@@ -40,7 +40,7 @@
                 <?php foreach($this->Zahlungsarten as $item): ?>
                 <p>
                     <input type="radio" name="paymentMethod" value="<?php echo $item['sendID']; ?>" id="radio_pm_<?php echo $item['sendID']; ?>"<?php if($this->sel_pm == $item['sendID']): ?> checked="checked"<?php endif; ?>>
-                    <label for="radio_pm_<?php echo $item['sendID']; ?>"><?php echo $item['bezeichnung']; ?> (<?php echo sprintf("%01.2f", $item['preis']); ?> <?php echo $GLOBALS['TL_CONFIG']['currency_symbol']; ?>)</label>
+                    <label for="radio_pm_<?php echo $item['sendID']; ?>"><?php echo $item['bezeichnung']; ?> (<?php echo sprintf("%01.2f", $item['preis']); ?> <?php echo $this->Currency->iso_code; ?>)</label>
                 </p>
                 <?php endforeach; ?>
                 <?php endif; ?>

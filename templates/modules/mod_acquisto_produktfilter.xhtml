@@ -20,7 +20,7 @@
         <li>Preis
             <ul class="level_1">
                 <?php foreach($this->Preise as $Preis): ?>
-                <li<?php if($Preis->css): ?> class="<?php echo $Preis->css; ?>"<?php endif; ?>><a href="<?php echo $Preis->url; ?>"><?php echo $Preis->von; ?> - <?php echo $Preis->bis; ?> <?php echo $GLOBALS['TL_CONFIG']['currency_symbol']; ?>  (<?php echo $Preis->counter; ?>)</a></li>
+                <li<?php if($Preis->css): ?> class="<?php echo $Preis->css; ?>"<?php endif; ?>><a href="<?php echo $Preis->url; ?>"><?php echo $Preis->von; ?> - <?php echo $Preis->bis; ?> <?php echo $Preis->currency->iso_code; ?>  (<?php echo $Preis->counter; ?>)</a></li>
                 <?php endforeach; ?>
             </ul>
         </li>

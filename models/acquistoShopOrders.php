@@ -51,6 +51,8 @@ class acquistoShopOrders extends \Controller {
         $objOrder['currency_selected'] = (object) unserialize($objOrder['currency_selected']);
         $objOrder['payment']           = (object) $objPayment->row();
         $objOrder['shipping']          = (object) $objShipping->row();
+        $objOrder['versandpreis']      = sprintf("%01.2f", $objOrder['versandpreis']);
+        $objOrder['orderDate']         = $this->parseDate($GLOBALS['TL_CONFIG']['dateFormat'], $objOrder['tstamp']);
         
         return (object) $objOrder;        
     }
@@ -60,7 +62,11 @@ class acquistoShopOrders extends \Controller {
         $objOrderItems = $this->Database->prepare("SELECT * FROM tl_shop_orders_items WHERE pid=?")->execute($orderId);
         while($objOrderItems->next()) 
         {
-            $arrItems[] = (object) $objOrderItems->row();
+            $objItem = (object) $objOrderItems->row();
+            $objItem->preis = sprintf("%01.2f", $objItem->preis);  
+            $objItem->summe = sprintf("%01.2f", $objItem->preis * $objItem->menge);  
+            
+            $arrItems[] = $objItem; 
         }
         
         return $arrItems;
@@ -105,10 +111,6 @@ class acquistoShopOrders extends \Controller {
                 $objSteuer = $this->Database->prepare("SELECT * FROM tl_shop_steuersaetze WHERE pid=? && tstamp<? ORDER  BY tstamp ASC")->limit(1)->execute($Item->steuersatz_id, $objOrder->tstamp);                       
                 $arrSteuer[$objSteuer->satz]['total'] = sprintf("%01.2f", $arrSteuer[$objSteuer->satz]['total'] + ($Item->menge * $Item->preis));
                 $arrSteuer[$objSteuer->satz]['tax'] = sprintf("%01.2f", round(($arrSteuer[$objSteuer->satz]['total'] * (($objSteuer->satz + 100) / 100)) - $arrSteuer[$objSteuer->satz]['total'], 2));
-//                 $arrSteuer[$objSteuer->satz] = (object) array(
-//                     'gesamt' => $arrSteuer[$objSteuer->satz]->gesamt + ($Item->menge * $Item->preis),
-//                     'steuer' => round(($arrSteuer[$objSteuer->satz]->gesamt * (($objSteuer->satz + 100) / 100)) - $arrSteuer[$objSteuer->satz]->gesamt, 2)
-//                 );
             }
             
             foreach($arrSteuer as $key => $tax)

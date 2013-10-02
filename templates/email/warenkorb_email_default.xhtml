@@ -1,9 +1,9 @@
 WARENKORB
 
-<?php if(is_array($this->Shopping)): foreach($this->Shopping as $produkt): ?>
-Artikelnummer: <?php echo $produkt['produktnummer']; ?>
+<?php if(is_array($this->Shopping)): foreach($this->Shopping as $Product): ?>
+Artikelnummer: <?php echo $Product->produktnummer; ?>
 
-<?php echo $produkt['kaufmenge']; ?>x <?php echo $produkt['bezeichnung']; ?>
+<?php echo $Product->menge; ?>x <?php echo $Product->bezeichnung; ?>
 
 <?php if($produkt['attributelist']): ?>
 <?php foreach($produkt['attributelist'] as $attribute): ?>
@@ -12,7 +12,7 @@ Artikelnummer: <?php echo $produkt['produktnummer']; ?>
 <?php endforeach; ?>
 <?php endif; ?>
 
-<?php echo $produkt['kaufpreis']; ?> <?php echo $GLOBALS['TL_CONFIG']['currency_symbol']; ?> inkl. <?php echo $produkt['steuersatz']; ?>% MwSt. zzgl. Versandkosten
+<?php echo $Product->preis; ?> <?php echo $GLOBALS['TL_CONFIG']['currency_symbol']; ?> inkl. <?php echo $produkt['steuersatz']; ?>% MwSt. zzgl. Versandkosten
 -----------------------------------------------------
 <?php endforeach; endif; ?>
 <?php if($this->Gutscheine): foreach($this->Gutscheine as $Gutschein): ?>
@@ -23,33 +23,31 @@ Gutschein: <?php echo $Gutschein->code; ?>
 -----------------------------------------------------
 <?php endforeach; endif; ?>
 
-<?php if(is_array($this->Endpreis['steuer'])): foreach($this->Endpreis['steuer'] as $steuersatz => $werte): ?>
-<?php if($this->Versand['calculate_tax'] == 'N'): ?>
-abzgl. der enth. MwSt. <?php echo $steuersatz; ?>% auf <?php echo $werte['gesamt']; ?> <?php echo $GLOBALS['TL_CONFIG']['currency_symbol']; ?>: -<?php echo $werte['steuer']; ?> <?php echo $GLOBALS['TL_CONFIG']['currency_symbol']; ?>
-<? else: ?>
-enth. MwSt. <?php echo $steuersatz; ?>% auf <?php echo $werte['gesamt']; ?> <?php echo $GLOBALS['TL_CONFIG']['currency_symbol']; ?>: <?php echo $werte['steuer']; ?> <?php echo $GLOBALS['TL_CONFIG']['currency_symbol']; ?>
+<?php if(is_array($this->Taxes)): foreach($this->Taxes as $tax => $value): ?>
+<?php if($this->Shipping->calculate_tax): ?>
+zzgl. MwSt. <?php echo $tax; ?>% auf <?php echo $value->total; ?> <?php echo $GLOBALS['TL_CONFIG']['currency_symbol']; ?>: <?php echo $value->tax; ?> <?php echo $GLOBALS['TL_CONFIG']['currency_symbol']; ?>
 <?php endif; ?>
 <?php endforeach; endif; ?>
 
-Zwischensumme: <?php echo $this->Endpreis['zwischensumme']; ?> <?php echo $GLOBALS['TL_CONFIG']['currency_symbol']; ?>
+Zwischensumme: <?php echo $this->Total->subtotal; ?> <?php echo $GLOBALS['TL_CONFIG']['currency_symbol']; ?>
 
-Lieferung nach: <?php echo $this->Versand['versandzone']; ?>
+Lieferung nach: <?php echo $this->Shipping->bezeichnung; ?>
 
-Zahlungsart: <?php echo $this->Versand['zahlungsart']; ?>
+Zahlungsart: <?php echo $this->Payment->bezeichnung; ?>
 
-Versandkosten: <?php echo $this->Versand['versandkosten']; ?> <?php echo $GLOBALS['TL_CONFIG']['currency_symbol']; ?>
+Versandkosten: <?php echo $this->Total->shipping; ?> <?php echo $GLOBALS['TL_CONFIG']['currency_symbol']; ?>
 
-Gesamtpreis: <?php echo $this->Endpreis['endpreis']; ?> <?php echo $GLOBALS['TL_CONFIG']['currency_symbol']; ?>
+Gesamtpreis: <?php echo $this->Total->total; ?> <?php echo $GLOBALS['TL_CONFIG']['currency_symbol']; ?>
 
 
 KUNDENINFORMATIONEN
-<?php echo $this->Customer['firstname']; ?> <?php echo $this->Customer['lastname']; ?>
+<?php echo $this->Customer->firstname; ?> <?php echo $this->Customer->lastname; ?>
 
-<?php echo $this->Customer['street']; ?>
+<?php echo $this->Customer->street; ?>
 
-<?php echo $this->Customer['postal']; ?> <?php echo $this->Customer['city']; ?>
+<?php echo $this->Customer->postal; ?> <?php echo $this->Customer->city; ?>
 
-E-Mail <?php echo $this->Customer['email']; ?>
+E-Mail <?php echo $this->Customer->email; ?>
 
 
 BANKVERBINDUNG

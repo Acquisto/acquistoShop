@@ -11,25 +11,25 @@
                     <td>
                         <b>Rechnungsempf&auml;nger</b><br>
                         <br>
-                        <?php echo $this->Kunde->firstname; ?> <?php echo $this->Kunde->lastname; ?><br>
-                        <?php echo $this->Kunde->street; ?><br>
-                        <?php echo $this->Kunde->postalcode; ?> <?php echo $this->Kunde->city; ?><br>
+                        <?php echo $this->Order->customerData->firstname; ?> <?php echo $this->Order->customerData->lastname; ?><br>
+                        <?php echo $this->Order->customerData->street; ?><br>
+                        <?php echo $this->Order->customerData->postalcode; ?> <?php echo $this->Order->customerData->city; ?><br>
                     </td>
                     <?php if($this->Kunde->deliver_firstname OR $this->Kunde->deliver_lastname): ?>
                     <td>
                         <b>Versandadresse</b><br>
                         <br>
-                        <?php echo $this->Kunde->deliver_firstname; ?> <?php echo $this->Kunde->deliver_lastname; ?><br>
-                        <?php echo $this->Kunde->deliver_street; ?><br>
-                        <?php echo $this->Kunde->deliver_postalcode; ?> <?php echo $this->Kunde->deliver_city; ?><br>
+                        <?php echo $this->Order->deliverAddress->deliver_firstname; ?> <?php echo $this->Order->deliverAddress->deliver_lastname; ?><br>
+                        <?php echo $this->Order->deliverAddress->deliver_street; ?><br>
+                        <?php echo $this->Order->deliverAddress->deliver_postalcode; ?> <?php echo $this->Order->deliverAddress->deliver_city; ?><br>
                     </td>
                     <?php endif; ?>
                     <td>
                         <b>Zahlungsart &amp; Versandkosten</b><br>
                         <br>
-                        Zahlungsart: <?php echo $this->Zahlungsart->bezeichnung; ?><br>
-                        Versandzone: <?php echo $this->Versandzonen->bezeichnung; ?><br>
-                        Versandkosten: <?php echo $this->Bestellungen->versandpreis; ?> <?php echo $GLOBALS['TL_CONFIG']['currency_symbol']; ?><br>
+                        Zahlungsart: <?php echo $this->Order->payment->bezeichnung; ?><br>
+                        Versandzone: <?php echo $this->Order->shipping->bezeichnung; ?><br>
+                        Versandkosten: <?php echo $this->Order->versandpreis; ?> <?php echo $GLOBALS['TL_CONFIG']['currency_symbol']; ?><br>
                     </td>
                 </tr>
             </table>
@@ -40,7 +40,7 @@
         <fieldset>
             <legend>Positionen</legend>
 
-            <?php if($this->Elements): ?>
+            <?php if($this->Order->items): ?>
             <table cellpadding="0" cellspacing="0">
                 <tr>
                     <th class="title_row">Bezeichnung</th>
@@ -48,12 +48,12 @@
                     <th class="price_row">Preis</th>
                     <th class="summe_row">Summe</th>
                 </tr>
-                <?php foreach($this->Elements as $Element): ?>
+                <?php foreach($this->Order->items as $Element): ?>
                 <tr class="<?php echo $Element->css; ?>">
                     <td class="title_row"><?php echo $Element->bezeichnung; ?></td>
                     <td class="menge_row"><?php echo $Element->menge; ?></td>
-                    <td class="price_row"><?php echo $Element->preis; ?> <?php echo $GLOBALS['TL_CONFIG']['currency_symbol']; ?></td>
-                    <td class="summe_row"><?php echo $Element->summe; ?> <?php echo $GLOBALS['TL_CONFIG']['currency_symbol']; ?></td>
+                    <td class="price_row"><?php echo $Element->preis; ?> <?php echo $this->Order->currency_default->iso_code; ?></td>
+                    <td class="summe_row"><?php echo $Element->summe; ?> <?php echo $this->Order->currency_default->iso_code; ?></td>
                 </tr>
                 <?php endforeach; ?>
                 <?php if($this->Gutscheine): ?>
@@ -67,17 +67,19 @@
                 <?php endif; ?>
                 <tr>
                     <td class="title_row" colspan="3">Gesamtsumme:</td>
-                    <td class="summe_row"><?php echo $this->Endpreise->gesamtsumme; ?> <?php echo $GLOBALS['TL_CONFIG']['currency_symbol']; ?></td>
+                    <td class="summe_row"><?php echo $this->Total->subtotal; ?> <?php echo $this->Order->currency_default->iso_code; ?></td>
                 </tr>
-                <?php if($this->Gutscheine): ?>
+                <?php if($this->Taxes && $this->Order->calculate_tax): ?>
+                <?php foreach($this->Taxes as $tax => $values): ?>                
                 <tr>
-                    <td class="title_row" colspan="3">Gutscheine:</td>
-                    <td class="summe_row">-<?php echo $this->Endpreise->gutscheine; ?> <?php echo $GLOBALS['TL_CONFIG']['currency_symbol']; ?></td>
+                    <td class="title_row" colspan="3">zzgl. <?php echo $tax; ?>% MwSt. auf <?php echo $values->total; ?></td>
+                    <td class="summe_row"><?php echo $values->tax; ?> <?php echo $this->Order->currency_default->iso_code; ?></td>
                 </tr>
+                <?php endforeach; ?>
                 <?php endif; ?>
                 <tr>
                     <td class="title_row" colspan="3">Endpreis:</td>
-                    <td class="summe_row"><?php echo $this->Endpreise->endsumme; ?> <?php echo $GLOBALS['TL_CONFIG']['currency_symbol']; ?></td>
+                    <td class="summe_row"><?php echo $this->Total->total; ?> <?php echo $this->Order->currency_default->iso_code; ?></td>
                 </tr>
             </table>
             <?php endif; ?>
@@ -87,7 +89,7 @@
     <?php if(is_array($this->Downloads) && count($this->Downloads)): ?>
     <fieldset>
         <legend>Digitale Produkt-Downloads</legend>
-        <?php if($Bestellungen->payed): ?>
+        <?php if($this->Order->payed): ?>
         <ul>
             <?php foreach($this->Downloads as $Download): ?>
             <li><a href="<?php echo $this->DownloadUrl; ?>?file=<?php echo $Download; ?>"><?php echo $Download; ?></a></li>

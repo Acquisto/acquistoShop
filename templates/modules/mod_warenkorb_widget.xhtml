@@ -11,7 +11,7 @@
     <?php endif; ?>
     </div>
     <div id="valueCard">
-    Warenwert <span class="preis"><?php echo sprintf("%01.2f", $this->Endpreis); ?> <?php echo $GLOBALS['TL_CONFIG']['currency_symbol']; ?></span> inkl. MwSt.
+    Warenwert <span class="preis"><?php echo sprintf("%01.2f", $this->Endpreis); ?> <?php echo $this->Currency->iso_code; ?></span> <?php if($this->Pricelist->type == 'brutto'): ?>inkl.<?php elseif($this->Pricelist->type == 'netto'): ?>zzgl.<?php endif; ?> MwSt.
     </div>
     
     <p>

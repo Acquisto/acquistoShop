@@ -26,12 +26,12 @@
     <?php endif; ?>
 
 
-    <?php if(!$this->Catalog OR ($this->Catalog && $this->CatalogMoney)): ?>
-    <div class="preis">
-        Preis: <?php if($Produkt->getCosts(0)->special): ?>statt <?php endif; ?><?php echo $Produkt->getCosts(0)->costs; ?> <?php echo $GLOBALS['TL_CONFIG']['currency_symbol']; ?><?php if($Produkt->getCosts(0)->special): ?> nur <?php echo $Produkt->getCosts(0)->special; ?> <?php echo $GLOBALS['TL_CONFIG']['currency_symbol']; ?><?php endif; ?><br>
-        <small>
-            inkl. MwSt. zzgl <a href="<?php echo $this->Versand; ?>">Versandkosten</a><br>
-            <?php if($Produkt->preise[0]->grundpreis): ?>Grundpreis auf <?php echo $Produkt->berechnungsmenge; ?><?php echo $Produkt->mengeneinheit; ?> sind <?php echo sprintf("%01.2f", $Produkt->preise[0]->grundpreis); ?> <?php echo $GLOBALS['TL_CONFIG']['currency_symbol']; ?>.<?php endif; ?>
+    <?php if(!$this->Catalog OR ($this->Catalog && $this->CatalogMoney)): ?>    
+    <div class="preis">        
+        <div class="preis">Preis: <span class="<?php if($Produkt->getCosts(0)->special): ?>old_price<?php else: ?>default_price<?php endif;?>"><?php echo $Produkt->getCosts(0)->costs; ?> <?php echo $Produkt->getCosts(0)->pricelist->currency->iso_code; ?></span><?php if($Produkt->getCosts(0)->special): ?> nur <span class="special_price"><?php echo $Produkt->getCosts(0)->special; ?> <?php echo $Produkt->getCosts(0)->pricelist->currency->iso_code; ?></span><?php endif; ?></div>
+        <small>        
+            <?php if($Produkt->getCosts(0)->pricelist->type == 'brutto'): ?>inkl.<?php else: ?>zzgl.<?php endif; ?> <?php echo $Produkt->getCosts(0)->tax; ?>% MwSt. zzgl. <a href="<?php echo $this->Versand; ?>">Versandkosten</a><br>
+            <?php if($Produkt->getCosts(0)->basecosts): ?>Grundpreis auf <?php echo $Produkt->berechnungsmenge; ?><?php echo $Produkt->mengeneinheit; ?> sind <?php echo sprintf("%01.2f", $Produkt->getCosts(0)->basecosts); ?> <?php echo $Produkt->getCosts(0)->pricelist->currency->iso_code; ?>.<?php endif; ?>
         </small>
     </div>
     <?php endif; ?>

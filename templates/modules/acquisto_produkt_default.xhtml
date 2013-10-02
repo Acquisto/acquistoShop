@@ -46,18 +46,6 @@
         <div class="text"><?php echo $this->Produkt->beschreibung; ?></div>
     <?php endif; ?>
 
-    <?php if ($this->Produkt->varianten): ?>
-    <div class="attributes">
-        <form method="post" name="atttibute" id="attribute">
-            <div class="formbody">
-                <input type="hidden" name="REQUEST_TOKEN" value="<?php echo REQUEST_TOKEN; ?>">
-                <?php echo $this->Produkt->varianten; ?>
-                <input type="submit" value="Ausw&auml;hlen">
-            </div>
-        </form>
-    </div>
-    <?php endif; ?>
-
     <div class="formBasket">
         <form method="post">
             <div class="formbody">
@@ -78,26 +66,25 @@
                 <?php if(!$this->Produkt->catalogMode OR ($this->Produkt->catalogMode && $this->Produkt->catalogMoney)): ?>
 
                 <p>
-                    <?php if($this->Produkt->getCosts(0)->special): ?>statt <?php endif; ?><?php echo $this->Produkt->getCosts(0)->costs; ?> <?php echo $GLOBALS['TL_CONFIG']['currency_symbol']; ?><?php if($this->Produkt->getCosts(0)->special): ?> nur <?php echo $this->Produkt->getCosts(0)->special; ?> <?php echo $GLOBALS['TL_CONFIG']['currency_symbol']; ?><?php endif; ?><br>
+                    <div class="preis">        
+                        <div class="preis">Preis: <span class="<?php if($this->Produkt->getCosts(0)->special): ?>old_price<?php else: ?>default_price<?php endif;?>"><?php echo $this->Produkt->getCosts(0)->costs; ?> <?php echo $this->Produkt->getCosts(0)->pricelist->currency->iso_code; ?></span><?php if($this->Produkt->getCosts(0)->special): ?> nur <span class="special_price"><?php echo $this->Produkt->getCosts(0)->special; ?> <?php echo $this->Produkt->getCosts(0)->pricelist->currency->iso_code; ?></span><?php endif; ?></div>
+                        <small>        
+                            <?php if($this->Produkt->getCosts(0)->pricelist->type == 'brutto'): ?>inkl.<?php else: ?>zzgl.<?php endif; ?> <?php echo $this->Produkt->getCosts(0)->tax; ?>% MwSt. zzgl. <a href="<?php echo $this->Versand; ?>">Versandkosten</a><br>
+                            <?php if($this->Produkt->getCosts(0)->basecosts): ?>Grundpreis auf <?php echo $this->Produkt->berechnungsmenge; ?><?php echo $this->Produkt->mengeneinheit; ?> sind <?php echo sprintf("%01.2f", $this->Produkt->getCosts(0)->basecosts); ?> <?php echo $this->Produkt->getCosts(0)->pricelist->currency->iso_code; ?>.<?php endif; ?>
+                        </small>
+                    </div>                
+                </p>
+                <!--                
                     <?php if(is_array($this->Produkt->preise)): ?>
                 	  <?php foreach($this->Produkt->preise as $value): ?>
                 	  <?php if($value->menge != 0): ?>
             	    
-            	    ?>
-            	    ab <?php echo $value->menge; ?> Stk. <?php echo $value->preis; ?> <?php echo $GLOBALS['TL_CONFIG']['currency_symbol']; ?><br>
+            	    ab <?php echo $value->menge; ?> Stk. <?php echo $value->preis; ?> <?php echo $this->Produkt->getCosts(0)->pricelist->currency; ?><br>
             	    <?php endif; ?>
                   <?php endforeach; ?>
                   <?php endif; ?>
+                -->    
                     
-                    
-                    <?php if(!$this->Produkt->catalogMode OR $this->Produkt->catalogMoney): ?>
-                    <small>
-                        inkl. MwSt. zzgl <a href="<?php echo $this->Versand; ?>">Versandkosten</a><br>
-	                      <?php if($this->Produkt->getCosts->berechnungsmenge): ?>Grundpreis auf <?php echo $this->Produkt->berechnungsmenge; ?><?php echo $this->Produkt->mengeneinheit; ?> sind <?php echo sprintf("%01.2f", $this->Produkt->getCosts(0)->basecosts); ?> <?php echo $GLOBALS['TL_CONFIG']['currency_symbol']; ?>.<?php endif; ?>
-                    </small>
-                    
-                    <?php endif; ?>
-                </p>
 
 
                 <?php endif; ?>

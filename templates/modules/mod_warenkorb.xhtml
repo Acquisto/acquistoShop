@@ -34,8 +34,8 @@
                     <tr>
                         <td class="title_row"><?php if($item['url']): ?><a href="<?php echo $item['url']; ?>"><?php endif; ?><?php echo $item['bezeichnung']; ?><?php if($item['url']): ?></a><?php endif; ?></td>
                         <td class="menge_row"><input type="text" size="5" name="menge[<?php echo $key; ?>]" value="<?php echo $item['menge']; ?>"></td>
-                        <td class="price_row"><?php echo sprintf("%01.2f", $item['preis']); ?> <?php echo $GLOBALS['TL_CONFIG']['currency_symbol']; ?></td>
-                        <td class="summe_row"><?php echo sprintf("%01.2f", $item['summe']); ?> <?php echo $GLOBALS['TL_CONFIG']['currency_symbol']; ?></td>
+                        <td class="price_row"><?php echo sprintf("%01.2f", $item['preis']); ?> <?php echo $this->Currency->iso_code ?></td>
+                        <td class="summe_row"><?php echo sprintf("%01.2f", $item['summe']); ?> <?php echo $this->Currency->iso_code ?></td>
                         <td class="update_row"><input type="submit" name="update" value="Aktualisieren"></td>
                         <td class="remove_row"><input type="button" value="L&ouml;schen" onclick="location.href = '<?php echo $this->WarenkorbUrl; ?>?remove=<?php echo $key; ?>';"></td>
                     </tr>
@@ -50,25 +50,38 @@
                         </td>
                     </tr>
                     <?php endif; ?>
-                    <?php endforeach; ?>
+                    <?php endforeach; ?>                    
                     <?php if($this->Gutscheine): foreach($this->Gutscheine as $Gutschein): ?>
                     <tr>
                         <td class="title_row" colspan="3">Gutschein: <?php echo $Gutschein->code; ?></td>
-                        <td class="summe_row">-<?php echo $Gutschein->preis; ?> <?php echo $GLOBALS['TL_CONFIG']['currency_symbol']; ?></td>
+                        <td class="summe_row">-<?php echo $Gutschein->preis; ?> <?php echo $this->Currency->iso_code ?></td>
                         <td></td>
                     </tr>
                     <?php endforeach; endif; ?>
+
+                    <?php if($this->Zwischensumme): ?>
+                    <tr>
+                        <td colspan="3" class="checkout_row">Zwischensumme</td>
+                        <td class="summe_row"><?php echo sprintf("%01.2f", $this->Zwischensumme); ?> <?php echo $this->Currency->iso_code ?></td>
+                    </tr>
+                    <?php endif; ?>
+                    
+
                     <?php if($this->Steuern): ?>
                     <?php foreach($this->Steuern as $item): ?>
                     <tr>
-                        <td colspan="3" class="tax_row">enth. MwSt. <?php echo $item['satz']; ?>% auf <?php echo sprintf("%01.2f", $item['summe']); ?> <?php echo $GLOBALS['TL_CONFIG']['currency_symbol']; ?>:</td>
-                        <td class="summe_row"><?php echo sprintf("%01.2f", $item['wert']); ?> <?php echo $GLOBALS['TL_CONFIG']['currency_symbol']; ?></td>
+                        <td colspan="3" class="tax_row"><?php if($this->cardType == 'brutto'): ?>enth.<?php elseif($this->cardType == 'netto'): ?>zzgl.<?php endif; ?> MwSt. <?php echo $item['satz']; ?>% auf <?php echo sprintf("%01.2f", $item['summe']); ?> <?php echo $this->Currency->iso_code ?>:</td>
+                        <td class="summe_row"><?php echo sprintf("%01.2f", $item['wert']); ?> <?php echo $this->Currency->iso_code ?></td>
                     </tr>
                     <?php endforeach; ?>
                     <?php endif; ?>
                     <tr>
                         <td colspan="3" class="checkout_row">Endpreis</td>
-                        <td class="summe_row"><?php echo sprintf("%01.2f", $this->Endpreis); ?> <?php echo $GLOBALS['TL_CONFIG']['currency_symbol']; ?></td>
+                        <td class="summe_row"><?php echo sprintf("%01.2f", $this->Endpreis); ?> <?php echo $this->Currency->iso_code ?></td>
+                    </tr>
+                    <?php else: ?>
+                    <tr>
+                        <td colspan="4">Es befinden sich keine Produkte im Warenkorb.</td>
                     </tr>
                     <?php endif; ?>
                 </table>
@@ -86,7 +99,7 @@
                 <?php endif; ?>
                 <?php elseif($this->productsInBasket): ?>
                 <input type="button" value="&laquo; Weiter Einkaufen" onclick="history.back();">
-                <p class="error">Der Mindestbestellwert wurde nicht erreicht. Dieser betr&auml;gt <?php echo sprintf("%01.2f", $this->Bestellzahl); ?> <?php echo $GLOBALS['TL_CONFIG']['currency_symbol']; ?>.</p>
+                <p class="error">Der Mindestbestellwert wurde nicht erreicht. Dieser betr&auml;gt <?php echo sprintf("%01.2f", $this->Bestellzahl); ?> <?php echo $this->Currency->iso_code; ?>.</p>
                 <?php endif; ?>
             </div>
         </form>

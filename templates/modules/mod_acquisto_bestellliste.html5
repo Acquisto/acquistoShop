@@ -17,15 +17,15 @@
                     <th class="summe_row">Gesamtpreis</th>
                     <th class="button_row"></th>
                 </tr>
-                <?php if($this->Bestellungen): foreach($this->Bestellungen as $bestellung): ?>
-                <tr class="<?php echo $bestellung->css; ?>">
-                    <td class="title_row"><?php echo $bestellung->tstamp; ?></td>
-                    <td class="title_row"><?php echo $bestellung->versandzone; ?></td>
-                    <td class="title_row"><?php echo $bestellung->zahlungsart; ?></td>
-                    <td class="title_row"><?php if($bestellung->payed == 'Y'): ?>Ja<?php else: ?>Nein<?php endif; ?></td>
-                    <td class="price_row"><?php echo $bestellung->versandpreis; ?> <?php echo $GLOBALS['TL_CONFIG']['currency_symbol']; ?></td>
-                    <td class="summe_row"><?php echo $bestellung->endpreis; ?> <?php echo $GLOBALS['TL_CONFIG']['currency_symbol']; ?></td>
-                    <td class="button_row"><a href="<?php echo $bestellung->url; ?>">Details</a></td>
+                <?php if($this->Bestellungen): foreach($this->Bestellungen as $Order): ?>
+                <tr class="<?php echo $Order->Order->css; ?>">
+                    <td class="title_row"><?php echo $Order->Order->orderDate; ?></td>
+                    <td class="title_row"><?php echo $Order->Order->shipping->bezeichnung; ?></td>
+                    <td class="title_row"><?php echo $Order->Order->payment->bezeichnung; ?></td>
+                    <td class="title_row"><?php if($Order->Order->payed): ?>Ja<?php else: ?>Nein<?php endif; ?></td>
+                    <td class="price_row"><?php echo $Order->Order->versandpreis; ?> <?php echo $Order->Order->currency_default->iso_code; ?></td>
+                    <td class="summe_row"><?php echo $Order->Summary->total; ?> <?php echo $Order->Order->currency_default->iso_code; ?></td>
+                    <td class="button_row"><a href="<?php echo $Order->Order->url; ?>">Details</a></td>
                 </tr>
                 <?php endforeach; endif; ?>
             </table>

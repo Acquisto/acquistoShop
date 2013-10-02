@@ -14,7 +14,7 @@
     </div>
     <?php endif; ?>
     <?php if(is_array($Zahlungsarten['versandkosten'])): foreach($Zahlungsarten['versandkosten'] as $Versandkosten): ?>
-    <p>ab <?php echo $Versandkosten['ab_einkaufspreis']; ?> <?php echo $this->Symbol; ?> Einkaufwert <?php echo $Versandkosten['preis']; ?> <?php echo $GLOBALS['TL_CONFIG']['currency_symbol']; ?> Versandkosten</p>
+    <p>ab <?php echo $Versandkosten['ab_einkaufspreis']; ?> <?php echo $this->Currency->iso_code; ?> Einkaufwert <?php echo $Versandkosten['preis']; ?> <?php echo $this->Currency->iso_code; ?> Versandkosten</p>
     <?php endforeach; endif; ?>
     <?php endforeach; endif; ?>
     <?php endforeach; endif; ?>

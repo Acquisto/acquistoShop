@@ -36,7 +36,7 @@ class ModuleAcquistoOrderDetails extends \Module
         {
             $objTemplate = new BackendTemplate('be_wildcard');
 
-            $objTemplate->wildcard = '### ACQUISTO BESTELLDETAILS ###';
+            $objTemplate->wildcard = '### ACQUISTO ORDERDETAILS ###';
             $objTemplate->title = $this->headline;
             $objTemplate->id = $this->id;
             $objTemplate->link = $this->name;
@@ -58,73 +58,43 @@ class ModuleAcquistoOrderDetails extends \Module
      */
     protected function compile()
     {
-        global $objPage;
-
-        if (FE_USER_LOGGED_IN) {
+        if (FE_USER_LOGGED_IN) 
+        {
             $this->import('FrontendUser', 'User');
-            $this->import('AcquistoShop\acquistoShopProduktLoader', 'Produkt');
+            $this->Import('AcquistoShop\acquistoShopProduktLoader', 'Produkt');
+            $this->import('AcquistoShop\acquistoShopOrders', 'Order');
 
-            if($this->Input->Get('file')) {
-                $objFile = new File($this->Input->Get('file'));
+            if($this->Input->Get('file')) 
+            {
+                $objFile = new \File($this->Input->Get('file'));
                 $this->sendFileToBrowser($this->Input->Get('file', true));
 
             }
 
-            $objBestellungen = $this->Database->prepare("SELECT * FROM tl_shop_orders WHERE member_id = ? && id = ?")->limit(1)->execute($this->User->id, $this->Input->Get('order'));
-            $objCustomer     = (object) unserialize($objBestellungen->customerData);
-            $objDeliver      = (object) unserialize($objBestellungen->deliverAddress);
-            $objDetails      = $this->Database->prepare("SELECT * FROM tl_shop_orders_items WHERE pid = ? ORDER BY tstamp DESC")->execute($objBestellungen->id);
-
-            $objPositionen   = $this->Database->prepare("SELECT SUM(menge * preis) AS endpreis FROM tl_shop_orders_items WHERE pid = ?")->execute($objBestellungen->id);
-            $objZahlungsart  = $this->Database->prepare("SELECT * FROM tl_shop_zahlungsarten WHERE id = ?")->limit(1)->execute($objBestellungen->zahlungsart_id);
-            $objVersandzonen = $this->Database->prepare("SELECT * FROM tl_shop_versandzonen WHERE id = ?")->limit(1)->execute($objBestellungen->versandzonen_id);
-
-//            $objBestellungen->endpreis = $objPositionen->endpreis + $objBestellungen->versandpreis;
-
+            $objBestellung = $this->Order->getComplettOrder($this->Input->Get('order'));
             $arrDownloads    = array();
 
-            while($objDetails->next()) {
-                $intCounter++;
+            foreach($objBestellung->items as $Item) 
+            {
+                $objProdukt = $this->Produkt->load($Item->produkt_id);
 
-                $objElement = (object) $objDetails->row();
-//                $objProdukt = new Produkt($objElement->produkt_id);
+                if(is_array($downloadArray = unserialize($objProdukt->digital_product))) 
+                {                    
+                    foreach($downloadArray as $value)
+                    {
+                        $objFile = \FilesModel::findByPk($value);
+                        $arrDownloads[] = $objFile->path;
 
-                if(is_array($objProdukt->digital_product)) {
-                    $arrDownloads = array_merge($arrDownloads, $objProdukt->digital_product);
-                }
-
-                if(($intCounter % 2) == 1) {
-                    $objElement->css  = 'even';
-                } else {
-                    $objElement->css  = 'odd';
-                }
-
-                $objElement->summe = $objElement->preis * $objElement->menge;
-                $dblSumme = $dblSumme + $objElement->summe;
-
-                $arrElements[] = $objElement;
-            }
-
-            if($objBestellungen->gutscheine) {
-                $this->Template->Gutscheine = ($arrGutscheine = unserialize($objBestellungen->gutscheine));
-                if(is_array($arrGutscheine)) {
-
-                    foreach($arrGutscheine as $objGutschein) {
-                        $dblGutscheine = $dblGutscheine + $objGutschein->preis;
-                    }
+                    }                    
                 }
             }
 
-            $objDefault = $this->Database->prepare("SELECT id, alias FROM tl_page WHERE id=?")->limit(1)->execute($objPage->id);
-            $this->Template->DownloadUrl = sprintf($this->generateFrontendUrl($objDefault->fetchAssoc(), '/order/%s'), $this->Input->Get('order'));
-
-            $this->Template->Endpreise    = (object) array('gesamtsumme' => sprintf("%01.2f", $dblSumme), 'gutscheine' => sprintf("%01.2f", $dblGutscheine), 'endsumme' => sprintf("%01.2f", $dblSumme - $dblGutscheine));
-            $this->Template->Downloads    = $arrDownloads;
-            $this->Template->Elements     = $arrElements;
-            $this->Template->Bestellungen = (object) $objBestellungen->row();
-            $this->Template->Kunde        = $objCustomer;
-            $this->Template->Zahlungsart  = (object) $objZahlungsart->row();
-            $this->Template->Versandzonen = (object) $objVersandzonen->row();
+            $this->Template->DownloadUrl = substr($this->Environment->requestUri, 1);
+            $this->Template->Downloads   = $arrDownloads;
+            
+            $this->Template->Total = $this->Order->getSummary($this->Input->Get('order'));
+            $this->Template->Order = $objBestellung;
+            $this->Template->Taxes = $this->Order->getTaxes($this->Input->Get('order'));
         }
     }
 
