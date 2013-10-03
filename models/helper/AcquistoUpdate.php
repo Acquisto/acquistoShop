@@ -44,7 +44,8 @@ class AcquistoUpdate {
         $objDatabase->prepare("UPDATE tl_module SET type=? WHERE type=?")->execute('ModuleAcquistoCategories',     'acquistoShop_Warengruppen');    
         $objDatabase->prepare("UPDATE tl_module SET type=? WHERE type=?")->execute('ModuleAcquistoProductFilter',  'acquistoShop_Produktfiler');            
         $objDatabase->prepare("UPDATE tl_module SET type=? WHERE type=?")->execute('ModuleAcquistoShipping',       'acquistoShop_Versand');
-        $objDatabase->prepare("UPDATE tl_module SET type=? WHERE type=?")->execute('ModuleAcquistoBasket',       'acquistoShop_Warenkorb');        
+        $objDatabase->prepare("UPDATE tl_module SET type=? WHERE type=?")->execute('ModuleAcquistoBasket',         'acquistoShop_Warenkorb');        
+        $objDatabase->prepare("UPDATE tl_module SET type=? WHERE type=?")->execute('ModuleAcquistoFilterList',     'acquistoShop_Filterliste');    
 
         $objDatabase->prepare("UPDATE tl_module SET type=? WHERE type=?")->execute('ModuleAcquistoFilterList',     'ModuleFilterList');    
         $objDatabase->prepare("UPDATE tl_module SET type=? WHERE type=?")->execute('ModuleAcquistoTerms',          'ModuleAcquistoAGB');    
