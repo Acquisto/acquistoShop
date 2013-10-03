@@ -19,7 +19,7 @@ http://www.contao-acquisto.de/de/unterstuetzen/microsupporter.html
 
 
 Template
-========
+--------
 
 Wir haben unser Demo-Template zum Download bereitgestellt. Dieses ist für die Contao 
 Versionen 2.11.x und 3.1.x verfügbar. Bei dem Demo-Template handelt es sich um die in 
@@ -30,7 +30,7 @@ http://www.contao-acquisto.de/de/service-support/template.html
 
 
 Urheber
-=======
+-------
 pixelSpread.de, Sascha Brandhoff
 Eisenbahnstr. 13
 D-35274 Kirchhain, Marburg-Biedenkopf, Hessen
