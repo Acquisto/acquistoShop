@@ -7,7 +7,7 @@ DemoShop ist unter http://demo.contao-acquisto.de erreichbar.
 
 
 Als Microsupporter unterstützten!
-=================================
+---------------------------------
 
 Mit einer Microsupport-Mitgliedschaft unterstützen Sie die dauerhafte Entwicklung 
 von Acquisto. Wie wir schon des öfteren erwähnt haben, möchten wir den aktuellen 
