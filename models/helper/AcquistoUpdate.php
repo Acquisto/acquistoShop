@@ -31,25 +31,25 @@ class AcquistoUpdate {
         /**
          * Module umbennen
          */                 
-        $objDatabase->prepare("UPDATE tl_module SET type=? WHERE type=?")->execute('ModuleAcquistoProductDetails', 'acquistoShop_Produktdetails');    
-        $objDatabase->prepare("UPDATE tl_module SET type=? WHERE type=?")->execute('ModuleAcquistoCoupon',         'acquistoShop_Gutschein');    
-        $objDatabase->prepare("UPDATE tl_module SET type=? WHERE type=?")->execute('ModuleAcquistoTagCloud',       'acquistoShop_TagCloud');    
-        $objDatabase->prepare("UPDATE tl_module SET type=? WHERE type=?")->execute('ModuleAcquistoOrderList',      'acquistoShop_Bestellliste');    
-        $objDatabase->prepare("UPDATE tl_module SET type=? WHERE type=?")->execute('ModuleAcquistoOrderDetails',   'acquistoShop_Bestelldetails');    
-        $objDatabase->prepare("UPDATE tl_module SET type=? WHERE type=?")->execute('ModuleAcquistoBasketWidget',   'acquistoShop_WarenkorbWidget');    
-        $objDatabase->prepare("UPDATE tl_module SET type=? WHERE type=?")->execute('ModuleAcquistoRecently',       'acquistoShop_Recent');
-        $objDatabase->prepare("UPDATE tl_module SET type=? WHERE type=?")->execute('ModuleAcquistoProductList',    'acquistoShop_Produktliste');            
-        $objDatabase->prepare("UPDATE tl_module SET type=? WHERE type=?")->execute('ModuleAcquistoBreadcrumb',     'acquistoShop_Breadcrumb');            
-        $objDatabase->prepare("UPDATE tl_module SET type=? WHERE type=?")->execute('ModuleAcquistoSearch',         'acquistoShop_Suche');    
-        $objDatabase->prepare("UPDATE tl_module SET type=? WHERE type=?")->execute('ModuleAcquistoCategories',     'acquistoShop_Warengruppen');    
-        $objDatabase->prepare("UPDATE tl_module SET type=? WHERE type=?")->execute('ModuleAcquistoProductFilter',  'acquistoShop_Produktfiler');            
-        $objDatabase->prepare("UPDATE tl_module SET type=? WHERE type=?")->execute('ModuleAcquistoShipping',       'acquistoShop_Versand');
-        $objDatabase->prepare("UPDATE tl_module SET type=? WHERE type=?")->execute('ModuleAcquistoBasket',         'acquistoShop_Warenkorb');        
-        $objDatabase->prepare("UPDATE tl_module SET type=? WHERE type=?")->execute('ModuleAcquistoFilterList',     'acquistoShop_Filterliste');    
+        $objDatabase->prepare("UPDATE tl_module SET type=? WHERE type=?")->execute('acquisto_productdetails', 'acquistoShop_Produktdetails');    
+        $objDatabase->prepare("UPDATE tl_module SET type=? WHERE type=?")->execute('acquisto_coupon',         'acquistoShop_Gutschein');    
+        $objDatabase->prepare("UPDATE tl_module SET type=? WHERE type=?")->execute('acquisto_tagcloud',       'acquistoShop_TagCloud');    
+        $objDatabase->prepare("UPDATE tl_module SET type=? WHERE type=?")->execute('acquisto_orderlist',      'acquistoShop_Bestellliste');    
+        $objDatabase->prepare("UPDATE tl_module SET type=? WHERE type=?")->execute('acquisto_orderdetails',   'acquistoShop_Bestelldetails');    
+        $objDatabase->prepare("UPDATE tl_module SET type=? WHERE type=?")->execute('acquisto_basketwidget',   'acquistoShop_WarenkorbWidget');    
+        $objDatabase->prepare("UPDATE tl_module SET type=? WHERE type=?")->execute('acquisto_recently',       'acquistoShop_Recent');
+        $objDatabase->prepare("UPDATE tl_module SET type=? WHERE type=?")->execute('acquisto_productlist',    'acquistoShop_Produktliste');            
+        $objDatabase->prepare("UPDATE tl_module SET type=? WHERE type=?")->execute('acquisto_breadcrumb',     'acquistoShop_Breadcrumb');            
+        $objDatabase->prepare("UPDATE tl_module SET type=? WHERE type=?")->execute('acquisto_search',         'acquistoShop_Suche');    
+        $objDatabase->prepare("UPDATE tl_module SET type=? WHERE type=?")->execute('acquisto_categories',     'acquistoShop_Warengruppen');    
+        $objDatabase->prepare("UPDATE tl_module SET type=? WHERE type=?")->execute('acquisto_productfilter',  'acquistoShop_Produktfiler');            
+        $objDatabase->prepare("UPDATE tl_module SET type=? WHERE type=?")->execute('acquisto_shipping',       'acquistoShop_Versand');
+        $objDatabase->prepare("UPDATE tl_module SET type=? WHERE type=?")->execute('acquisto_basket',         'acquistoShop_Warenkorb');        
+        $objDatabase->prepare("UPDATE tl_module SET type=? WHERE type=?")->execute('acquisto_filterList',     'acquistoShop_Filterliste');    
 
-        $objDatabase->prepare("UPDATE tl_module SET type=? WHERE type=?")->execute('ModuleAcquistoFilterList',     'ModuleFilterList');    
-        $objDatabase->prepare("UPDATE tl_module SET type=? WHERE type=?")->execute('ModuleAcquistoTerms',          'ModuleAcquistoAGB');    
-        $objDatabase->prepare("UPDATE tl_module SET type=? WHERE type=?")->execute('ModuleAcquistoShipping',       'ModuleAcquistoVersand');            
+        $objDatabase->prepare("UPDATE tl_module SET type=? WHERE type=?")->execute('acquisto_filterlist',     'ModuleFilterList');    
+        $objDatabase->prepare("UPDATE tl_module SET type=? WHERE type=?")->execute('acquisto_terms',          'ModuleAcquistoAGB');    
+        $objDatabase->prepare("UPDATE tl_module SET type=? WHERE type=?")->execute('acquisto_shipping',       'ModuleAcquistoVersand');            
         
         
         /**

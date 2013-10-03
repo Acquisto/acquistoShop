@@ -109,29 +109,54 @@ $GLOBALS['BE_MOD']['acquisto_Settings'] = array(
 /**
  * Frontend module
  */
+// array_insert($GLOBALS['FE_MOD']['acquisto'], 0, array
+// (
+//     'ModuleAcquistoProductDetails' => 'ModuleAcquistoProductDetails',
+//     'ModuleAcquistoProductList'    => 'ModuleAcquistoProductList',
+//     'ModuleAcquistoBreadcrumb'     => 'ModuleAcquistoBreadcrumb',
+//     'ModuleAcquistoSearch'         => 'ModuleAcquistoSearch',
+//     'ModuleAcquistoShipping'       => 'ModuleAcquistoShipping',
+//     'ModuleAcquistoCurrency'       => 'ModuleAcquistoCurrency',
+//     'ModuleAcquistoCategories'     => 'ModuleAcquistoCategories',
+//     'ModuleAcquistoBasket'         => 'ModuleAcquistoBasket',
+//     'ModuleAcquistoTagCloud'       => 'ModuleAcquistoTagCloud',
+//     'ModuleAcquistoCoupon'         => 'ModuleAcquistoCoupon',
+//     'ModuleAcquistoOrderList'      => 'ModuleAcquistoOrderList',
+//     'ModuleAcquistoOrderDetails'   => 'ModuleAcquistoOrderDetails',
+//     'ModuleAcquistoFilterList'     => 'ModuleAcquistoFilterList',
+//     'ModuleAcquistoTerms'          => 'ModuleAcquistoTerms'
+// ));
+// 
+// array_insert($GLOBALS['FE_MOD']['acquisto_widget'], 0, array
+// (
+//     'ModuleAcquistoBasketWidget'   => 'ModuleAcquistoBasketWidget',
+//     'ModuleAcquistoProductFilter'  => 'ModuleAcquistoProductFilter',
+//     'ModuleAcquistoRecently'       => 'ModuleAcquistoRecently'
+// ));
+
 array_insert($GLOBALS['FE_MOD']['acquisto'], 0, array
 (
-    'ModuleAcquistoProductDetails' => 'ModuleAcquistoProductDetails',
-    'ModuleAcquistoProductList'    => 'ModuleAcquistoProductList',
-    'ModuleAcquistoBreadcrumb'     => 'ModuleAcquistoBreadcrumb',
-    'ModuleAcquistoSearch'         => 'ModuleAcquistoSearch',
-    'ModuleAcquistoShipping'       => 'ModuleAcquistoShipping',
-    'ModuleAcquistoCurrency'       => 'ModuleAcquistoCurrency',
-    'ModuleAcquistoCategories'     => 'ModuleAcquistoCategories',
-    'ModuleAcquistoBasket'         => 'ModuleAcquistoBasket',
-    'ModuleAcquistoTagCloud'       => 'ModuleAcquistoTagCloud',
-    'ModuleAcquistoCoupon'         => 'ModuleAcquistoCoupon',
-    'ModuleAcquistoOrderList'      => 'ModuleAcquistoOrderList',
-    'ModuleAcquistoOrderDetails'   => 'ModuleAcquistoOrderDetails',
-    'ModuleAcquistoFilterList'     => 'ModuleAcquistoFilterList',
-    'ModuleAcquistoTerms'          => 'ModuleAcquistoTerms'
+    'acquisto_productdetails' => 'ModuleAcquistoProductDetails',
+    'acquisto_productlist'    => 'ModuleAcquistoProductList',
+    'acquisto_breadcrumb'     => 'ModuleAcquistoBreadcrumb',
+    'acquisto_search'         => 'ModuleAcquistoSearch',
+    'acquisto_shipping'       => 'ModuleAcquistoShipping',
+    'acquisto_currency'       => 'ModuleAcquistoCurrency',
+    'acquisto_categories'     => 'ModuleAcquistoCategories',
+    'acquisto_basket'         => 'ModuleAcquistoBasket',
+    'acquisto_tagcloud'       => 'ModuleAcquistoTagCloud',
+    'acquisto_coupon'         => 'ModuleAcquistoCoupon',
+    'acquisto_orderlist'      => 'ModuleAcquistoOrderList',
+    'acquisto_orderdetails'   => 'ModuleAcquistoOrderDetails',
+    'acquisto_filterlist'     => 'ModuleAcquistoFilterList',
+    'acquisto_terms'          => 'ModuleAcquistoTerms'
 ));
 
 array_insert($GLOBALS['FE_MOD']['acquisto_widget'], 0, array
 (
-    'ModuleAcquistoBasketWidget'   => 'ModuleAcquistoBasketWidget',
-    'ModuleAcquistoProductFilter'  => 'ModuleAcquistoProductFilter',
-    'ModuleAcquistoRecently'       => 'ModuleAcquistoRecently'
+    'acquisto_basketwidget'   => 'ModuleAcquistoBasketWidget',
+    'acquisto_productfilter'  => 'ModuleAcquistoProductFilter',
+    'acquisto_recently'       => 'ModuleAcquistoRecently'
 ));
 
 

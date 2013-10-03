@@ -39,16 +39,9 @@ class acquistoShopMessages extends \Backend
         $this->clear();
         $dbUpdate = false;
         
-        $objDatabase = $this->Database->prepare("SELECT COUNT(*) as totalSum FROM tl_module WHERE type = '?'")->execute('acquistoShop_Warenkorb');         
-        if($objDatabase->totalSum) {
-            $html .= '<p class="tl_error">Wir haben das Modul acquistoShop_Warenkorb in ModuleAcquistoBasket umbenannt, bitte aktualisieren Sie dieses.';
-        }        
-
         /**
          * Basisdatensätze anlegen
-         */
-        
-        
+         */                
         $objSummary = $this->Database->prepare("SHOW TABLES LIKE 'tl_shop_currency'")->execute();
         if($objSummary->count())
         {        
