@@ -1,19 +1,37 @@
-acquistoShop
-============
+Acquisto Webshop für das Contao CMS
+===================================
 
-Acquisto ist eine Webshop Application für das Contao CMS (www.contao.org).
-Die Webseite des Acquisto Shop finden Sie auf www.contao-acquisto.de der 
+Acquisto ist eine Webshop Application für das Contao CMS (http://www.contao.org).
+Die Webseite des Acquisto Shop finden Sie auf http://www.contao-acquisto.de der 
 DemoShop ist unter http://demo.contao-acquisto.de erreichbar.
 
-Die Software steht unter der LGPL. Wir würden finanzieren dieses Projekt 
-über Spenden und sind auf diese angewiesen. Deshalb freuen wir uns über
-finanzielle Unterstützung. Mehr dazu erfahren Sie auf unserer Internetseite.
 
-Wir hoffen Sie haben Spaß und Erfolg mit dem Acquisto Shop.
+Als Microsupporter unterstützten!
+=================================
+
+Mit einer Microsupport-Mitgliedschaft unterstützen Sie die dauerhafte Entwicklung 
+von Acquisto. Wie wir schon des öfteren erwähnt haben, möchten wir den aktuellen 
+Acquisto Support (Forum, Telefon, E-Mail) und die kontinuierliche Entwicklung 
+aufrecht erhalten. Dieses geht leider nur mit entsprechenden finanziellen Mitteln. 
+Aus diesem Grund machen wir Ihnen ein interessantes Angebot.
+
+http://www.contao-acquisto.de/de/unterstuetzen/microsupporter.html
+
+
+Template
+========
+
+Wir haben unser Demo-Template zum Download bereitgestellt. Dieses ist für die Contao 
+Versionen 2.11.x und 3.1.x verfügbar. Bei dem Demo-Template handelt es sich um die in 
+der Online-Demo verhandene Version, die Sie unter http://demo.contao-acquisto.de ansehen 
+können.
+
+http://www.contao-acquisto.de/de/service-support/template.html
+
 
 Urheber
 =======
 pixelSpread.de, Sascha Brandhoff
-Sandfeld 13
-D-35396 Gießen, Hessen
+Eisenbahnstr. 13
+D-35274 Kirchhain, Marburg-Biedenkopf, Hessen
 email: ecommerce@contao-acquisto.de
