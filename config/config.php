@@ -109,30 +109,6 @@ $GLOBALS['BE_MOD']['acquisto_Settings'] = array(
 /**
  * Frontend module
  */
-// array_insert($GLOBALS['FE_MOD']['acquisto'], 0, array
-// (
-//     'ModuleAcquistoProductDetails' => 'ModuleAcquistoProductDetails',
-//     'ModuleAcquistoProductList'    => 'ModuleAcquistoProductList',
-//     'ModuleAcquistoBreadcrumb'     => 'ModuleAcquistoBreadcrumb',
-//     'ModuleAcquistoSearch'         => 'ModuleAcquistoSearch',
-//     'ModuleAcquistoShipping'       => 'ModuleAcquistoShipping',
-//     'ModuleAcquistoCurrency'       => 'ModuleAcquistoCurrency',
-//     'ModuleAcquistoCategories'     => 'ModuleAcquistoCategories',
-//     'ModuleAcquistoBasket'         => 'ModuleAcquistoBasket',
-//     'ModuleAcquistoTagCloud'       => 'ModuleAcquistoTagCloud',
-//     'ModuleAcquistoCoupon'         => 'ModuleAcquistoCoupon',
-//     'ModuleAcquistoOrderList'      => 'ModuleAcquistoOrderList',
-//     'ModuleAcquistoOrderDetails'   => 'ModuleAcquistoOrderDetails',
-//     'ModuleAcquistoFilterList'     => 'ModuleAcquistoFilterList',
-//     'ModuleAcquistoTerms'          => 'ModuleAcquistoTerms'
-// ));
-// 
-// array_insert($GLOBALS['FE_MOD']['acquisto_widget'], 0, array
-// (
-//     'ModuleAcquistoBasketWidget'   => 'ModuleAcquistoBasketWidget',
-//     'ModuleAcquistoProductFilter'  => 'ModuleAcquistoProductFilter',
-//     'ModuleAcquistoRecently'       => 'ModuleAcquistoRecently'
-// ));
 
 array_insert($GLOBALS['FE_MOD']['acquisto'], 0, array
 (
