@@ -41,7 +41,14 @@ class acquistoShopMessages extends \Backend
         
         /**
          * Basisdatensätze anlegen
-         */                
+         */
+
+        $objSummary = $this->Database->prepare("SELECT id,selector FROM tl_style WHERE selector LIKE '%.mod_acquistoShop%' OR selector LIKE '%.mod_ModuleAcquisto%' OR selector LIKE '%.mod_ModuleFilterList%'")->execute();
+        if($objSummary->count())
+        {
+            \AcquistoShop\Helper\AcquistoUpdate::rebuildCss();
+        }         
+                         
         $objSummary = $this->Database->prepare("SHOW TABLES LIKE 'tl_shop_currency'")->execute();
         if($objSummary->count())
         {        
