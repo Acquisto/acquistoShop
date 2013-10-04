@@ -35,9 +35,7 @@ Versionen 2.11.x und 3.1.x verfügbar. Bei dem Demo-Template handelt es sich um 
 der Online-Demo verhandene Version, die Sie unter http://demo.contao-acquisto.de ansehen 
 können.
 
-Zugangsdaten bei Nutzung des Templates:_
-Benutzername: Administrator_
-Passwort:     87654321_
+***Zugangsdaten bei Nutzung des Templates:*** Administrator / 87654321
 
 http://www.contao-acquisto.de/de/service-support/template.html
 
