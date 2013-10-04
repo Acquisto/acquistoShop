@@ -386,7 +386,7 @@ class acquistoShopCosts extends \Controller {
     }
     
     public function buildCostsData($costsArray, $volumen = null, $calculate = null) 
-    {
+    {        
         if(is_array($costsArray)) 
         {
             foreach($costsArray as $costItem)            
@@ -417,7 +417,7 @@ class acquistoShopCosts extends \Controller {
                     
                     $objItem = (object) array(
                         'tax'       => $this->tax,
-                        'basecots'  => $costItem['basecosts'],
+                        'basecosts' => $costItem['basecosts'],
                         'pricelist' => $this->getPricelist($costItem['pricelist']),
                         'costs'     => $costItem['label'],
                         'amount'    => $costItem['value'],
