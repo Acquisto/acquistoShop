@@ -47,6 +47,10 @@ class acquistoShopMessages extends \Backend
         if($objSummary->count())
         {
             \AcquistoShop\Helper\AcquistoUpdate::rebuildCss();
+            $this->Import('StyleSheets');
+            $this->StyleSheets->updateStyleSheets();
+            $this->log('All StyleSheets updated', __CLASS__.'::'.__FUNCTION__, TL_CONFIGURATION);
+            $html .= '<p class="tl_info">Es wurde alle StyleSheets geupdatet.</p>';        
         }         
                          
         $objSummary = $this->Database->prepare("SHOW TABLES LIKE 'tl_shop_currency'")->execute();
