@@ -61,23 +61,23 @@ $GLOBALS['TL_LANG']['MOD']['acquistoShopCurrency']                = array('W&aum
 $GLOBALS['TL_LANG']['FMD']['acquisto']                            = 'Acquisto';
 $GLOBALS['TL_LANG']['FMD']['acquisto_widget']                     = 'Acquisto Widgets';
 
-$GLOBALS['TL_LANG']['FMD']['ModuleAcquistoProductDetails']        = array('Produktdetails', '');
-$GLOBALS['TL_LANG']['FMD']['ModuleAcquistoProductList']           = array('Produktliste', '');
-$GLOBALS['TL_LANG']['FMD']['ModuleAcquistoCurrency']              = array('W&auml;hrungswechsel');
-$GLOBALS['TL_LANG']['FMD']['ModuleAcquistoSearch']                = array('Suchformular', '');
-$GLOBALS['TL_LANG']['FMD']['ModuleAcquistoBasket']                = array('Warenkorb', '');
-$GLOBALS['TL_LANG']['FMD']['ModuleAcquistoBasketWidget']          = array('Warenkorb Widget', '');
-$GLOBALS['TL_LANG']['FMD']['ModuleAcquistoCategories']            = array('Warengruppen', '');
-$GLOBALS['TL_LANG']['FMD']['ModuleAcquistoTerms']                 = array('Allgemeine Gesch&auml;ftsbedingungen', '');
-$GLOBALS['TL_LANG']['FMD']['ModuleAcquistoBreadcrumb']            = array('Breadcrumb', '');
-$GLOBALS['TL_LANG']['FMD']['ModuleAcquistoTagCloud']              = array('TagCloud', '');
-$GLOBALS['TL_LANG']['FMD']['ModuleAcquistoShipping']              = array('Versand und Zahlung', '');
-$GLOBALS['TL_LANG']['FMD']['ModuleAcquistoRecently']              = array('Zuletzt angeschaut', '');
-$GLOBALS['TL_LANG']['FMD']['ModuleAcquistoCoupon']                = array('Gutschein', '');
-$GLOBALS['TL_LANG']['FMD']['ModuleAcquistoProductFilter']         = array('Produktfilter', '');
-$GLOBALS['TL_LANG']['FMD']['ModuleAcquistoFilterList']            = array('Filterliste', '');
-$GLOBALS['TL_LANG']['FMD']['ModuleAcquistoOrderDetails']          = array('Bestelldetails', '');
-$GLOBALS['TL_LANG']['FMD']['ModuleAcquistoOrderList']             = array('Bestellliste', '');
+$GLOBALS['TL_LANG']['FMD']['acquisto_productdetails']        = array('Produktdetails', '');
+$GLOBALS['TL_LANG']['FMD']['acquisto_productlist']           = array('Produktliste', '');
+$GLOBALS['TL_LANG']['FMD']['acquisto_currency']              = array('W&auml;hrungswechsel');
+$GLOBALS['TL_LANG']['FMD']['acquisto_search']                = array('Suchformular', '');
+$GLOBALS['TL_LANG']['FMD']['acquisto_basket']                = array('Warenkorb', '');
+$GLOBALS['TL_LANG']['FMD']['acquisto_basketwidget']          = array('Warenkorb Widget', '');
+$GLOBALS['TL_LANG']['FMD']['acquisto_categories']            = array('Warengruppen', '');
+$GLOBALS['TL_LANG']['FMD']['acquisto_terms']                 = array('Allgemeine Gesch&auml;ftsbedingungen', '');
+$GLOBALS['TL_LANG']['FMD']['acquisto_breadcrumb']            = array('Breadcrumb', '');
+$GLOBALS['TL_LANG']['FMD']['acquisto_tagcloud']              = array('TagCloud', '');
+$GLOBALS['TL_LANG']['FMD']['acquisto_shipping']              = array('Versand und Zahlung', '');
+$GLOBALS['TL_LANG']['FMD']['acquisto_recently']              = array('Zuletzt angeschaut', '');
+$GLOBALS['TL_LANG']['FMD']['acquisto_coupon']                = array('Gutschein', '');
+$GLOBALS['TL_LANG']['FMD']['acquisto_productfilter']         = array('Produktfilter', '');
+$GLOBALS['TL_LANG']['FMD']['acquisto_filterlist']            = array('Filterliste', '');
+$GLOBALS['TL_LANG']['FMD']['acquisto_orderdetails']          = array('Bestelldetails', '');
+$GLOBALS['TL_LANG']['FMD']['acquisto_orderlist']             = array('Bestellliste', '');
                       
 
 /**

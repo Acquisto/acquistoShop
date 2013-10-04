@@ -158,139 +158,139 @@
 				<source>Acquisto Widgets</source>
 				<target>Acquisto Widgets</target>
 			</trans-unit>
-			<trans-unit id="FMD.ModuleAcquistoProductDetails.0">
+			<trans-unit id="FMD.acquisto_productdetails.0">
 				<source>Produktdetails</source>
 				<target>Produktdetails</target>
 			</trans-unit>
-			<trans-unit id="FMD.ModuleAcquistoProductDetails.1">
+			<trans-unit id="FMD.acquisto_productdetails.1">
 				<source></source>
 				<target></target>
 			</trans-unit>
-			<trans-unit id="FMD.ModuleAcquistoProductList.0">
+			<trans-unit id="FMD.acquisto_productlist.0">
 				<source>Produktliste</source>
 				<target>Produktliste</target>
 			</trans-unit>
-			<trans-unit id="FMD.ModuleAcquistoProductList.1">
+			<trans-unit id="FMD.acquisto_productlist.1">
 				<source></source>
 				<target></target>
 			</trans-unit>
-			<trans-unit id="FMD.ModuleAcquistoCurrency.0">
+			<trans-unit id="FMD.acquisto_currency.0">
 				<source>Währungswechsel</source>
 				<target>Währungswechsel</target>
 			</trans-unit>
-			<trans-unit id="FMD.ModuleAcquistoCurrency.1">
+			<trans-unit id="FMD.acquisto_currency.1">
 				<source></source>
 				<target></target>
 			</trans-unit>
-			<trans-unit id="FMD.ModuleAcquistoSearch.0">
+			<trans-unit id="FMD.acquisto_search.0">
 				<source>Suchformular</source>
 				<target>Suchformular</target>
 			</trans-unit>
-			<trans-unit id="FMD.ModuleAcquistoSearch.1">
+			<trans-unit id="FMD.acquisto_search.1">
 				<source></source>
 				<target></target>
 			</trans-unit>
-			<trans-unit id="FMD.ModuleAcquistoBasket.0">
+			<trans-unit id="FMD.acquisto_basket.0">
 				<source>Warenkorb</source>
 				<target>Warenkorb</target>
 			</trans-unit>
-			<trans-unit id="FMD.ModuleAcquistoBasket.1">
+			<trans-unit id="FMD.acquisto_basket.1">
 				<source></source>
 				<target></target>
 			</trans-unit>
-			<trans-unit id="FMD.ModuleAcquistoBasketWidget.0">
+			<trans-unit id="FMD.acquisto_basketwidget.0">
 				<source>Warenkorb Widget</source>
 				<target>Warenkorb Widget</target>
 			</trans-unit>
-			<trans-unit id="FMD.ModuleAcquistoBasketWidget.1">
+			<trans-unit id="FMD.acquisto_basketwidget.1">
 				<source></source>
 				<target></target>
 			</trans-unit>
-			<trans-unit id="FMD.ModuleAcquistoCategories.0">
+			<trans-unit id="FMD.acquisto_categories.0">
 				<source>Warengruppen</source>
 				<target>Warengruppen</target>
 			</trans-unit>
-			<trans-unit id="FMD.ModuleAcquistoCategories.1">
+			<trans-unit id="FMD.acquisto_categories.1">
 				<source></source>
 				<target></target>
 			</trans-unit>
-			<trans-unit id="FMD.ModuleAcquistoTerms.0">
+			<trans-unit id="FMD.acquisto_terms.0">
 				<source>Allgemeine Geschäftsbedingungen</source>
 				<target>Allgemeine Geschäftsbedingungen</target>
 			</trans-unit>
-			<trans-unit id="FMD.ModuleAcquistoTerms.1">
+			<trans-unit id="FMD.acquisto_terms.1">
 				<source></source>
 				<target></target>
 			</trans-unit>
-			<trans-unit id="FMD.ModuleAcquistoBreadcrumb.0">
+			<trans-unit id="FMD.acquisto_breadcrumb.0">
 				<source>Breadcrumb</source>
 				<target>Breadcrumb</target>
 			</trans-unit>
-			<trans-unit id="FMD.ModuleAcquistoBreadcrumb.1">
+			<trans-unit id="FMD.acquisto_breadcrumb.1">
 				<source></source>
 				<target></target>
 			</trans-unit>
-			<trans-unit id="FMD.ModuleAcquistoTagCloud.0">
+			<trans-unit id="FMD.acquisto_tagcloud.0">
 				<source>TagCloud</source>
 				<target>TagCloud</target>
 			</trans-unit>
-			<trans-unit id="FMD.ModuleAcquistoTagCloud.1">
+			<trans-unit id="FMD.acquisto_tagcloud.1">
 				<source></source>
 				<target></target>
 			</trans-unit>
-			<trans-unit id="FMD.ModuleAcquistoShipping.0">
+			<trans-unit id="FMD.acquisto_shipping.0">
 				<source>Versand und Zahlung</source>
 				<target>Versand und Zahlung</target>
 			</trans-unit>
-			<trans-unit id="FMD.ModuleAcquistoShipping.1">
+			<trans-unit id="FMD.acquisto_shipping.1">
 				<source></source>
 				<target></target>
 			</trans-unit>
-			<trans-unit id="FMD.ModuleAcquistoRecently.0">
+			<trans-unit id="FMD.acquisto_recently.0">
 				<source>Zuletzt angeschaut</source>
 				<target>Zuletzt angeschaut</target>
 			</trans-unit>
-			<trans-unit id="FMD.ModuleAcquistoRecently.1">
+			<trans-unit id="FMD.acquisto_recently.1">
 				<source></source>
 				<target></target>
 			</trans-unit>
-			<trans-unit id="FMD.ModuleAcquistoCoupon.0">
+			<trans-unit id="FMD.acquisto_coupon.0">
 				<source>Gutschein</source>
 				<target>Gutschein</target>
 			</trans-unit>
-			<trans-unit id="FMD.ModuleAcquistoCoupon.1">
+			<trans-unit id="FMD.acquisto_coupon.1">
 				<source></source>
 				<target></target>
 			</trans-unit>
-			<trans-unit id="FMD.ModuleAcquistoProductFilter.0">
+			<trans-unit id="FMD.acquisto_productfilter.0">
 				<source>Produktfilter</source>
 				<target>Produktfilter</target>
 			</trans-unit>
-			<trans-unit id="FMD.ModuleAcquistoProductFilter.1">
+			<trans-unit id="FMD.acquisto_productfilter.1">
 				<source></source>
 				<target></target>
 			</trans-unit>
-			<trans-unit id="FMD.ModuleAcquistoFilterList.0">
+			<trans-unit id="FMD.acquisto_filterlist.0">
 				<source>Filterliste</source>
 				<target>Filterliste</target>
 			</trans-unit>
-			<trans-unit id="FMD.ModuleAcquistoFilterList.1">
+			<trans-unit id="FMD.acquisto_filterlist.1">
 				<source></source>
 				<target></target>
 			</trans-unit>
-			<trans-unit id="FMD.ModuleAcquistoOrderDetails.0">
+			<trans-unit id="FMD.acquisto_orderdetails.0">
 				<source>Bestelldetails</source>
 				<target>Bestelldetails</target>
 			</trans-unit>
-			<trans-unit id="FMD.ModuleAcquistoOrderDetails.1">
+			<trans-unit id="FMD.acquisto_orderdetails.1">
 				<source></source>
 				<target></target>
 			</trans-unit>
-			<trans-unit id="FMD.ModuleAcquistoOrderList.0">
+			<trans-unit id="FMD.acquisto_orderlist.0">
 				<source>Bestellliste</source>
 				<target>Bestellliste</target>
 			</trans-unit>
-			<trans-unit id="FMD.ModuleAcquistoOrderList.1">
+			<trans-unit id="FMD.acquisto_orderlist.1">
 				<source></source>
 				<target></target>
 			</trans-unit>
