@@ -168,13 +168,12 @@ class AcquistoUpdate {
     {
         $objDatabase = self::DB();
 
-        $objProdukte = $objDatabase->prepare("SELECT id,preise FROM tl_shop_produkte WHERE calculateTax = ''")->execute();
+        $objProdukte = $objDatabase->prepare("SELECT id,preise,steuer FROM tl_shop_produkte WHERE calculateTax = ''")->execute();
         while($objProdukte->next()) 
         {
             $arrayCosts = unserialize($objProdukte->preise);
             $newCosts   = array();
             $Tax   = $objDatabase->prepare("SELECT * FROM tl_shop_steuersaetze WHERE pid=? ORDER  BY tstamp ASC")->limit(1)->execute($objProdukte->steuer);           
-            
             if(is_array($arrayCosts))
             {
                 foreach($arrayCosts as $Costs)
@@ -197,8 +196,9 @@ class AcquistoUpdate {
                         );                
                     }
                     
-                    $objDatabase->prepare("UPDATE tl_shop_produkte SET preise = ?, calculateTax = '1' WHERE id = ?")->execute(serialize($newCosts), $objProdukte->id);
                 }
+                
+                $objDatabase->prepare("UPDATE tl_shop_produkte SET preise = ?, calculateTax = '1' WHERE id = ?")->execute(serialize($newCosts), $objProdukte->id);
             }
             else
             {

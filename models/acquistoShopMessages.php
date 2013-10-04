@@ -19,23 +19,21 @@ namespace AcquistoShop;
 class acquistoShopMessages extends \Backend
 {
     private $html;
-    protected $feeds = array(
-        'http://www.contao-acquisto.de/blog.xml', 
-//        'https://api.twitter.com/1/statuses/user_timeline.rss?screen_name=acquistoshop', 
-        'http://feeds.feedburner.com/shopbetreiberblog'
-    );
 
-    public function __construct() {
+    public function __construct() 
+    {
         parent::__construct();
         $this->import('AcquistoShop\acquistoShop', 'Shop');
     }
     
-    private function clear() {
+    private function clear() 
+    {
         $this->html = null;
     }
 
 
-    public function checkAcquistoState() {
+    public function checkAcquistoState() 
+    {
         $this->clear();
         $dbUpdate = false;
         
@@ -49,6 +47,7 @@ class acquistoShopMessages extends \Backend
             \AcquistoShop\Helper\AcquistoUpdate::rebuildCss();
             $this->Import('StyleSheets');
             $this->StyleSheets->updateStyleSheets();
+            
             $this->log('All StyleSheets updated', __CLASS__.'::'.__FUNCTION__, TL_CONFIGURATION);
             $html .= '<p class="tl_info">Es wurde alle StyleSheets geupdatet.</p>';        
         }         
