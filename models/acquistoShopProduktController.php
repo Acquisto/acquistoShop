@@ -53,7 +53,6 @@ class acquistoShopProduktController extends \Controller
         $this->Costs->setGroups($this->Member->groups);
         $this->Costs->setTax($this->steuer);        
         $this->Costs->buildCostsData(unserialize($this->preise), $this->inhalt, $this->berechnungsmenge);
-#    public function buildCostsData($costsArray, $volumen = null, $calculate = null) 
     }
 
     public function buildCss() {
