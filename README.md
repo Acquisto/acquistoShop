@@ -18,6 +18,15 @@ Aus diesem Grund machen wir Ihnen ein interessantes Angebot.
 http://www.contao-acquisto.de/de/unterstuetzen/microsupporter.html
 
 
+MultiColumnWizard
+-----------------
+Acquisto benötigt die Erweiterung MultiColumnWizard von MEN AT WORK. Diese kann 
+entweder über das Extension-Reposity (Erweiterungskatalog) installiert werden oder
+manuell von der nachfolgenden Seite heruntergeladen werden.
+
+https://contao.org/de/extension-list/view/MultiColumnWizard.de.html
+
+
 Template
 --------
 
