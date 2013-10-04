@@ -174,10 +174,10 @@ class ModuleAcquistoFilterList extends \Module
                 $Produkt->url           = $strUrl;
                 $Produkt->default_image = $this->contaoShop_imageSrc;
     
-                $objFile = FilesModel::findByPk($Produkt->preview_image);
+                $objFile = \FilesModel::findByPk($Produkt->preview_image);
     
                 if($Produkt->preview_image) {
-                    $objImage = new stdClass();
+                    $objImage = new \stdClass();
                     $this->addImageToTemplate($objImage, array (
                             'addImage'    => 1,
                             'singleSRC'   => $objFile->path,
@@ -220,7 +220,7 @@ class ModuleAcquistoFilterList extends \Module
             $this->acquistoShop_listTemplate = 'acquisto_list_default';
         }
 
-        $Template = new FrontendTemplate($this->acquistoShop_listTemplate);
+        $Template = new \FrontendTemplate($this->acquistoShop_listTemplate);
         $Template->Versand  = $strVersandpage;
         $Template->Produkte = $arrProdukte;
         $Template->Catalog      = $GLOBALS['TL_CONFIG']['catalogFunction'];

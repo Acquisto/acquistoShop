@@ -66,6 +66,12 @@ class AcquistoUpdate {
         $objDatabase->prepare("UPDATE tl_shop_orders SET currency_selected = '" . serialize(\AcquistoShop\acquistoShopCosts::getCurrency(\AcquistoShop\acquistoShopCosts::getDefaultCurrency())) . "' WHERE currency_selected = ''")->execute();                     
     }
     
+    static function rebuildCss()
+    {
+        $objDatabase = self::DB();
+        
+    }
+    
     static function taxProducts()
     {
         $objDatabase = self::DB();
