@@ -430,13 +430,13 @@ class acquistoShopBasket extends \Controller
         }
 
         if($cardData['agbFile']) {
-            $objFile = FilesModel::findByPk($cardData['agbFile']);
+            $objFile = \FilesModel::findByPk($cardData['agbFile']);
             $objEmail->attachFile(TL_ROOT . '/' . $objFile->path);
         }
 
         if(is_array($cardData['attachments']) && count($cardData['attachments'])) {
             foreach($cardData['attachments'] as $attachment) {
-                $objFile = FilesModel::findByPk($attachment);
+                $objFile = \FilesModel::findByPk($attachment);
                 $objEmail->attachFile(TL_ROOT . '/' . $objFile->path);
             }
         }
