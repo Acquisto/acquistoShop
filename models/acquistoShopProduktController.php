@@ -35,7 +35,6 @@ class acquistoShopProduktController extends \Controller
         parent::__construct();
         $this->Import('Database');
         
-#        $this->Import('AcquistoShop\acquistoShopMember', 'Member');        
         $this->Import('AcquistoShop\acquistoShopCosts', 'Costs');
         
         if(FE_USER_LOGGED_IN) 

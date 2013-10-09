@@ -77,6 +77,11 @@ class ModuleAcquistoProductDetails extends \Module
         $objProdukt = $this->Database->prepare("SELECT id FROM tl_shop_produkte WHERE alias=?")->execute($this->Input->Get('produkt'));
         $objProdukt = $this->Produkt->load($objProdukt->id, $this->Input->Post('additionalBasket'));
 
+        if($objProdukt->template) 
+        {
+            $objProdukt->strTemplate = $objProdukt->template;
+        }
+        
         $produktTemplate = new \FrontendTemplate($objProdukt->strTemplate);
 
         /**
