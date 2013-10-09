@@ -3,8 +3,8 @@
 /**
  * The AcquistoShop extension allows to create an online 
  * store with the OpenSource Contao CMS. If you have
- * questions visit our website: http://www.contao-acquisto.de  
-*
+ * questions our website: http://www.contao-acquisto.de  
+ *
  * PHP version 5
  * @package	   AcquistoShop
  * @subpackage Frontend
@@ -34,7 +34,7 @@ class ModuleAcquistoOrderDetails extends \Module
     {
         if (TL_MODE == 'BE')
         {
-            $objTemplate = new BackendTemplate('be_wildcard');
+            $objTemplate = new \BackendTemplate('be_wildcard');
 
             $objTemplate->wildcard = '### ACQUISTO ORDERDETAILS ###';
             $objTemplate->title = $this->headline;

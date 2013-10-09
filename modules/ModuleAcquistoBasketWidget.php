@@ -33,10 +33,10 @@ class ModuleAcquistoBasketWidget extends \Module
     public function generate()
     {
         if (TL_MODE == 'BE')
-        {
-            $objTemplate = new BackendTemplate('be_wildcard');
+        {                             
+            $objTemplate = new \BackendTemplate('be_wildcard');
 
-            $objTemplate->wildcard = '### ACQUISTO BASKET WIDGET ###';
+            $objTemplate->wildcard = '### ACQUISTO BASKET  WIDGET ###';
             $objTemplate->title = $this->headline;
             $objTemplate->id = $this->id;
             $objTemplate->link = $this->name;

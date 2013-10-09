@@ -34,9 +34,9 @@ class ModuleAcquistoSearch extends \Module
     {
         if (TL_MODE == 'BE')
         {
-            $objTemplate = new BackendTemplate('be_wildcard');
+            $objTemplate = new \BackendTemplate('be_wildcard');
 
-            $objTemplate->wildcard = '### ACQUISTO SUCHE ###';
+            $objTemplate->wildcard = '### ACQUISTO SEARCH ###';
             $objTemplate->title = $this->headline;
             $objTemplate->id = $this->id;
             $objTemplate->link = $this->name;

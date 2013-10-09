@@ -1,9 +1,9 @@
 <?php
 
 /**
- * The AcquistoShop extension allows the creation a OnlineStore width 
- * the OpenSource Contao CMS. For Question visit our Website under
- * http://www.contao-acquisto.de  
+ * The AcquistoShop extension allows to create an online 
+ * store with the OpenSource Contao CMS. If you have
+ * questions our website: http://www.contao-acquisto.de  
  *
  * PHP version 5
  * @package	   AcquistoShop
@@ -34,7 +34,7 @@ class ModuleAcquistoTagCloud extends \Module
     {
         if (TL_MODE == 'BE')
         {
-            $objTemplate = new BackendTemplate('be_wildcard');
+            $objTemplate = new \BackendTemplate('be_wildcard');
 
             $objTemplate->wildcard = '### ACQUISTO TAG-CLOUD ###';
             $objTemplate->title = $this->headline;
