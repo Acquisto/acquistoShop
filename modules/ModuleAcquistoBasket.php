@@ -411,12 +411,6 @@ class ModuleAcquistoBasket extends \Module
             $this->Template = new \FrontendTemplate('mod_warenkorb_access_denied');                
         }
     
-        if($this->contaoShop_jumpTo) 
-        {
-            $objPage = $this->Database->prepare("SELECT id, alias FROM tl_page WHERE id=?")->limit(1)->execute($this->contaoShop_jumpTo);
-            $strUrl  = $this->generateFrontendUrl($objPage->fetchAssoc(), '/produkt/%s');
-        }
-        
         $this->basketData = $this->Session->get('basket_data');
         $objPage = $this->Database->prepare("SELECT id, alias FROM tl_page WHERE id=?")->limit(1)->execute($this->replaceInsertTags($this->Shop->getInsertTagPID()));
 
@@ -479,6 +473,12 @@ class ModuleAcquistoBasket extends \Module
             $this->Template->Zwischensumme = $this->Basket->getCosts(false);        
         }
 
+        if($this->contaoShop_jumpTo) 
+        {
+            $objPage = $this->Database->prepare("SELECT id, alias FROM tl_page WHERE id=?")->limit(1)->execute($this->contaoShop_jumpTo);
+            $strUrl  = $this->generateFrontendUrl($objPage->fetchAssoc(), '/produkt/%s');
+        }
+        
         $this->Template->Steuern       = $this->Basket->getTaxes();        
         $this->Template->Endpreis      = $this->Basket->getCosts(true);
         $this->Template->Produktliste  = $this->Basket->loadProducts($strUrl);
