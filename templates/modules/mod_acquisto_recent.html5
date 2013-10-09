@@ -34,18 +34,18 @@
             <a href="<?=$Produkt->url;?>"><?=$Produkt->bezeichnung;?></a><br>
             <?php if($Produkt->getCosts(0)->pricelist->type == "netto"): ?>
 
-            <div class="preis">Preis: <span class="<?php if($Produkt->getCosts(0)->special_netto): ?>old_price<?php else: ?>default_price<?php endif;?>"><?php echo $Produkt->getCosts(0)->costs_netto; ?> <?php echo $GLOBALS['TL_CONFIG']['currency_symbol']; ?></span><?php if($Produkt->getCosts(0)->special_netto): ?> nur <span class="special_price"><?php echo $Produkt->getCosts(0)->special_netto; ?> <?php echo $Produkt->getCosts(0)->pricelist->currency; ?></span><?php endif; ?></div>
+            <div class="preis">Preis: <span class="<?php if($Produkt->getCosts(0)->special): ?>old_price<?php else: ?>default_price<?php endif;?>"><?php echo $Produkt->getCosts(0)->costs; ?> <?php echo $Produkt->getCosts(0)->pricelist->currency->iso_code; ?></span><?php if($Produkt->getCosts(0)->special): ?> nur <span class="special_price"><?php echo $Produkt->getCosts(0)->special; ?> <?php echo $Produkt->getCosts(0)->pricelist->currency->iso_code; ?></span><?php endif; ?></div>
             <small>
-                zzgl. <?php echo $Produkt->getCosts(0)->steuersatz; ?>% MwSt. zzgl <a href="<?php echo $this->Versand; ?>">Versandkosten</a><br>
-                <?php if($Produkt->getCosts(0)->basecosts_netto): ?>Grundpreis auf <?php echo $Produkt->berechnungsmenge; ?><?php echo $Produkt->mengeneinheit; ?> sind <?php echo sprintf("%01.2f", $Produkt->getCosts(0)->basecosts_netto); ?> <?php echo $Produkt->getCosts(0)->pricelist->currency; ?>.<?php endif; ?>
+                zzgl. <?php echo $Produkt->getCosts(0)->tax; ?>% MwSt. zzgl <a href="<?php echo $this->Versand; ?>">Versandkosten</a><br>
+                <?php if($Produkt->getCosts(0)->basecosts): ?>Grundpreis auf <?php echo $Produkt->berechnungsmenge; ?><?php echo $Produkt->mengeneinheit; ?> sind <?php echo $Produkt->getCosts(0)->basecosts; ?> <?php echo $Produkt->getCosts(0)->pricelist->currency->iso_code; ?>.<?php endif; ?>
             </small>
 
             <?php elseif($Produkt->getCosts(0)->pricelist->type == "brutto"): ?>
 
-            <div class="preis">Preis: <span class="<?php if($Produkt->getCosts(0)->special_brutto): ?>old_price<?php else: ?>default_price<?php endif;?>"><?php echo $Produkt->getCosts(0)->costs_brutto; ?> <?php echo $GLOBALS['TL_CONFIG']['currency_symbol']; ?></span><?php if($Produkt->getCosts(0)->special_brutto): ?> nur <span class="special_price"><?php echo $Produkt->getCosts(0)->special_brutto; ?> <?php echo $Produkt->getCosts(0)->pricelist->currency; ?></span><?php endif; ?></div>
+            <div class="preis">Preis: <span class="<?php if($Produkt->getCosts(0)->special): ?>old_price<?php else: ?>default_price<?php endif;?>"><?php echo $Produkt->getCosts(0)->costs; ?> <?php echo $Produkt->getCosts(0)->pricelist->currency->iso_code; ?></span><?php if($Produkt->getCosts(0)->special): ?> nur <span class="special_price"><?php echo $Produkt->getCosts(0)->special; ?> <?php echo $Produkt->getCosts(0)->pricelist->currency->iso_code; ?></span><?php endif; ?></div>
             <small>
-                zzgl. <?php echo $Produkt->getCosts(0)->steuersatz; ?>% MwSt. zzgl <a href="<?php echo $this->Versand; ?>">Versandkosten</a><br>
-                <?php if($Produkt->getCosts(0)->basecosts_brutto): ?>Grundpreis auf <?php echo $Produkt->berechnungsmenge; ?><?php echo $Produkt->mengeneinheit; ?> sind <?php echo sprintf("%01.2f", $Produkt->getCosts(0)->basecosts_brutto); ?> <?php echo $Produkt->getCosts(0)->pricelist->currency; ?>.<?php endif; ?>
+                zzgl. <?php echo $Produkt->getCosts(0)->tax; ?>% MwSt. zzgl <a href="<?php echo $this->Versand; ?>">Versandkosten</a><br>
+                <?php if($Produkt->getCosts(0)->basecosts): ?>Grundpreis auf <?php echo $Produkt->berechnungsmenge; ?><?php echo $Produkt->mengeneinheit; ?> sind <?php echo sprintf("%01.2f", $Produkt->getCosts(0)->basecosts); ?> <?php echo $Produkt->getCosts(0)->pricelist->currency->iso_code; ?>.<?php endif; ?>
             </small>
 
             <?php endif; ?>
