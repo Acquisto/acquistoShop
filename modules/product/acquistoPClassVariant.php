@@ -95,12 +95,13 @@ class acquistoPClassVariant extends \acquistoShopProduktController
             if($this->isDefinedAttribute($objItem->definedId)) 
             {
                 $objItem->attributeItems = $this->getDefinedAttributeItems($objItem->definedId);
+                $objItem->id = $objItem->definedId;
             } 
             else 
             {
                 $objItem->attributeItems = $this->getAttributeItems($objItem->selectedId);
+                $objItem->id = $objItem->selectedId;
             }
-
 
             if($objItem->feldtyp && count($objItem->attributeItems)) 
             {
@@ -256,18 +257,24 @@ class acquistoPClassVariant extends \acquistoShopProduktController
      * Erstellt die Attributliste für den Warenkorb aus dem Auswahl Array
      **/
 
-    public function filterArray() {
-        if(is_array($this->produkt_attributes) && count($this->produkt_attributes)) {
-            foreach($this->produkt_attributes as $attribute => $selection) {
+    public function filterArray() 
+    {
+        if(is_array($this->produkt_attributes) && count($this->produkt_attributes)) 
+        {
+            foreach($this->produkt_attributes as $attribute => $selection) 
+            {
                 $objAttribute = $this->Database->prepare("SELECT tl_shop_attribute.* FROM tl_shop_attribute, tl_shop_produkte_attribute WHERE tl_shop_produkte_attribute.id=? && tl_shop_produkte_attribute.attribut_id = tl_shop_attribute.id")->execute($attribute);
 
-                if($this->isDefinedAttribute($attribute)) {
+                if($this->isDefinedAttribute($attribute)) 
+                {
                     $objVariante  = $this->Database->prepare("SELECT * FROM tl_shop_attribute_values WHERE id=?")->execute($selection);
                     $arrAttributes[] = (object) array(
                         'title'     => $objAttribute->bezeichnung,
                         'selection' => $objVariante->bezeichnung
                     );
-                } else {
+                } 
+                else 
+                {
                     $objVariante  = $this->Database->prepare("SELECT * FROM tl_shop_produkte_varianten WHERE id=?")->execute($selection);
                     $arrAttributes[] = (object) array(
                         'title'     => $objAttribute->bezeichnung,
