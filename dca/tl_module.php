@@ -24,9 +24,9 @@ $GLOBALS['TL_DCA']['tl_module']['palettes']['acquisto_productlist']    = '{title
 $GLOBALS['TL_DCA']['tl_module']['palettes']['acquisto_filterlist']     = '{title_legend},name,headline,type;{config_legend},acquistoShop_tags,acquistoShop_zustand,acquistoShop_hersteller,acquistoShop_produkttype,acquistoShop_warengruppe,acquistoShop_markedProducts;{list_settings},contaoShop_jumpTo,contaoShop_numberOfItems,perPage,acquistoShop_elementsPerRow,acquistoShop_listTemplate;{list_images:hide},contaoShop_imageSrc,acquistoShop_galerie_imageSize,acquistoShop_galerie_imageMargin,acquistoShop_galerie_imageFloating;{expert_legend:hide},cssID,space;';
 $GLOBALS['TL_DCA']['tl_module']['palettes']['acquisto_recently']       = '{title_legend},name,headline,type;{config_legend},contaoShop_jumpTo,contaoShop_numberOfItems;{list_images:hide},contaoShop_imageSrc,acquistoShop_galerie_imageSize,acquistoShop_galerie_imageMargin,acquistoShop_galerie_imageFloating;{expert_legend:hide},cssID,space';
 $GLOBALS['TL_DCA']['tl_module']['palettes']['acquisto_tagcloud']       = '{title_legend},name,headline,type;{config_legend},acquistoShop_excludeTags,contaoShop_jumpTo;{expert_legend:hide},cssID,space';
-$GLOBALS['TL_DCA']['tl_module']['palettes']['acquisto_shipping']        = '{title_legend},name,headline,type;{expert_legend:hide},cssID,space';
-$GLOBALS['TL_DCA']['tl_module']['palettes']['acquisto_basket']         = '{title_legend},name,headline,type;{config_legend},acquistoShop_basketType,acquistoShop_guestOrder,contaoShop_jumpTo,acquistoShop_AGBFile;{email_legend},acquistoShop_emailTyp,acquistoShop_emailTemplate,acquistoShop_emailTemplate_seller;{fields:hide},acquistoShop_selFields;{deliver:hide},acquistoShop_selDeliver;{addon_legend},acquistoShop_fieldsAddon;{expert_legend:hide},cssID,space';
-$GLOBALS['TL_DCA']['tl_module']['palettes']['acquisto_terms']            = '{title_legend},name,headline,type;{expert_legend:hide},cssID,space';
+$GLOBALS['TL_DCA']['tl_module']['palettes']['acquisto_shipping']       = '{title_legend},name,headline,type;{expert_legend:hide},cssID,space';
+$GLOBALS['TL_DCA']['tl_module']['palettes']['acquisto_basket']         = '{title_legend},name,headline,type;{config_legend},acquistoShop_basketType,acquistoShop_guestOrder,contaoShop_jumpTo,acquistoShop_AGBFile;{email_legend},acquistoShop_emailTyp,acquistoShop_emailTemplate,acquistoShop_emailTemplate_seller,acquistoShop_emailSubject_Buyer,acquistoShop_emailSubject_Seller;{fields:hide},acquistoShop_selFields;{deliver:hide},acquistoShop_selDeliver;{addon_legend},acquistoShop_fieldsAddon;{expert_legend:hide},cssID,space';
+$GLOBALS['TL_DCA']['tl_module']['palettes']['acquisto_terms']          = '{title_legend},name,headline,type;{expert_legend:hide},cssID,space';
 $GLOBALS['TL_DCA']['tl_module']['palettes']['acquisto_breadcrumb']     = '{title_legend},name,headline,type;{config_legend},contaoShop_jumpTo;{expert_legend:hide},cssID,space';
 $GLOBALS['TL_DCA']['tl_module']['palettes']['acquisto_search']         = '{title_legend},name,headline,type;{config_legend},acquistoShop_Searchfields,contaoShop_imageSrc,contaoShop_jumpTo;{expert_legend:hide},cssID,space';
 $GLOBALS['TL_DCA']['tl_module']['palettes']['acquisto_categories']     = '{title_legend},name,headline,type;{config_legend},contaoShop_levelOffset,contaoShop_showLevel,contaoShop_hardLimit,contaoShop_jumpTo;[reference:hide},contaoShop_reference,contaoShop_referencePage;{expert_legend:hide},cssID,space';
@@ -67,6 +67,24 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['acquistoShop_excludeTags'] = array
     'exclude'                 => true,
     'inputType'               => 'text',
     'eval'                    => array('mandatory'=>false, 'tl_class'=>'long'),
+    'sql'                     => "varchar(255) NOT NULL default ''"
+);
+
+$GLOBALS['TL_DCA']['tl_module']['fields']['acquistoShop_emailSubject_Buyer'] = array
+(
+    'label'                   => &$GLOBALS['TL_LANG']['tl_module']['acquistoShop_emailSubject_Buyer'],
+    'exclude'                 => true,
+    'inputType'               => 'text',
+    'eval'                    => array('mandatory'=>true, 'tl_class'=>'w50'),
+    'sql'                     => "varchar(255) NOT NULL default ''"
+);
+
+$GLOBALS['TL_DCA']['tl_module']['fields']['acquistoShop_emailSubject_Seller'] = array
+(
+    'label'                   => &$GLOBALS['TL_LANG']['tl_module']['acquistoShop_emailSubject_Seller'],
+    'exclude'                 => true,
+    'inputType'               => 'text',
+    'eval'                    => array('mandatory'=>true, 'tl_class'=>'w50'),
     'sql'                     => "varchar(255) NOT NULL default ''"
 );
 
