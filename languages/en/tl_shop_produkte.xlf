@@ -1,5 +1,5 @@
 <?xml version="1.0" ?><xliff version="1.1">
-	<file datatype="php" original="system/modules/acquistoShop/languages/de/tl_shop_produkte.php" source-language="de_DE">
+	<file datatype="php" original="system/modules/acquistoShop/languages/de/tl_shop_produkte.php" source-language="de">
 		<body>
 			<trans-unit id="tl_shop_produkte.new.0">
 				<source>Neues Produkt</source>
@@ -241,6 +241,7 @@
 			</trans-unit>
 			<trans-unit id="tl_shop_produkte.digital_product.0">
 				<source>Downloads auswählen</source>
+				<target>Pick downloads</target>
 				
 			</trans-unit>
 			<trans-unit id="tl_shop_produkte.digital_product.1">
@@ -248,6 +249,7 @@
 			</trans-unit>
 			<trans-unit id="tl_shop_produkte.preise.0">
 				<source>Geben Sie bitte den Preis / die Preise für das Produkt ein.</source>
+				<target>Please enter the price / the prices for this product</target>
 				
 			</trans-unit>
 			<trans-unit id="tl_shop_produkte.preise.1">
@@ -318,10 +320,12 @@
 			</trans-unit>
 			<trans-unit id="tl_shop_produkte.catalogMoney.0">
 				<source>Preise im Katalog</source>
+				<target>Price in catalog</target>
 				
 			</trans-unit>
 			<trans-unit id="tl_shop_produkte.catalogMoney.1">
 				<source>Im Katalog sollen Preise angezeigt werden.</source>
+				<target>Show the prices in the catalog</target>
 				
 			</trans-unit>
 			<trans-unit id="tl_shop_produkte.startDate.0">
@@ -346,6 +350,7 @@
 			</trans-unit>
 			<trans-unit id="tl_shop_produkte.preise_value.0">
 				<source>Menge</source>
+				<target>Quantity</target>
 				
 			</trans-unit>
 			<trans-unit id="tl_shop_produkte.preise_value.1">
@@ -387,10 +392,12 @@
 			</trans-unit>
 			<trans-unit id="tl_shop_produkte.attr.0">
 				<source>Attribute</source>
+				<target>Attributes</target>
 				
 			</trans-unit>
 			<trans-unit id="tl_shop_produkte.attr.1">
 				<source>Attribute des Produkts ID %s bearbeiten</source>
+				<target>Edit attributes of product ID %s</target>
 				
 			</trans-unit>
 		</body>

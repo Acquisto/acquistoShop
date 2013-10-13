@@ -1,0 +1,645 @@
+<?xml version="1.0" ?><xliff version="1.1">
+	<file datatype="php" original="system/modules/acquistoShop/languages/de/modules.php" source-language="de">
+		<body>
+			<trans-unit id="MOD.acquisto">
+				<source>Acquisto</source>
+				
+			</trans-unit>
+			<trans-unit id="MOD.acquistoShopHersteller.0">
+				<source>Hersteller</source>
+				
+			</trans-unit>
+			<trans-unit id="MOD.acquistoShopHersteller.1">
+				<source>Hersteller verwalten um diese Produkten zuzuordnen.</source>
+				
+			</trans-unit>
+			<trans-unit id="MOD.acquistoShopProdukte.0">
+				<source>Produkte</source>
+				
+			</trans-unit>
+			<trans-unit id="MOD.acquistoShopProdukte.1">
+				<source>Produkte fü acquistoShop verwalten.</source>
+				
+			</trans-unit>
+			<trans-unit id="MOD.acquistoShopWarengruppen.0">
+				<source>Warengruppen</source>
+				
+			</trans-unit>
+			<trans-unit id="MOD.acquistoShopWarengruppen.1">
+				<source>Warengruppen anlegen und verwalten um Produkte in diese einzuordenen.</source>
+				
+			</trans-unit>
+			<trans-unit id="MOD.acquistoShopGutscheine.0">
+				<source>Gutscheine</source>
+				
+			</trans-unit>
+			<trans-unit id="MOD.acquistoShopGutscheine.1">
+				<source>Gutscheine anlegen und verwalten.</source>
+				
+			</trans-unit>
+			<trans-unit id="MOD.acquisto_Orders">
+				<source>Acquisto Bestellungen</source>
+				
+			</trans-unit>
+			<trans-unit id="MOD.acquistoShopOrders.0">
+				<source>Bestellungen</source>
+				
+			</trans-unit>
+			<trans-unit id="MOD.acquistoShopOrders.1">
+				<source>Eingegangene Bestellungen verwalten.</source>
+				
+			</trans-unit>
+			<trans-unit id="MOD.acquisto_Settings">
+				<source>Acquisto Einstellungen</source>
+				
+			</trans-unit>
+			<trans-unit id="MOD.acquistoShopSteuern.0">
+				<source>Steuern</source>
+				
+			</trans-unit>
+			<trans-unit id="MOD.acquistoShopSteuern.1">
+				<source>Hier verwalten Sie Steuertypen und Steuersätze des acquistoShop.</source>
+				
+			</trans-unit>
+			<trans-unit id="MOD.acquistoShopEinstellungen.0">
+				<source>Einstellungen</source>
+				
+			</trans-unit>
+			<trans-unit id="MOD.acquistoShopEinstellungen.1">
+				<source>Basiseinstellungen für den acquistoShop.</source>
+				
+			</trans-unit>
+			<trans-unit id="MOD.acquistoShopShippingZones.0">
+				<source>Versandzonen</source>
+				
+			</trans-unit>
+			<trans-unit id="MOD.acquistoShopShippingZones.1">
+				<source>Versandzonen und Versandpreise für verwalten.</source>
+				
+			</trans-unit>
+			<trans-unit id="MOD.acquistoShopDispatcher.0">
+				<source>Versandarten</source>
+				
+			</trans-unit>
+			<trans-unit id="MOD.acquistoShopDispatcher.1">
+				<source>Hier können Sie die Versandarten verwalten.</source>
+				
+			</trans-unit>
+			<trans-unit id="MOD.acquistoShopZahlungsarten.0">
+				<source>Zahlungsarten</source>
+				
+			</trans-unit>
+			<trans-unit id="MOD.acquistoShopZahlungsarten.1">
+				<source>Zahlungsarten für Warenkorb verwalten.</source>
+				
+			</trans-unit>
+			<trans-unit id="MOD.acquistoShopMengeneinheit.0">
+				<source>Mengeneinheiten</source>
+				
+			</trans-unit>
+			<trans-unit id="MOD.acquistoShopMengeneinheit.1">
+				<source>Mengeneinheiten für Grundpreisberechnung</source>
+				
+			</trans-unit>
+			<trans-unit id="MOD.acquistoShopAttribute.0">
+				<source>Attribute</source>
+				
+			</trans-unit>
+			<trans-unit id="MOD.acquistoShopAttribute.1">
+				<source>Attributklassen für Produkte verwalten.</source>
+				
+			</trans-unit>
+			<trans-unit id="MOD.acquistoShopPricelists.0">
+				<source>Preislisten</source>
+				
+			</trans-unit>
+			<trans-unit id="MOD.acquistoShopPricelists.1">
+				<source>Preislisten für Acquisto anlegen und verwalten.</source>
+				
+			</trans-unit>
+			<trans-unit id="MOD.acquistoShopExport.0">
+				<source>Export-Module</source>
+				
+			</trans-unit>
+			<trans-unit id="MOD.acquistoShopExport.1">
+				<source>Export-Module für Preissuchmaschinen anlegen.</source>
+				
+			</trans-unit>
+			<trans-unit id="MOD.acquistoShopImport.0">
+				<source>Import-Module</source>
+				
+			</trans-unit>
+			<trans-unit id="MOD.acquistoShopImport.1">
+				<source>Import-Module für das Importieren anlegen.</source>
+				
+			</trans-unit>
+			<trans-unit id="MOD.acquistoShopPortal.0">
+				<source>Partner-Portal</source>
+				
+			</trans-unit>
+			<trans-unit id="MOD.acquistoShopPortal.1">
+				<source>Das Partner-Portal versorgt Sie mit aktuellen Informationen rund um Acquisto und die eCommerce Branche.</source>
+				
+			</trans-unit>
+			<trans-unit id="MOD.acquistoShopCurrency.0">
+				<source>Währungen</source>
+				
+			</trans-unit>
+			<trans-unit id="MOD.acquistoShopCurrency.1">
+				<source>Erstellen Sie Währungen für Preislisten.</source>
+				
+			</trans-unit>
+			<trans-unit id="FMD.acquisto">
+				<source>Acquisto</source>
+				
+			</trans-unit>
+			<trans-unit id="FMD.acquisto_widget">
+				<source>Acquisto Widgets</source>
+				
+			</trans-unit>
+			<trans-unit id="FMD.ModuleAcquistoProductDetails.0">
+				<source>Produktdetails</source>
+				
+			</trans-unit>
+			<trans-unit id="FMD.ModuleAcquistoProductDetails.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="FMD.ModuleAcquistoProductList.0">
+				<source>Produktliste</source>
+				
+			</trans-unit>
+			<trans-unit id="FMD.ModuleAcquistoProductList.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="FMD.ModuleAcquistoCurrency.0">
+				<source>Währungswechsel</source>
+				
+			</trans-unit>
+			<trans-unit id="FMD.ModuleAcquistoCurrency.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="FMD.ModuleAcquistoSearch.0">
+				<source>Suchformular</source>
+				
+			</trans-unit>
+			<trans-unit id="FMD.ModuleAcquistoSearch.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="FMD.ModuleAcquistoBasket.0">
+				<source>Warenkorb</source>
+				
+			</trans-unit>
+			<trans-unit id="FMD.ModuleAcquistoBasket.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="FMD.ModuleAcquistoBasketWidget.0">
+				<source>Warenkorb Widget</source>
+				
+			</trans-unit>
+			<trans-unit id="FMD.ModuleAcquistoBasketWidget.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="FMD.ModuleAcquistoCategories.0">
+				<source>Warengruppen</source>
+				
+			</trans-unit>
+			<trans-unit id="FMD.ModuleAcquistoCategories.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="FMD.ModuleAcquistoTerms.0">
+				<source>Allgemeine Geschäftsbedingungen</source>
+				
+			</trans-unit>
+			<trans-unit id="FMD.ModuleAcquistoTerms.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="FMD.ModuleAcquistoBreadcrumb.0">
+				<source>Breadcrumb</source>
+				
+			</trans-unit>
+			<trans-unit id="FMD.ModuleAcquistoBreadcrumb.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="FMD.ModuleAcquistoTagCloud.0">
+				<source>TagCloud</source>
+				
+			</trans-unit>
+			<trans-unit id="FMD.ModuleAcquistoTagCloud.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="FMD.ModuleAcquistoShipping.0">
+				<source>Versand und Zahlung</source>
+				
+			</trans-unit>
+			<trans-unit id="FMD.ModuleAcquistoShipping.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="FMD.ModuleAcquistoRecently.0">
+				<source>Zuletzt angeschaut</source>
+				
+			</trans-unit>
+			<trans-unit id="FMD.ModuleAcquistoRecently.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="FMD.ModuleAcquistoCoupon.0">
+				<source>Gutschein</source>
+				
+			</trans-unit>
+			<trans-unit id="FMD.ModuleAcquistoCoupon.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="FMD.ModuleAcquistoProductFilter.0">
+				<source>Produktfilter</source>
+				
+			</trans-unit>
+			<trans-unit id="FMD.ModuleAcquistoProductFilter.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="FMD.ModuleAcquistoFilterList.0">
+				<source>Filterliste</source>
+				
+			</trans-unit>
+			<trans-unit id="FMD.ModuleAcquistoFilterList.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="FMD.ModuleAcquistoOrderDetails.0">
+				<source>Bestelldetails</source>
+				
+			</trans-unit>
+			<trans-unit id="FMD.ModuleAcquistoOrderDetails.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="FMD.ModuleAcquistoOrderList.0">
+				<source>Bestellliste</source>
+				
+			</trans-unit>
+			<trans-unit id="FMD.ModuleAcquistoOrderList.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_module.list_settings">
+				<source>Listeneinstellungen</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_module.deliver">
+				<source>Alternative Lieferadresse</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_module.fields">
+				<source>Kundenfelder</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_module.list_images">
+				<source>Bildeinstellungen (Liste)</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_module.categorie_image">
+				<source>Bildeinstellungen (Kategorie)</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_module.contaoShop_image">
+				<source>Bildeinstellungen</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_module.galerie_options">
+				<source>Galerie-Einstellungen</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_module.addon_legend">
+				<source>Zustazfelder</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_module.contaoShop_hardLimit.0">
+				<source>Hardlimit</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_module.contaoShop_hardLimit.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_module.contaoShop_jumpTo.0">
+				<source>Weiterleitungsziel</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_module.contaoShop_jumpTo.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_module.contaoShop_imageSrc.0">
+				<source>Standardbild</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_module.contaoShop_imageSrc.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_module.contaoShop_numberOfItems.0">
+				<source>Gesamtzahl der Produkte</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_module.contaoShop_numberOfItems.1">
+				<source>Hier können Sie die Gesamtzahl der Beiträge festlegen.</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_module.contaoShop_imageFullsize.0">
+				<source>Großansicht/Neues Fenster</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_module.contaoShop_imageFullsize.1">
+				<source>Großansicht des Bildes in einer Lightbox bzw. den Link in einem neuen Browserfenster öffnen.</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_module.contaoShop_Template.0">
+				<source>Template</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_module.contaoShop_Template.1">
+				<source>Wählen Sie ein Template aus.</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_module.contaoShop_levelOffset.0">
+				<source>Startlevel</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_module.contaoShop_levelOffset.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_module.contaoShop_showLevel.0">
+				<source>Stoplevel</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_module.contaoShop_showLevel.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_module.acquistoShop_elementsPerRow.0">
+				<source>Elemente pro Zeile</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_module.acquistoShop_elementsPerRow.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_module.acquistoShop_tags.0">
+				<source>Tags</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_module.acquistoShop_tags.1">
+				<source>Sie müssen die Tags komma getrennt eingeben. Bsp. Tag 1, Tag 2, Tag 3</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_module.acquistoShop_zustand.0">
+				<source>Produktzustand</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_module.acquistoShop_zustand.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_module.acquistoShop_hersteller.0">
+				<source>Hersteller</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_module.acquistoShop_hersteller.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_module.acquistoShop_produkttype.0">
+				<source>Produkttyp</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_module.acquistoShop_produkttype.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_module.acquistoShop_markedProducts.0">
+				<source>Hervorgehobene</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_module.acquistoShop_markedProducts.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_module.acquistoShop_warengruppe.0">
+				<source>Warengruppe</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_module.acquistoShop_warengruppe.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_module.acquistoShop_listTemplate.0">
+				<source>Auflistungstemplate</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_module.acquistoShop_listTemplate.1">
+				<source>Wählen Sie das Auflistungstemplate aus.</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_module.acquistoShop_selFields.0">
+				<source>Anzeigefelder</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_module.acquistoShop_selFields.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_module.acquistoShop_selFields_field.0">
+				<source>Benutzerfeld</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_module.acquistoShop_selFields_field.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_module.acquistoShop_selFields_mandatory.0">
+				<source>Pflichtfeld</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_module.acquistoShop_selFields_mandatory.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_module.acquistoShop_selFields_info.0">
+				<source>Infotext</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_module.acquistoShop_selFields_info.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_module.acquistoShop_selFields_error.0">
+				<source>Fehlermeldung</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_module.acquistoShop_selFields_error.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_module.acquistoShop_selDeliver.0">
+				<source>Anzeigefelder</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_module.acquistoShop_selDeliver.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_module.acquistoShop_basketType.0">
+				<source>Warenkorb-Typ</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_module.acquistoShop_basketType.1">
+				<source>Wählen Sie hier ob der Warenkorb Brutto, Netto oder die Anzeige durch die Preisliste definiert wird.</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_module.acquistoShop_guestOrder.0">
+				<source>Gästebestellung</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_module.acquistoShop_guestOrder.1">
+				<source>Definieren Sie ob Gäste im Shop bestellen können.</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_module.acquistoShop_fieldsAddon.0">
+				<source>Zusatzfelder</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_module.acquistoShop_fieldsAddon.1">
+				<source>Definieren Sie hier Zusatzfelder die bei der Eingabe der Kundendaten abgefragt werden. Wenn Sie ein Select-, Checkbox- oder Optionfeld wählen geben Sie die Feldoptionen wie folgt ein: key=value,key1=value1 usw...</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_module.acquistoShop_fieldsAddon_fieldname.0">
+				<source>Feldname</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_module.acquistoShop_fieldsAddon_fieldname.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_module.acquistoShop_fieldsAddon_fieldtitle.0">
+				<source>Bezeichnung</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_module.acquistoShop_fieldsAddon_fieldtitle.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_module.acquistoShop_fieldsAddon_fieldtype.0">
+				<source>Feldtype</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_module.acquistoShop_fieldsAddon_fieldtype.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_module.acquistoShop_fieldsAddon_value.0">
+				<source>Wert</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_module.acquistoShop_fieldsAddon_value.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_module.acquistoShop_fieldsAddon_fieldtype_opt_text.0">
+				<source>Text</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_module.acquistoShop_fieldsAddon_fieldtype_opt_text.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_module.acquistoShop_fieldsAddon_fieldtype_opt_select.0">
+				<source>Select</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_module.acquistoShop_fieldsAddon_fieldtype_opt_select.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_module.acquistoShop_fieldsAddon_fieldtype_opt_checkbox.0">
+				<source>Checkbox</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_module.acquistoShop_fieldsAddon_fieldtype_opt_checkbox.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_module.acquistoShop_fieldsAddon_fieldtype_opt_radio.0">
+				<source>Radio</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_module.acquistoShop_fieldsAddon_fieldtype_opt_radio.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_module.acquistoShop_fieldsAddon_fieldtype_opt_textarea.0">
+				<source>Textarea</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_module.acquistoShop_fieldsAddon_fieldtype_opt_textarea.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_module.acquistoShop_Searchfields.0">
+				<source>Suchfelder</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_module.acquistoShop_Searchfields.1">
+				<source>Hier definieren Sie die Felder in dennen nach dem Suchbegeriff gesucht wird.</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_module.acquistoShop_excludeTags.0">
+				<source>Tags ausnehmen</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_module.acquistoShop_excludeTags.1">
+				<source>Geben Sie hier eine Komma getrennte Liste von Tags ein die nicht angezeigt werden sollen.</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_module.socialmedia">
+				<source>SocialMedia</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_module.contaoShop_socialFacebook.0">
+				<source>Facebook Gefällt mir Button</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_module.contaoShop_socialFacebook.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_module.contaoShop_socialTwitter.0">
+				<source>Tweet This - Button</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_module.contaoShop_socialTwitter.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_module.acquistoShop_emailTemplate.0">
+				<source>E-Mail Template für Käufer</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_module.acquistoShop_emailTemplate.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_module.acquistoShop_emailTemplate_seller.0">
+				<source>E-Mail Template für Verkäufer</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_module.acquistoShop_emailTemplate_seller.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_module.acquistoShop_emailTyp.0">
+				<source>E-Mail Typ</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_module.acquistoShop_emailTyp.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_module.acquistoShop_AGBFile.0">
+				<source>AGB Datei</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_module.acquistoShop_AGBFile.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_module.acquistoShop_allowComments.0">
+				<source>Kommentare aktivieren</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_module.acquistoShop_allowComments.1">
+				<source>Besuchern das Kommentieren von Nachrichtenbeiträgen erlauben.</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_module.acquistoShop_commentsPerPage.0">
+				<source>Kommentare pro Seite</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_module.acquistoShop_commentsPerPage.1">
+				<source>Anzahl an Kommentaren pro Seite. Geben Sie 0 ein, um den automatischen Seitenumbruch zu deaktivieren.</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_module.acquistoShop_commentsNotify.0">
+				<source>Benachrichtigung an</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_module.acquistoShop_commentsNotify.1">
+				<source>Bitte legen Sie fest, wer beim Hinzufügen neuer Kommentare benachrichtigt wird.</source>
+				
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

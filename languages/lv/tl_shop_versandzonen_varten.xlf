@@ -1,0 +1,82 @@
+<?xml version="1.0" ?><xliff version="1.1">
+	<file datatype="php" original="system/modules/acquistoShop/languages/de/tl_shop_versandzonen_varten.php" source-language="de">
+		<body>
+			<trans-unit id="tl_shop_versandzonen_varten.title_legend">
+				<source>Allgemein</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_versandzonen_varten.steuersatz_id.0">
+				<source>Steuersatz</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_versandzonen_varten.steuersatz_id.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_shop_versandzonen_varten.zahlungsart_id.0">
+				<source>Zalungsart</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_versandzonen_varten.zahlungsart_id.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_shop_versandzonen_varten.ab_einkaufpreis.0">
+				<source>Ab Einkaufspreis</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_versandzonen_varten.ab_einkaufpreis.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_shop_versandzonen_varten.preis.0">
+				<source>Versandkosten</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_versandzonen_varten.preis.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_shop_versandzonen_varten.new.0">
+				<source>Neuen Versandpreis</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_versandzonen_varten.new.1">
+				<source>Einen neuen Versandpreis erstellen</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_versandzonen_varten.edit.0">
+				<source>Bearbeiten</source>
+				<target>Apstrādāt</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_versandzonen_varten.edit.1">
+				<source>Versandpreis ID %s bearbeiten</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_versandzonen_varten.copy.0">
+				<source>Duplizieren</source>
+				<target>Dublicēt</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_versandzonen_varten.copy.1">
+				<source>Versandpreis ID %s duplizieren</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_versandzonen_varten.delete.0">
+				<source>Löschen</source>
+				<target>Dzēst</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_versandzonen_varten.delete.1">
+				<source>Versandpreis ID %s löschen</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_versandzonen_varten.show.0">
+				<source>Details</source>
+				<target>Detaļas</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_versandzonen_varten.show.1">
+				<source>Die Details des Versandpreises ID %s anzeigen</source>
+				
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

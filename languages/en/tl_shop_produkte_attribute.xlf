@@ -1,0 +1,70 @@
+<?xml version="1.0" ?><xliff version="1.1">
+	<file datatype="php" original="system/modules/acquistoShop/languages/de/tl_shop_produkte_attribute.php" source-language="de">
+		<body>
+			<trans-unit id="tl_shop_produkte_attribute.attribut_id.0">
+				<source>Attribut</source>
+				<target>Attribute</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte_attribute.attribut_id.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte_attribute.pattribut_id.0">
+				<source>Elternattribut</source>
+				<target>Parent attribute</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte_attribute.pattribut_id.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte_attribute.new.0">
+				<source>Neues Attribut anlegen</source>
+				<target>Create new attribute</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte_attribute.new.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte_attribute.edit.0">
+				<source>Bearbeiten</source>
+				<target>Edit</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte_attribute.edit.1">
+				<source>Varianten in Attibut ID %s bearbeiten</source>
+				<target>Edit variants of attribute ID %s</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte_attribute.copy.0">
+				<source>Kopieren</source>
+				<target>Copy</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte_attribute.copy.1">
+				<source>Attribut ID %s und Varianten kopieren</source>
+				<target>Copy attribute ID %s and variants</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte_attribute.delete.0">
+				<source>Löschen</source>
+				<target>Delete</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte_attribute.delete.1">
+				<source>Attribut ID %s und Varianten löschen</source>
+				<target>Delete attribute ID %s and variants</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte_attribute.show.0">
+				<source>Details</source>
+				<target>Details</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_produkte_attribute.show.1">
+				<source>Die Details des Attibuts ID %s anzeigen</source>
+				<target>Show details of attribute ID %s</target>
+				
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

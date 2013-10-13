@@ -1,0 +1,211 @@
+<?xml version="1.0" ?><xliff version="1.1">
+	<file datatype="php" original="system/modules/acquistoShop/languages/de/tl_shop_settings.php" source-language="de">
+		<body>
+			<trans-unit id="tl_shop_settings.settings">
+				<source>Einstellungen</source>
+				<target>Iestatījumi</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.shopdaten">
+				<source>Shopdaten</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.bankverbindung">
+				<source>Bankverbindung</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.rechtangaben">
+				<source>Rechtsangaben</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.currency_legend">
+				<source>Währung</source>
+				<target>Valūta</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.steuer.0">
+				<source>Steuersatz</source>
+				<target>Nodokļa likme</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.steuer.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.agb.0">
+				<source>Allgemeine Geschäftsbedingungen</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.agb.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.widerruf.0">
+				<source>Widerrufsbelehrung</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.widerruf.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.firmenname.0">
+				<source>Firma</source>
+				<target>Uzņēmums</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.firmenname.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.firmentyp.0">
+				<source>Gesellschaftsform</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.firmentyp.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.inhaber.0">
+				<source>Inhaber</source>
+				<target>Īpašnieks</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.inhaber.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.strasse.0">
+				<source>Strasse</source>
+				<target>Iela</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.strasse.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.postleitzahl.0">
+				<source>Postleitzahl</source>
+				<target>Pasta indekss</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.postleitzahl.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.ort.0">
+				<source>Ort</source>
+				<target>Vieta</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.ort.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.telefon.0">
+				<source>Telefon</source>
+				<target>Tālrunis</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.telefon.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.telefax.0">
+				<source>Telefax</source>
+				<target>Fakss</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.telefax.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.bestell_email.0">
+				<source>E-Mail Adresse</source>
+				<target>E-pasta adrese</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.bestell_email.1">
+				<source>Empfangs- und Absender eMail Adresse für Bestellungen</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.currency_symbol.0">
+				<source>Währungssymbol</source>
+				<target>Valūtas simbols</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.currency_symbol.1">
+				<source>Wählen Sie ihre Standardwährung</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.bank.0">
+				<source>Name der Bank</source>
+				<target>Bankas nosaukums</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.bank.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.bank_inhaber.0">
+				<source>Kontoinhaber</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.bank_inhaber.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.blz.0">
+				<source>Bankleitzahl</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.blz.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.kto.0">
+				<source>Kontonummer</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.kto.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.iban.0">
+				<source>IBAN</source>
+				<target>IBAN</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.iban.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.bic.0">
+				<source>BIC</source>
+				<target>BIC</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.bic.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.versandPage.0">
+				<source>Versand und Zahlungsinformationen</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.versandPage.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.versandberechnung.0">
+				<source>Versandkostenberechnung</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.versandberechnung.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.steuernummer.0">
+				<source>Steuernummer</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.steuernummer.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.umsatzsteuerindent.0">
+				<source>Umsatzsteuer-Indent</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.umsatzsteuerindent.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.handelsregister.0">
+				<source>Handelsregister-Nummer</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.handelsregister.1">
+				<source/>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

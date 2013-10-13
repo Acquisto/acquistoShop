@@ -1,5 +1,5 @@
 <?xml version="1.0" ?><xliff version="1.1">
-	<file datatype="php" original="system/modules/acquistoShop/languages/de/tl_shop_currency.php" source-language="de_DE">
+	<file datatype="php" original="system/modules/acquistoShop/languages/de/tl_shop_currency.php" source-language="de">
 		<body>
 			<trans-unit id="tl_shop_currency.title_legend">
 				<source>Allgemein</source>
@@ -83,6 +83,7 @@
 			</trans-unit>
 			<trans-unit id="tl_shop_currency.exchange_ratio.1">
 				<source>Geben Sie den Umrechnungsfaktor zur Standartwährung ein.</source>
+				<target>Enter the exchange ratio to the default currency</target>
 				
 			</trans-unit>
 			<trans-unit id="tl_shop_currency.new.0">

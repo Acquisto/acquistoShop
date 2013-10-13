@@ -1,5 +1,5 @@
 <?xml version="1.0" ?><xliff version="1.1">
-	<file datatype="php" original="system/modules/acquistoShop/languages/de/modules.php" source-language="de_DE">
+	<file datatype="php" original="system/modules/acquistoShop/languages/de/modules.php" source-language="de">
 		<body>
 			<trans-unit id="MOD.acquisto">
 				<source>Acquisto</source>
@@ -98,6 +98,7 @@
 			</trans-unit>
 			<trans-unit id="MOD.acquistoShopDispatcher.0">
 				<source>Versandarten</source>
+				<target>Shipping options</target>
 				
 			</trans-unit>
 			<trans-unit id="MOD.acquistoShopDispatcher.1">
@@ -107,6 +108,7 @@
 			</trans-unit>
 			<trans-unit id="MOD.acquistoShopZahlungsarten.0">
 				<source>Zahlungsarten</source>
+				<target>Payment methods</target>
 				
 			</trans-unit>
 			<trans-unit id="MOD.acquistoShopZahlungsarten.1">
@@ -131,6 +133,7 @@
 			</trans-unit>
 			<trans-unit id="MOD.acquistoShopAttribute.1">
 				<source>Attributklassen für Produkte verwalten.</source>
+				<target>Manage attribute classes for products</target>
 				
 			</trans-unit>
 			<trans-unit id="MOD.acquistoShopPricelists.0">
@@ -140,38 +143,47 @@
 			</trans-unit>
 			<trans-unit id="MOD.acquistoShopPricelists.1">
 				<source>Preislisten für Acquisto anlegen und verwalten.</source>
+				<target>Create and manage price lists for acquisto</target>
 				
 			</trans-unit>
 			<trans-unit id="MOD.acquistoShopExport.0">
 				<source>Export-Module</source>
+				<target>Export-module</target>
 				
 			</trans-unit>
 			<trans-unit id="MOD.acquistoShopExport.1">
 				<source>Export-Module für Preissuchmaschinen anlegen.</source>
+				<target>Create an export-module for price search engine</target>
 				
 			</trans-unit>
 			<trans-unit id="MOD.acquistoShopImport.0">
 				<source>Import-Module</source>
+				<target>Import-module</target>
 				
 			</trans-unit>
 			<trans-unit id="MOD.acquistoShopImport.1">
 				<source>Import-Module für das Importieren anlegen.</source>
+				<target>Create an import-module</target>
 				
 			</trans-unit>
 			<trans-unit id="MOD.acquistoShopPortal.0">
 				<source>Partner-Portal</source>
+				<target>Partner portal</target>
 				
 			</trans-unit>
 			<trans-unit id="MOD.acquistoShopPortal.1">
 				<source>Das Partner-Portal versorgt Sie mit aktuellen Informationen rund um Acquisto und die eCommerce Branche.</source>
+				<target>The partner portal gives you access to news about acquisto and the eCommerce branch</target>
 				
 			</trans-unit>
 			<trans-unit id="MOD.acquistoShopCurrency.0">
 				<source>Währungen</source>
+				<target>Currencies</target>
 				
 			</trans-unit>
 			<trans-unit id="MOD.acquistoShopCurrency.1">
 				<source>Erstellen Sie Währungen für Preislisten.</source>
+				<target>Create currencies for the price lists</target>
 				
 			</trans-unit>
 			<trans-unit id="FMD.acquisto">
@@ -209,6 +221,7 @@
 			</trans-unit>
 			<trans-unit id="FMD.ModuleAcquistoSearch.0">
 				<source>Suchformular</source>
+				<target>Search form</target>
 				
 			</trans-unit>
 			<trans-unit id="FMD.ModuleAcquistoSearch.1">
@@ -240,6 +253,7 @@
 			</trans-unit>
 			<trans-unit id="FMD.ModuleAcquistoTerms.0">
 				<source>Allgemeine Geschäftsbedingungen</source>
+				<target>General terms and conditions</target>
 				
 			</trans-unit>
 			<trans-unit id="FMD.ModuleAcquistoTerms.1">
@@ -279,6 +293,7 @@
 			</trans-unit>
 			<trans-unit id="FMD.ModuleAcquistoCoupon.0">
 				<source>Gutschein</source>
+				<target>Coupon</target>
 				
 			</trans-unit>
 			<trans-unit id="FMD.ModuleAcquistoCoupon.1">
@@ -294,6 +309,7 @@
 			</trans-unit>
 			<trans-unit id="FMD.ModuleAcquistoFilterList.0">
 				<source>Filterliste</source>
+				<target>Filter list</target>
 				
 			</trans-unit>
 			<trans-unit id="FMD.ModuleAcquistoFilterList.1">
@@ -317,34 +333,42 @@
 			</trans-unit>
 			<trans-unit id="tl_module.list_settings">
 				<source>Listeneinstellungen</source>
+				<target>List settings</target>
 				
 			</trans-unit>
 			<trans-unit id="tl_module.deliver">
 				<source>Alternative Lieferadresse</source>
+				<target>Alternative shipping adress</target>
 				
 			</trans-unit>
 			<trans-unit id="tl_module.fields">
 				<source>Kundenfelder</source>
+				<target>Customer fields</target>
 				
 			</trans-unit>
 			<trans-unit id="tl_module.list_images">
 				<source>Bildeinstellungen (Liste)</source>
+				<target>Image settings (list)</target>
 				
 			</trans-unit>
 			<trans-unit id="tl_module.categorie_image">
 				<source>Bildeinstellungen (Kategorie)</source>
+				<target>Image settings (category)</target>
 				
 			</trans-unit>
 			<trans-unit id="tl_module.contaoShop_image">
 				<source>Bildeinstellungen</source>
+				<target>Image settings</target>
 				
 			</trans-unit>
 			<trans-unit id="tl_module.galerie_options">
 				<source>Galerie-Einstellungen</source>
+				<target>Gallery settings</target>
 				
 			</trans-unit>
 			<trans-unit id="tl_module.addon_legend">
 				<source>Zustazfelder</source>
+				<target>Additional fields</target>
 				
 			</trans-unit>
 			<trans-unit id="tl_module.contaoShop_hardLimit.0">
@@ -357,6 +381,7 @@
 			</trans-unit>
 			<trans-unit id="tl_module.contaoShop_jumpTo.0">
 				<source>Weiterleitungsziel</source>
+				<target>Redirect page</target>
 				
 			</trans-unit>
 			<trans-unit id="tl_module.contaoShop_jumpTo.1">
@@ -364,6 +389,7 @@
 			</trans-unit>
 			<trans-unit id="tl_module.contaoShop_imageSrc.0">
 				<source>Standardbild</source>
+				<target>Default image</target>
 				
 			</trans-unit>
 			<trans-unit id="tl_module.contaoShop_imageSrc.1">
@@ -371,18 +397,22 @@
 			</trans-unit>
 			<trans-unit id="tl_module.contaoShop_numberOfItems.0">
 				<source>Gesamtzahl der Produkte</source>
+				<target>Total number of products</target>
 				
 			</trans-unit>
 			<trans-unit id="tl_module.contaoShop_numberOfItems.1">
 				<source>Hier können Sie die Gesamtzahl der Beiträge festlegen.</source>
+				<target>Set the total number of products</target>
 				
 			</trans-unit>
 			<trans-unit id="tl_module.contaoShop_imageFullsize.0">
 				<source>Großansicht/Neues Fenster</source>
+				<target>Enlarge image/New window</target>
 				
 			</trans-unit>
 			<trans-unit id="tl_module.contaoShop_imageFullsize.1">
 				<source>Großansicht des Bildes in einer Lightbox bzw. den Link in einem neuen Browserfenster öffnen.</source>
+				<target>Show enlarged image in a lightbox or in a new browser window</target>
 				
 			</trans-unit>
 			<trans-unit id="tl_module.contaoShop_Template.0">
@@ -392,6 +422,7 @@
 			</trans-unit>
 			<trans-unit id="tl_module.contaoShop_Template.1">
 				<source>Wählen Sie ein Template aus.</source>
+				<target>Choose a template</target>
 				
 			</trans-unit>
 			<trans-unit id="tl_module.contaoShop_levelOffset.0">
@@ -412,6 +443,7 @@
 			</trans-unit>
 			<trans-unit id="tl_module.acquistoShop_elementsPerRow.0">
 				<source>Elemente pro Zeile</source>
+				<target>Elements per row</target>
 				
 			</trans-unit>
 			<trans-unit id="tl_module.acquistoShop_elementsPerRow.1">
@@ -424,10 +456,12 @@
 			</trans-unit>
 			<trans-unit id="tl_module.acquistoShop_tags.1">
 				<source>Sie müssen die Tags komma getrennt eingeben. Bsp. Tag 1, Tag 2, Tag 3</source>
+				<target>Please enter the tags seperated by commas. E.g. tag 1, tag 2, tag 3</target>
 				
 			</trans-unit>
 			<trans-unit id="tl_module.acquistoShop_zustand.0">
 				<source>Produktzustand</source>
+				<target>Product condition</target>
 				
 			</trans-unit>
 			<trans-unit id="tl_module.acquistoShop_zustand.1">
@@ -443,6 +477,7 @@
 			</trans-unit>
 			<trans-unit id="tl_module.acquistoShop_produkttype.0">
 				<source>Produkttyp</source>
+				<target>Product type</target>
 				
 			</trans-unit>
 			<trans-unit id="tl_module.acquistoShop_produkttype.1">
@@ -450,6 +485,7 @@
 			</trans-unit>
 			<trans-unit id="tl_module.acquistoShop_markedProducts.0">
 				<source>Hervorgehobene</source>
+				<target>Hightlighted</target>
 				
 			</trans-unit>
 			<trans-unit id="tl_module.acquistoShop_markedProducts.1">
@@ -465,10 +501,12 @@
 			</trans-unit>
 			<trans-unit id="tl_module.acquistoShop_listTemplate.0">
 				<source>Auflistungstemplate</source>
+				<target>Listing template</target>
 				
 			</trans-unit>
 			<trans-unit id="tl_module.acquistoShop_listTemplate.1">
 				<source>Wählen Sie das Auflistungstemplate aus.</source>
+				<target>Choose your listing template</target>
 				
 			</trans-unit>
 			<trans-unit id="tl_module.acquistoShop_selFields.0">
@@ -480,6 +518,7 @@
 			</trans-unit>
 			<trans-unit id="tl_module.acquistoShop_selFields_field.0">
 				<source>Benutzerfeld</source>
+				<target>User field</target>
 				
 			</trans-unit>
 			<trans-unit id="tl_module.acquistoShop_selFields_field.1">
@@ -487,6 +526,7 @@
 			</trans-unit>
 			<trans-unit id="tl_module.acquistoShop_selFields_mandatory.0">
 				<source>Pflichtfeld</source>
+				<target>Mandatory field</target>
 				
 			</trans-unit>
 			<trans-unit id="tl_module.acquistoShop_selFields_mandatory.1">
@@ -494,6 +534,7 @@
 			</trans-unit>
 			<trans-unit id="tl_module.acquistoShop_selFields_info.0">
 				<source>Infotext</source>
+				<target>Information</target>
 				
 			</trans-unit>
 			<trans-unit id="tl_module.acquistoShop_selFields_info.1">
@@ -501,6 +542,7 @@
 			</trans-unit>
 			<trans-unit id="tl_module.acquistoShop_selFields_error.0">
 				<source>Fehlermeldung</source>
+				<target>Error</target>
 				
 			</trans-unit>
 			<trans-unit id="tl_module.acquistoShop_selFields_error.1">
@@ -515,6 +557,7 @@
 			</trans-unit>
 			<trans-unit id="tl_module.acquistoShop_basketType.0">
 				<source>Warenkorb-Typ</source>
+				<target>Cart type</target>
 				
 			</trans-unit>
 			<trans-unit id="tl_module.acquistoShop_basketType.1">
@@ -523,14 +566,17 @@
 			</trans-unit>
 			<trans-unit id="tl_module.acquistoShop_guestOrder.0">
 				<source>Gästebestellung</source>
+				<target>Order from guests</target>
 				
 			</trans-unit>
 			<trans-unit id="tl_module.acquistoShop_guestOrder.1">
 				<source>Definieren Sie ob Gäste im Shop bestellen können.</source>
+				<target>Define if guests can order products from your shop.</target>
 				
 			</trans-unit>
 			<trans-unit id="tl_module.acquistoShop_fieldsAddon.0">
 				<source>Zusatzfelder</source>
+				<target>Additional fields</target>
 				
 			</trans-unit>
 			<trans-unit id="tl_module.acquistoShop_fieldsAddon.1">
@@ -539,6 +585,7 @@
 			</trans-unit>
 			<trans-unit id="tl_module.acquistoShop_fieldsAddon_fieldname.0">
 				<source>Feldname</source>
+				<target>Field name</target>
 				
 			</trans-unit>
 			<trans-unit id="tl_module.acquistoShop_fieldsAddon_fieldname.1">
@@ -546,6 +593,7 @@
 			</trans-unit>
 			<trans-unit id="tl_module.acquistoShop_fieldsAddon_fieldtitle.0">
 				<source>Bezeichnung</source>
+				<target>Title</target>
 				
 			</trans-unit>
 			<trans-unit id="tl_module.acquistoShop_fieldsAddon_fieldtitle.1">
@@ -553,6 +601,7 @@
 			</trans-unit>
 			<trans-unit id="tl_module.acquistoShop_fieldsAddon_fieldtype.0">
 				<source>Feldtype</source>
+				<target>Field type</target>
 				
 			</trans-unit>
 			<trans-unit id="tl_module.acquistoShop_fieldsAddon_fieldtype.1">
@@ -560,6 +609,7 @@
 			</trans-unit>
 			<trans-unit id="tl_module.acquistoShop_fieldsAddon_value.0">
 				<source>Wert</source>
+				<target>Value</target>
 				
 			</trans-unit>
 			<trans-unit id="tl_module.acquistoShop_fieldsAddon_value.1">
@@ -567,6 +617,7 @@
 			</trans-unit>
 			<trans-unit id="tl_module.acquistoShop_fieldsAddon_fieldtype_opt_text.0">
 				<source>Text</source>
+				<target>Text</target>
 				
 			</trans-unit>
 			<trans-unit id="tl_module.acquistoShop_fieldsAddon_fieldtype_opt_text.1">
@@ -574,6 +625,7 @@
 			</trans-unit>
 			<trans-unit id="tl_module.acquistoShop_fieldsAddon_fieldtype_opt_select.0">
 				<source>Select</source>
+				<target>Select</target>
 				
 			</trans-unit>
 			<trans-unit id="tl_module.acquistoShop_fieldsAddon_fieldtype_opt_select.1">
@@ -581,6 +633,7 @@
 			</trans-unit>
 			<trans-unit id="tl_module.acquistoShop_fieldsAddon_fieldtype_opt_checkbox.0">
 				<source>Checkbox</source>
+				<target>Checkbox</target>
 				
 			</trans-unit>
 			<trans-unit id="tl_module.acquistoShop_fieldsAddon_fieldtype_opt_checkbox.1">
@@ -588,6 +641,7 @@
 			</trans-unit>
 			<trans-unit id="tl_module.acquistoShop_fieldsAddon_fieldtype_opt_radio.0">
 				<source>Radio</source>
+				<target>Radio</target>
 				
 			</trans-unit>
 			<trans-unit id="tl_module.acquistoShop_fieldsAddon_fieldtype_opt_radio.1">
@@ -595,6 +649,7 @@
 			</trans-unit>
 			<trans-unit id="tl_module.acquistoShop_fieldsAddon_fieldtype_opt_textarea.0">
 				<source>Textarea</source>
+				<target>Textarea</target>
 				
 			</trans-unit>
 			<trans-unit id="tl_module.acquistoShop_fieldsAddon_fieldtype_opt_textarea.1">
@@ -602,6 +657,7 @@
 			</trans-unit>
 			<trans-unit id="tl_module.acquistoShop_Searchfields.0">
 				<source>Suchfelder</source>
+				<target>Fields to seach</target>
 				
 			</trans-unit>
 			<trans-unit id="tl_module.acquistoShop_Searchfields.1">
@@ -610,18 +666,22 @@
 			</trans-unit>
 			<trans-unit id="tl_module.acquistoShop_excludeTags.0">
 				<source>Tags ausnehmen</source>
+				<target>Exclude tags</target>
 				
 			</trans-unit>
 			<trans-unit id="tl_module.acquistoShop_excludeTags.1">
 				<source>Geben Sie hier eine Komma getrennte Liste von Tags ein die nicht angezeigt werden sollen.</source>
+				<target>Enter a list of tags you do not want to display separated by commas</target>
 				
 			</trans-unit>
 			<trans-unit id="tl_module.socialmedia">
 				<source>SocialMedia</source>
+				<target>SocialMedia</target>
 				
 			</trans-unit>
 			<trans-unit id="tl_module.contaoShop_socialFacebook.0">
 				<source>Facebook Gefällt mir Button</source>
+				<target>Facebook Like-Button</target>
 				
 			</trans-unit>
 			<trans-unit id="tl_module.contaoShop_socialFacebook.1">
@@ -629,6 +689,7 @@
 			</trans-unit>
 			<trans-unit id="tl_module.contaoShop_socialTwitter.0">
 				<source>Tweet This - Button</source>
+				<target>Tweet This - Button</target>
 				
 			</trans-unit>
 			<trans-unit id="tl_module.contaoShop_socialTwitter.1">
@@ -636,6 +697,7 @@
 			</trans-unit>
 			<trans-unit id="tl_module.acquistoShop_emailTemplate.0">
 				<source>E-Mail Template für Käufer</source>
+				<target>Email-template for buyer</target>
 				
 			</trans-unit>
 			<trans-unit id="tl_module.acquistoShop_emailTemplate.1">
@@ -643,6 +705,7 @@
 			</trans-unit>
 			<trans-unit id="tl_module.acquistoShop_emailTemplate_seller.0">
 				<source>E-Mail Template für Verkäufer</source>
+				<target>Email-template for seller</target>
 				
 			</trans-unit>
 			<trans-unit id="tl_module.acquistoShop_emailTemplate_seller.1">
@@ -650,6 +713,7 @@
 			</trans-unit>
 			<trans-unit id="tl_module.acquistoShop_emailTyp.0">
 				<source>E-Mail Typ</source>
+				<target>Email type</target>
 				
 			</trans-unit>
 			<trans-unit id="tl_module.acquistoShop_emailTyp.1">
@@ -657,6 +721,7 @@
 			</trans-unit>
 			<trans-unit id="tl_module.acquistoShop_AGBFile.0">
 				<source>AGB Datei</source>
+				<target>GTC file</target>
 				
 			</trans-unit>
 			<trans-unit id="tl_module.acquistoShop_AGBFile.1">
@@ -664,26 +729,32 @@
 			</trans-unit>
 			<trans-unit id="tl_module.acquistoShop_allowComments.0">
 				<source>Kommentare aktivieren</source>
+				<target>Activate comments</target>
 				
 			</trans-unit>
 			<trans-unit id="tl_module.acquistoShop_allowComments.1">
 				<source>Besuchern das Kommentieren von Nachrichtenbeiträgen erlauben.</source>
+				<target>Enable comments from visitors</target>
 				
 			</trans-unit>
 			<trans-unit id="tl_module.acquistoShop_commentsPerPage.0">
 				<source>Kommentare pro Seite</source>
+				<target>Comments per page</target>
 				
 			</trans-unit>
 			<trans-unit id="tl_module.acquistoShop_commentsPerPage.1">
 				<source>Anzahl an Kommentaren pro Seite. Geben Sie 0 ein, um den automatischen Seitenumbruch zu deaktivieren.</source>
+				<target>Number of comments per page. Enter 0 to disable automatic pagination</target>
 				
 			</trans-unit>
 			<trans-unit id="tl_module.acquistoShop_commentsNotify.0">
 				<source>Benachrichtigung an</source>
+				<target>Notification on</target>
 				
 			</trans-unit>
 			<trans-unit id="tl_module.acquistoShop_commentsNotify.1">
 				<source>Bitte legen Sie fest, wer beim Hinzufügen neuer Kommentare benachrichtigt wird.</source>
+				<target>Please define who should be notified about new comments</target>
 				
 			</trans-unit>
 		</body>

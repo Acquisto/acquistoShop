@@ -1,0 +1,21 @@
+<?xml version="1.0" ?><xliff version="1.1">
+	<file datatype="php" original="system/modules/acquistoShop/languages/de/default.php" source-language="de">
+		<body>
+			<trans-unit id="CTE.acquistoShop">
+				<source>Acquisto</source>
+				<target>Acquisto</target>
+				
+			</trans-unit>
+			<trans-unit id="CTE.product.0">
+				<source>Produkt</source>
+				<target>Produkts</target>
+				
+			</trans-unit>
+			<trans-unit id="CTE.product.1">
+				<source>Zeigt ein Produkt an.</source>
+				<target>Parāda produktu.</target>
+				
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

@@ -1,0 +1,151 @@
+<?xml version="1.0" ?><xliff version="1.1">
+	<file datatype="php" original="system/modules/acquistoShop/languages/de/tl_shop_hersteller.php" source-language="de">
+		<body>
+			<trans-unit id="tl_shop_hersteller.title_legend">
+				<source>Allgemein</source>
+				<target>Vispārīgi</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_hersteller.address_legend">
+				<source>Adressdaten</source>
+				<target>Adrese</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_hersteller.contact_legend">
+				<source>Kontaktdaten</source>
+				<target>Kontakti</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_hersteller.bezeichnung.0">
+				<source>Bezeichnung</source>
+				<target>Apraksts</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_hersteller.bezeichnung.1">
+				<source>Geben Sie den Namen des Herstellers ein.</source>
+				<target>Ievadiet ražotāja nosaukumu.</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_hersteller.street.0">
+				<source>Straße</source>
+				<target>Iela</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_hersteller.street.1">
+				<source>Bitte geben Sie den Straßennamen und die Hausnummer ein.</source>
+				<target>Lūdzu, ievadiet ielas nosaukumu un mājas numuru.</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_hersteller.postal.0">
+				<source>Postleitzahl</source>
+				<target>Pasta indekss</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_hersteller.postal.1">
+				<source>Bitte geben Sie die Postleitzahl ein.</source>
+				<target>Lūdzu ievadiet pasta indeksu.</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_hersteller.city.0">
+				<source>Ort</source>
+				<target>Vieta</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_hersteller.city.1">
+				<source>Bitte geben Sie den Namen des Ortes ein.</source>
+				<target>Lūdzu, ievadiet vietas nosaukumu.</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_hersteller.phone.0">
+				<source>Telefon</source>
+				<target>Tālrunis</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_hersteller.phone.1">
+				<source>Bitte geben Sie die Telefonnummer ein.</source>
+				<target>Lūdzu, ievadiet tālruņa numuru.</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_hersteller.fax.0">
+				<source>Faxnummer</source>
+				<target>Faksa numurs</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_hersteller.fax.1">
+				<source>Bitte geben Sie die Faxnummer ein.</source>
+				<target>Lūdzu, ievadiet faksa numuru.</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_hersteller.email.0">
+				<source>E-Mail Adresse</source>
+				<target>E-pasta adrese</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_hersteller.email.1">
+				<source>Bitte geben Sie eine gültige E-Mail-Adresse ein.</source>
+				<target>Lūdzu, ievadiet derīgu e-pasta adresi.</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_hersteller.website.0">
+				<source>Webseite</source>
+				<target>Tīmekļa vietne</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_hersteller.website.1">
+				<source>Hier können Sie eine Web-Adresse eingeben.</source>
+				<target>Šeit jūs varat ievadīt tīmekļa vietnes adresi.</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_hersteller.new.0">
+				<source>Neuer Hersteller</source>
+				<target>Jauns ražotājs</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_hersteller.new.1">
+				<source>Einen neuen Hersteller erstellen</source>
+				<target>Izveidot jaunu ražotāju</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_hersteller.edit.0">
+				<source>Bearbeiten</source>
+				<target>Apstrādāt</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_hersteller.edit.1">
+				<source>Hersteller ID %s bearbeiten</source>
+				<target>Apstrādāt ražotāju ID %s</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_hersteller.copy.0">
+				<source>Duplizieren</source>
+				<target>Dublicēt</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_hersteller.copy.1">
+				<source>Hersteller ID %s duplizieren</source>
+				<target>Dublicēt ražotāju ID %s</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_hersteller.delete.0">
+				<source>Löschen</source>
+				<target>Dzēst</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_hersteller.delete.1">
+				<source>Hersteller ID %s löschen</source>
+				<target>Dzēst ražotāju ID %s</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_hersteller.show.0">
+				<source>Details</source>
+				<target>Detaļas</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_hersteller.show.1">
+				<source>Die Details des Herstellers ID %s anzeigen</source>
+				<target>Parādīt ražotāja ID %s informāciju</target>
+				
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

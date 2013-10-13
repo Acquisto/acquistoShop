@@ -1,5 +1,5 @@
 <?xml version="1.0" ?><xliff version="1.1">
-	<file datatype="php" original="system/modules/acquistoShop/languages/de/tl_shop_settings.php" source-language="de_DE">
+	<file datatype="php" original="system/modules/acquistoShop/languages/de/tl_shop_settings.php" source-language="de">
 		<body>
 			<trans-unit id="tl_shop_settings.settings">
 				<source>Einstellungen</source>
@@ -13,10 +13,12 @@
 			</trans-unit>
 			<trans-unit id="tl_shop_settings.bankverbindung">
 				<source>Bankverbindung</source>
+				<target>Bank details</target>
 				
 			</trans-unit>
 			<trans-unit id="tl_shop_settings.rechtangaben">
 				<source>Rechtsangaben</source>
+				<target>Legal information</target>
 				
 			</trans-unit>
 			<trans-unit id="tl_shop_settings.currency_legend">
@@ -42,6 +44,7 @@
 			</trans-unit>
 			<trans-unit id="tl_shop_settings.widerruf.0">
 				<source>Widerrufsbelehrung</source>
+				<target>Revocation instructions</target>
 				
 			</trans-unit>
 			<trans-unit id="tl_shop_settings.widerruf.1">
@@ -181,6 +184,7 @@
 			</trans-unit>
 			<trans-unit id="tl_shop_settings.versandPage.0">
 				<source>Versand und Zahlungsinformationen</source>
+				<target>Shipping and payment information</target>
 				
 			</trans-unit>
 			<trans-unit id="tl_shop_settings.versandPage.1">
@@ -188,6 +192,7 @@
 			</trans-unit>
 			<trans-unit id="tl_shop_settings.versandberechnung.0">
 				<source>Versandkostenberechnung</source>
+				<target>Shipping cost calculation</target>
 				
 			</trans-unit>
 			<trans-unit id="tl_shop_settings.versandberechnung.1">
@@ -195,6 +200,7 @@
 			</trans-unit>
 			<trans-unit id="tl_shop_settings.steuernummer.0">
 				<source>Steuernummer</source>
+				<target>Unique Taxpayer Reference</target>
 				
 			</trans-unit>
 			<trans-unit id="tl_shop_settings.steuernummer.1">
@@ -202,6 +208,7 @@
 			</trans-unit>
 			<trans-unit id="tl_shop_settings.umsatzsteuerindent.0">
 				<source>Umsatzsteuer-Indent</source>
+				<target>VAT registration number</target>
 				
 			</trans-unit>
 			<trans-unit id="tl_shop_settings.umsatzsteuerindent.1">
@@ -209,6 +216,7 @@
 			</trans-unit>
 			<trans-unit id="tl_shop_settings.handelsregister.0">
 				<source>Handelsregister-Nummer</source>
+				<target>Company registration number</target>
 				
 			</trans-unit>
 			<trans-unit id="tl_shop_settings.handelsregister.1">

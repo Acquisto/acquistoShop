@@ -1,0 +1,106 @@
+<?xml version="1.0" ?><xliff version="1.1">
+	<file datatype="php" original="system/modules/acquistoShop/languages/de/tl_shop_pricelists.php" source-language="de">
+		<body>
+			<trans-unit id="tl_shop_pricelists.title_legend">
+				<source>Allgemein</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_pricelists.config_legend">
+				<source>Einstellungen</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_pricelists.show_legend">
+				<source>Anzeigeeinstellungen</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_pricelists.title.0">
+				<source>Bezeichnung</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_pricelists.title.1">
+				<source>Geben Sie eine Bezeichnung für diese Preisliste ein.</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_pricelists.default_list.0">
+				<source>Standard</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_pricelists.default_list.1">
+				<source>Definieren Sie ob diese Preisliste die Standardpreisliste ist.</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_pricelists.type.0">
+				<source>Preislisten-Typ</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_pricelists.type.1">
+				<source>Geben Sie eine Bezeichnung für diese Preisliste ein.</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_pricelists.currency.0">
+				<source>Währung</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_pricelists.currency.1">
+				<source>Wählen Sie den Währungstyp aus.</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_pricelists.guests.0">
+				<source>Gäste</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_pricelists.guests.1">
+				<source>Ist diese Preisliste für Gäste sichrbar?</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_pricelists.groups.0">
+				<source>Mitgliedergruppen</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_pricelists.groups.1">
+				<source>Welche Mitgliedergruppen haben Zugriff auf diese Preisliste?</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_pricelists.new.0">
+				<source>Neue Preisliste</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_pricelists.new.1">
+				<source>Eine neue Preisliste erstellen</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_pricelists.edit.0">
+				<source>Bearbeiten</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_pricelists.edit.1">
+				<source>Preisliste ID %s bearbeiten</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_pricelists.copy.0">
+				<source>Duplizieren</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_pricelists.copy.1">
+				<source>Preisliste ID %s duplizieren</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_pricelists.delete.0">
+				<source>Löschen</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_pricelists.delete.1">
+				<source>Preisliste ID %s löschen</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_pricelists.show.0">
+				<source>Details</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_pricelists.show.1">
+				<source>Die Details der Preisliste ID %s anzeigen</source>
+				
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

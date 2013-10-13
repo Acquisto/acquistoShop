@@ -1,0 +1,131 @@
+<?xml version="1.0" ?><xliff version="1.1">
+	<file datatype="php" original="system/modules/acquistoShop/languages/de/tl_shop_currency.php" source-language="de">
+		<body>
+			<trans-unit id="tl_shop_currency.title_legend">
+				<source>Allgemein</source>
+				<target>Vispārīgi</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_currency.config_legend">
+				<source>Einstellungen</source>
+				<target>Iestatījumi</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_currency.show_legend">
+				<source>Anzeigeeinstellungen</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_currency.title.0">
+				<source>Bezeichnung</source>
+				<target>Apzīmējums</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_currency.title.1">
+				<source>Geben Sie eine Bezeichnung für diese Preisliste ein.</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_currency.default_currency.0">
+				<source>Standard</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_currency.default_currency.1">
+				<source>Definieren Sie ob diese Währung die Standardwährung ist.</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_currency.iso_code.0">
+				<source>ISO-Code</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_currency.iso_code.1">
+				<source>Geben Sie eine Bezeichnung für diese Preisliste ein.</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_currency.currency.0">
+				<source>Währung</source>
+				<target>Valūta</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_currency.currency.1">
+				<source>Wählen Sie den Währungstyp aus.</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_currency.guests.0">
+				<source>Gäste</source>
+				<target>Viesi</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_currency.guests.1">
+				<source>Ist diese Währung für Gäste sichrbar?</source>
+				<target>Vai šī valūta ir redzama  viesiem?</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_currency.groups.0">
+				<source>Mitgliedergruppen</source>
+				<target>Biedru grupas</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_currency.groups.1">
+				<source>Welche Mitgliedergruppen haben Zugriff auf diese Preisliste?</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_currency.exchange_ratio.0">
+				<source>Umrechnungsfaktor</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_currency.exchange_ratio.1">
+				<source>Geben Sie den Umrechnungsfaktor zur Standartwährung ein.</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_currency.new.0">
+				<source>Neue Währung</source>
+				<target>Jauna valūta</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_currency.new.1">
+				<source>Eine neue Währung erstellen</source>
+				<target>Izveidot jaunu valūtu</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_currency.edit.0">
+				<source>Bearbeiten</source>
+				<target>Apstrādāt</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_currency.edit.1">
+				<source>Währung ID %s bearbeiten</source>
+				<target>Apstrādāt valūtu ID %s</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_currency.copy.0">
+				<source>Duplizieren</source>
+				<target>Dublicēt</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_currency.copy.1">
+				<source>Währung ID %s duplizieren</source>
+				<target>Dublicēt valūtu ID %s</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_currency.delete.0">
+				<source>Löschen</source>
+				<target>Dzēst</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_currency.delete.1">
+				<source>Währung ID %s löschen</source>
+				<target>Dzēst valūtu ID %s</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_currency.show.0">
+				<source>Details</source>
+				<target>Informācija</target>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_currency.show.1">
+				<source>Die Details der Währung ID %s anzeigen</source>
+				<target>Parādīt valūtas ID %s informāciju</target>
+				
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

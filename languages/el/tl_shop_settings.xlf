@@ -1,0 +1,196 @@
+<?xml version="1.0" ?><xliff version="1.1">
+	<file datatype="php" original="system/modules/acquistoShop/languages/de/tl_shop_settings.php" source-language="de">
+		<body>
+			<trans-unit id="tl_shop_settings.settings">
+				<source>Einstellungen</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.shopdaten">
+				<source>Shopdaten</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.bankverbindung">
+				<source>Bankverbindung</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.rechtangaben">
+				<source>Rechtsangaben</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.currency_legend">
+				<source>Währung</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.steuer.0">
+				<source>Steuersatz</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.steuer.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.agb.0">
+				<source>Allgemeine Geschäftsbedingungen</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.agb.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.widerruf.0">
+				<source>Widerrufsbelehrung</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.widerruf.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.firmenname.0">
+				<source>Firma</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.firmenname.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.firmentyp.0">
+				<source>Gesellschaftsform</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.firmentyp.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.inhaber.0">
+				<source>Inhaber</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.inhaber.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.strasse.0">
+				<source>Strasse</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.strasse.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.postleitzahl.0">
+				<source>Postleitzahl</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.postleitzahl.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.ort.0">
+				<source>Ort</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.ort.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.telefon.0">
+				<source>Telefon</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.telefon.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.telefax.0">
+				<source>Telefax</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.telefax.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.bestell_email.0">
+				<source>E-Mail Adresse</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.bestell_email.1">
+				<source>Empfangs- und Absender eMail Adresse für Bestellungen</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.currency_symbol.0">
+				<source>Währungssymbol</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.currency_symbol.1">
+				<source>Wählen Sie ihre Standardwährung</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.bank.0">
+				<source>Name der Bank</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.bank.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.bank_inhaber.0">
+				<source>Kontoinhaber</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.bank_inhaber.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.blz.0">
+				<source>Bankleitzahl</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.blz.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.kto.0">
+				<source>Kontonummer</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.kto.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.iban.0">
+				<source>IBAN</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.iban.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.bic.0">
+				<source>BIC</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.bic.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.versandPage.0">
+				<source>Versand und Zahlungsinformationen</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.versandPage.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.versandberechnung.0">
+				<source>Versandkostenberechnung</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.versandberechnung.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.steuernummer.0">
+				<source>Steuernummer</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.steuernummer.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.umsatzsteuerindent.0">
+				<source>Umsatzsteuer-Indent</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.umsatzsteuerindent.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.handelsregister.0">
+				<source>Handelsregister-Nummer</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_shop_settings.handelsregister.1">
+				<source/>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

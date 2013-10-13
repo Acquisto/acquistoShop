@@ -1,0 +1,27 @@
+<?xml version="1.0" ?><xliff version="1.1">
+	<file datatype="php" original="system/modules/acquistoShop/languages/de/tl_acquisto_pclasses.php" source-language="de">
+		<body>
+			<trans-unit id="tl_acquisto_pclasses.normal.0">
+				<source>Normales Produkt</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_acquisto_pclasses.normal.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_acquisto_pclasses.digital.0">
+				<source>Digitales Produkt</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_acquisto_pclasses.digital.1">
+				<source/>
+			</trans-unit>
+			<trans-unit id="tl_acquisto_pclasses.variant.0">
+				<source>Varianten Produkte</source>
+				
+			</trans-unit>
+			<trans-unit id="tl_acquisto_pclasses.variant.1">
+				<source/>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
