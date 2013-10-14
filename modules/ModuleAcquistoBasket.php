@@ -695,7 +695,7 @@ class ModuleAcquistoBasket extends \Module
                     'fromName'  => $GLOBALS['TL_CONFIG']['firmenname'],
                 ),
                 'sendTo'        => array(
-                    'to'            => array($orderObject->customerData->email),
+                    'to'            => array(),
                     'cc'            => array(),
                     'bcc'           => array($GLOBALS['TL_CONFIG']['bestell_email'])
                 ), 
@@ -705,7 +705,10 @@ class ModuleAcquistoBasket extends \Module
                 'attachments'   => array()                                                                                   
             );
     
+            $arrCardMail['sendTo']['to'] = array($orderObject->customerData->email);
             $this->Basket->sendOrderMail($this->acquistoShop_emailTemplate, $orderObject->customerData->email, $arrCardMail);
+
+            $arrCardMail['sendTo']['to'] = array($GLOBALS['TL_CONFIG']['bestell_email']);
             $this->Basket->sendOrderMail($this->acquistoShop_emailTemplate_seller, $GLOBALS['TL_CONFIG']['bestell_email'], $arrCardMail);
             
             $this->Template = new \FrontendTemplate('mod_warenkorb_pay');
