@@ -71,6 +71,11 @@ $GLOBALS['BE_MOD']['acquisto_Settings'] = array(
         'tables'     => array('tl_shop_steuer', 'tl_shop_steuersaetze'),
         'icon'       => 'system/modules/acquistoShop/assets/gfx/ruby.png',
     ),
+    'acquistoShopOrderStates' => array
+    (
+        'tables'     => array('tl_shop_order_states', 'tl_shop_order_states_processes'),
+        'icon'       => 'system/modules/acquistoShop/assets/gfx/text_list_bullets.png',
+    ),
     'acquistoShopShippingZones' => array
     (
         'tables'     => array('tl_shop_versandzonen', 'tl_shop_versandzonen_varten'),
@@ -112,20 +117,21 @@ $GLOBALS['BE_MOD']['acquisto_Settings'] = array(
 
 array_insert($GLOBALS['FE_MOD']['acquisto'], 0, array
 (
-    'acquisto_productdetails' => 'ModuleAcquistoProductDetails',
-    'acquisto_productlist'    => 'ModuleAcquistoProductList',
-    'acquisto_breadcrumb'     => 'ModuleAcquistoBreadcrumb',
-    'acquisto_search'         => 'ModuleAcquistoSearch',
-    'acquisto_shipping'       => 'ModuleAcquistoShipping',
-    'acquisto_currency'       => 'ModuleAcquistoCurrency',
-    'acquisto_categories'     => 'ModuleAcquistoCategories',
-    'acquisto_basket'         => 'ModuleAcquistoBasket',
-    'acquisto_tagcloud'       => 'ModuleAcquistoTagCloud',
-    'acquisto_coupon'         => 'ModuleAcquistoCoupon',
-    'acquisto_orderlist'      => 'ModuleAcquistoOrderList',
-    'acquisto_orderdetails'   => 'ModuleAcquistoOrderDetails',
-    'acquisto_filterlist'     => 'ModuleAcquistoFilterList',
-    'acquisto_terms'          => 'ModuleAcquistoTerms'
+    'acquisto_productdetails'   => 'ModuleAcquistoProductDetails',
+    'acquisto_productlist'      => 'ModuleAcquistoProductList',
+    'acquisto_breadcrumb'       => 'ModuleAcquistoBreadcrumb',
+    'acquisto_search'           => 'ModuleAcquistoSearch',
+    'acquisto_shipping'         => 'ModuleAcquistoShipping',
+    'acquisto_currency'         => 'ModuleAcquistoCurrency',
+    'acquisto_categories'       => 'ModuleAcquistoCategories',
+    'acquisto_basket'           => 'ModuleAcquistoBasket',
+    'acquisto_tagcloud'         => 'ModuleAcquistoTagCloud',
+    'acquisto_coupon'           => 'ModuleAcquistoCoupon',
+    'acquisto_manufacturerlist' => 'ModuleAcquistoManufacturerList',
+    'acquisto_orderlist'        => 'ModuleAcquistoOrderList',
+    'acquisto_orderdetails'     => 'ModuleAcquistoOrderDetails',
+    'acquisto_filterlist'       => 'ModuleAcquistoFilterList',
+    'acquisto_terms'            => 'ModuleAcquistoTerms'
 ));
 
 array_insert($GLOBALS['FE_MOD']['acquisto_widget'], 0, array

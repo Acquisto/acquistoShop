@@ -1,0 +1,38 @@
+<div class="<?php echo $this->class; ?>"<?php echo $this->cssID; ?><?php if ($this->style): ?> style="<?php echo $this->style; ?>"<?php endif; ?>>
+    <?php if($this->headline): ?>
+    <<?php echo $this->hl; ?>><?php echo $this->headline; ?></<?php echo $this->hl; ?>>
+    <?php endif; ?>
+    
+    <?php if($this->Manufacturer): ?>
+    <?php foreach($this->Manufacturer as $Manufacturer): ?>
+    <div class="element">
+        <h2><?php echo $Manufacturer->bezeichnung; ?></h2>
+        
+        <?php if (!$Manufacturer->imageSrc->addBefore): ?>
+            <div class="text"><?php echo $Manufacturer->description; ?></div>
+        <?php endif; ?>
+    
+        <?php if ($Manufacturer->imageSrc->addImage): ?>
+            <div class="image_container<?php echo $Manufacturer->imageSrc->floatClass; ?>"<?php if ($Manufacturer->imageSrc->margin || $Manufacturer->imageSrc->float): ?> style="<?php echo trim($Manufacturer->imageSrc->margin . $Manufacturer->imageSrc->float); ?>"<?php endif; ?>>
+            <?php if ($Manufacturer->imageSrc->href): ?>
+            <a href="<?php echo $Manufacturer->imageSrc->href; ?>"<?php echo $Manufacturer->imageSrc->attributes; ?> title="<?php echo $Manufacturer->imageSrc->alt; ?>">
+            <?php endif; ?>
+                <img src="<?php echo $Manufacturer->imageSrc->src; ?>"<?php echo $Manufacturer->imageSrc->imgSize; ?> alt="<?php echo $Manufacturer->imageSrc->alt; ?>">
+            <?php if ($Manufacturer->imageSrc->href): ?>
+            </a>
+            <?php endif; ?>
+            <?php if ($Manufacturer->imageSrc->caption): ?>
+            <div class="caption"><?php echo $Manufacturer->imageSrc->caption; ?></div>
+            <?php endif; ?>
+            </div>
+        <?php endif; ?>
+    
+        <?php if ($Manufacturer->imageSrc->addBefore): ?>
+            <div class="text"><?php echo $Manufacturer->description; ?></div>
+        <?php endif; ?>
+        
+        <p><a href="<?php echo $Manufacturer->url; ?>">Alle Produkte des Herstellers anzeigen.</a></p>        
+    </div>
+    <?php endforeach; ?>
+    <?php endif; ?>
+</div>

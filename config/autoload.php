@@ -77,6 +77,7 @@ ClassLoader::addClasses(array
 	'AcquistoShop\Frontend\ModuleAcquistoBasket'              => 'system/modules/acquistoShop/modules/ModuleAcquistoBasket.php',
 	'AcquistoShop\Frontend\ModuleAcquistoTerms'               => 'system/modules/acquistoShop/modules/ModuleAcquistoTerms.php',
 	'AcquistoShop\Frontend\ModuleAcquistoFilterList'          => 'system/modules/acquistoShop/modules/ModuleAcquistoFilterList.php',
+	'AcquistoShop\Frontend\ModuleAcquistoManufacturerList'    => 'system/modules/acquistoShop/modules/ModuleAcquistoManufacturerList.php',
 	'AcquistoShop\Frontend\ModuleAcquistoCoupon'              => 'system/modules/acquistoShop/modules/ModuleAcquistoCoupon.php',
 	'AcquistoShop\Frontend\ModuleAcquistoOrderList'           => 'system/modules/acquistoShop/modules/ModuleAcquistoOrderList.php',
 	'AcquistoShop\Frontend\ModuleAcquistoOrderDetails'        => 'system/modules/acquistoShop/modules/ModuleAcquistoOrderDetails.php',
@@ -137,6 +138,7 @@ TemplateLoader::addFiles(array
   'mod_warenkorb_paypal_revieworder'   => 'system/modules/acquistoShop/templates/modules',
   'mod_warenkorb_access_denied'        => 'system/modules/acquistoShop/templates/modules',
   'mod_acquisto_currency'              => 'system/modules/acquistoShop/templates/modules',
+  'mod_acquisto_manufacturer_list'     => 'system/modules/acquistoShop/templates/modules',
 
 	'warenkorb_email_default'            => 'system/modules/acquistoShop/templates/email',
 

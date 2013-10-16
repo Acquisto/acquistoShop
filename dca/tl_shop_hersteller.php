@@ -93,7 +93,7 @@ $GLOBALS['TL_DCA']['tl_shop_hersteller'] = array
     // Palettes
     'palettes' => array
     (
-        'default'                     => '{title_legend},bezeichnung;{address_legend},street,postal,city;{contact_legend},phone,fax,email,website;',
+        'default'                     => '{title_legend},bezeichnung;{address_legend},street,postal,city;{contact_legend},phone,fax,email,website;{description_legend},description;{logo_legend},imageSrc;',
     ),
 
 
@@ -171,7 +171,24 @@ $GLOBALS['TL_DCA']['tl_shop_hersteller'] = array
             'search'                  => true,
             'eval'                    => array('mandatory'=>false, 'maxlength'=>255, 'rgxp' => 'email', 'tl_class'=>'w50'),
       			'sql'                     => "varchar(255) NOT NULL default ''"
-        )
+        ),
+        'description' => array
+        (
+            'label'                   => &$GLOBALS['TL_LANG']['tl_shop_hersteller']['description'],
+            'inputType'               => 'textarea',
+            'exclude'                 => true,
+            'search'                  => true,
+            'eval'                    => array('mandatory'=>false, 'rte'=>'tinyMCE', 'tl_class'=>'clr', 'acquistoSearch'=>true),
+      			'sql'                     => "text NOT NULL"
+        ),
+        'imageSrc' => array(
+            'label'                   => &$GLOBALS['TL_LANG']['tl_shop_hersteller']['imageSrc'],
+            'inputType'               => 'fileTree',
+            'exclude'                 => true,
+            'search'                  => false,
+            'eval'                    => array('mandatory'=>false,'fieldType'=>'radio', 'files'=>true, 'filesOnly'=>true,'extensions'=>'jpg,png,gif'),
+      			'sql'                     => "varchar(255) NOT NULL default ''"
+        )        
     )
 );
 
