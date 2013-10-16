@@ -2,7 +2,7 @@
 
 namespace AcquistoShop\Frontend;
 
-class ModuleAcquistoTerms extends Module
+class ModuleAcquistoTerms extends \Module
 {
 
     /**
