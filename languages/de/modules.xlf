@@ -690,6 +690,22 @@
 				<source>Bitte legen Sie fest, wer beim Hinzufügen neuer Kommentare benachrichtigt wird.</source>
 				<target>Bitte legen Sie fest, wer beim Hinzufügen neuer Kommentare benachrichtigt wird.</target>
 			</trans-unit>
+			<trans-unit id="tl_module.acquistoShop_emailSubject_Buyer.0">
+				<source>Betreff der Käufer E-Mail</source>
+				<target>Betreff der Käufer E-Mail</target>
+			</trans-unit>
+			<trans-unit id="tl_module.acquistoShop_emailSubject_Buyer.1">
+				<source>Bitte geben Sie hier den Betreff für die Käufer E-Mail ein. Nutzen %s für die Bestellnummer.</source>
+				<target>Bitte geben Sie hier den Betreff für die Käufer E-Mail ein. Nutzen %s für die Bestellnummer.</target>
+			</trans-unit>      
+			<trans-unit id="tl_module.acquistoShop_emailSubject_Seller.0">
+				<source>Betreff der Verkäufer E-Mail</source>
+				<target>Betreff der Verkäufer E-Mail</target>
+			</trans-unit>
+			<trans-unit id="tl_module.acquistoShop_emailSubject_Seller.1">
+				<source>Bitte geben Sie hier den Betreff für die Verkäufer E-Mail ein. Nutzen %s für die Bestellnummer.</source>
+				<target>Bitte geben Sie hier den Betreff für die Verkäufer E-Mail ein. Nutzen %s für die Bestellnummer.</target>
+			</trans-unit>      
 		</body>
 	</file>
 </xliff>

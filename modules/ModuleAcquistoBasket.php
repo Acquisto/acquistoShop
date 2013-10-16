@@ -690,22 +690,27 @@ class ModuleAcquistoBasket extends \Module
                     'Payment'    => $orderObject->payment,
                 ),
                 'emailTemplate' => $this->acquistoShop_emailTemplate,
-                'emailFrom'          => array(
+                'emailFrom'     => array(
                     'fromMail'  => $GLOBALS['TL_CONFIG']['bestell_email'],
                     'fromName'  => $GLOBALS['TL_CONFIG']['firmenname'],
                 ),
                 'sendTo'        => array(
-                    'to'            => array($orderObject->customerData->email),
-                    'cc'            => array(),
-                    'bcc'           => array($GLOBALS['TL_CONFIG']['bestell_email'])
+                    'to'        => array(),
+                    'cc'        => array(),
+                    'bcc'       => array($GLOBALS['TL_CONFIG']['bestell_email'])
                 ), 
-                'emailSubject'  => 'Bestellung ' . $this->Shop->generateOrderID($orderID),
+                'emailSubject'  => null,
                 'emailTyp'      => $this->acquistoShop_emailTyp,
                 'agbFile'       => $this->acquistoShop_AGBFile,
                 'attachments'   => array()                                                                                   
             );
-    
+                
+            $arrCardMail['sendTo']['to'] = array($orderObject->customerData->email);
+            $arrCardMail['emailSubject'] = sprintf($this->acquistoShop_emailSubject_Buyer, $this->Shop->generateOrderID($orderID));
             $this->Basket->sendOrderMail($this->acquistoShop_emailTemplate, $orderObject->customerData->email, $arrCardMail);
+            
+            $arrCardMail['sendTo']['to'] = array($GLOBALS['TL_CONFIG']['bestell_email']);
+            $arrCardMail['emailSubject'] = sprintf($this->acquistoShop_emailSubject_Seller, $this->Shop->generateOrderID($orderID));
             $this->Basket->sendOrderMail($this->acquistoShop_emailTemplate_seller, $GLOBALS['TL_CONFIG']['bestell_email'], $arrCardMail);
             
             $this->Template = new \FrontendTemplate('mod_warenkorb_pay');

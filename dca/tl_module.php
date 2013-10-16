@@ -74,6 +74,7 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['acquistoShop_excludeTags'] = array
 $GLOBALS['TL_DCA']['tl_module']['fields']['acquistoShop_emailSubject_Buyer'] = array
 (
     'label'                   => &$GLOBALS['TL_LANG']['tl_module']['acquistoShop_emailSubject_Buyer'],
+    'default'                 => '%s',
     'exclude'                 => true,
     'inputType'               => 'text',
     'eval'                    => array('mandatory'=>true, 'tl_class'=>'w50'),
@@ -83,6 +84,7 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['acquistoShop_emailSubject_Buyer'] = a
 $GLOBALS['TL_DCA']['tl_module']['fields']['acquistoShop_emailSubject_Seller'] = array
 (
     'label'                   => &$GLOBALS['TL_LANG']['tl_module']['acquistoShop_emailSubject_Seller'],
+    'default'                 => '%s',
     'exclude'                 => true,
     'inputType'               => 'text',
     'eval'                    => array('mandatory'=>true, 'tl_class'=>'w50'),
