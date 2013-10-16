@@ -1,26 +1,6 @@
 <?php
 
-/**
- * The AcquistoShop extension allows to create an online 
- * store with the OpenSource Contao CMS. If you have
- * questions our website: http://www.contao-acquisto.de  
- *
- * PHP version 5
- * @copyright  Leo Feyer 2005-2011
- * @author     Leo Feyer <http://www.contao.org>
- * @package    Backend
- * @license    LGPL
- * @filesource
- */
-
-/**
- * Class mod_acquistoShop_AGB
- *
- * Front end module "mod_acquistoShop_AGB".
- * @copyright  Sascha Brandhoff 2011
- * @author     Sascha Brandhoff <http://www.contao-acquisto.org>
- * @package    Controller
- */
+namespace AcquistoShop\Frontend;
 
 class ModuleAcquistoTerms extends Module
 {
@@ -42,7 +22,7 @@ class ModuleAcquistoTerms extends Module
         {
             $objTemplate = new \BackendTemplate('be_wildcard');
 
-            $objTemplate->wildcard = '### ACQUISTO AGB ###';
+            $objTemplate->wildcard = '### ACQUISTO TERMS ###';
             $objTemplate->title = $this->headline;
             $objTemplate->id = $this->id;
             $objTemplate->link = $this->name;
