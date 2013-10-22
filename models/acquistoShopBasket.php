@@ -183,7 +183,6 @@ class acquistoShopBasket extends \Controller
         }
 
         $this->buildBasket();    
-        \AcquistoShop\acquistoShop::reload();
     }
 
     public function getWeight() 
@@ -252,9 +251,12 @@ class acquistoShopBasket extends \Controller
             if($this->cardType == 'netto' && $taxAdd) 
             {
                 $arrSteuern = $this->getTaxes();
-                foreach($arrSteuern as $taxValue) 
+                if(is_array($arrSteuern))
                 {
-                    $floatCosts = $floatCosts + $taxValue['wert'];
+                    foreach($arrSteuern as $taxValue) 
+                    {
+                        $floatCosts = $floatCosts + $taxValue['wert'];
+                    }
                 }
             }            
         }
