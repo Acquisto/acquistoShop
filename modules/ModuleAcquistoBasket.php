@@ -78,7 +78,9 @@ class ModuleAcquistoBasket extends \Module
             foreach($this->Input->Post('menge') as $keyId => $menge) 
             {
                 $this->Basket->update($keyId, $menge);
-            }    
+            }
+            
+            \AcquistoShop\acquistoShop::reload();    
         }
 
         if($this->Input->Get('remove')) 

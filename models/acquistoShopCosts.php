@@ -199,9 +199,9 @@ class acquistoShopCosts extends \Controller {
     {        
         $tax = ($costItem->tax + 100) / 100;
         
-        if($costItem->basecots && !$this->taxAdded) 
+        if($costItem->basecosts && !$this->taxAdded) 
         {
-            $costItem->basecots = $costItem->basecots * $tax;
+            $costItem->basecosts = $costItem->basecosts * $tax;
         }
 
         if($costItem->costs && !$this->taxAdded) 
@@ -222,21 +222,21 @@ class acquistoShopCosts extends \Controller {
     {
         $newCosts = new \stdClass();
                     
-        if($from->basecots) 
+        if($from->basecosts) 
         {
             if($to->default_currency) 
             {
-                $newCosts->basecots = $from->basecots / $from->pricelist->currency->exchange_ratio;
+                $newCosts->basecosts = $from->basecosts / $from->pricelist->currency->exchange_ratio;
             }
             else
             {
                 if($from->pricelist->currency->default_currency)
                 {
-                    $newCosts->basecots = $from->basecots * $to->exchange_ratio;
+                    $newCosts->basecosts = $from->basecosts * $to->exchange_ratio;
                 }            
                 else
                 {
-                    $newCosts->basecots = ($from->basecots / $from->pricelist->currency->exchange_ratio) * $to->exchange_ratio;                
+                    $newCosts->basecosts = ($from->basecosts / $from->pricelist->currency->exchange_ratio) * $to->exchange_ratio;                
                 }                
             }        
         }
@@ -291,9 +291,9 @@ class acquistoShopCosts extends \Controller {
     
     private function formatCosts($costItem)
     {
-        if($costItem->basecots) 
+        if($costItem->basecosts) 
         {
-            $costItem->basecots = sprintf("%01.2f", round($costItem->basecots, 2));
+            $costItem->basecosts = sprintf("%01.2f", round($costItem->basecosts, 2));
         }
 
         if($costItem->costs) 
@@ -363,7 +363,7 @@ class acquistoShopCosts extends \Controller {
 
             $newValue            = new \stdClass();
             $newValue->tax       = $returnValue->tax; 
-            $newValue->basecots  = $returnValue->basecots;
+            $newValue->basecosts = $returnValue->basecosts;
             $newValue->costs     = $returnValue->costs;
             $newValue->amount    = $returnValue->amount;
             $newValue->special   = $returnValue->special;
