@@ -147,7 +147,6 @@ class acquistoShopBasket extends \Controller
         }
         
         $this->buildBasket();
-        \AcquistoShop\acquistoShop::reload();
     }
 
     /**

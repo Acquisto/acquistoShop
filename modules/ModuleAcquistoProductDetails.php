@@ -60,7 +60,13 @@ class ModuleAcquistoProductDetails extends \Module
         if($this->Input->Post('action') == 'tl_shop_orders') 
         {
             $this->Basket->add($this->Input->Post('id'), $this->Input->Post('menge'), $this->Input->Post('additionalBasket'));
-            $this->Input->setPost('action', null);
+
+            if($this->acquistoShop_setRedirect && $this->contaoShop_jumpTo) {
+                $objPage = $this->Database->prepare("SELECT id, alias FROM tl_page WHERE id=?")->limit(1)->execute($this->contaoShop_jumpTo);
+                $strUrl  = $this->generateFrontendUrl($objPage->fetchAssoc(), '');
+            }
+
+            \AcquistoShop\acquistoShop::reload($strUrl);                    
         }
 
         if($this->contaoShop_socialFacebook) 
