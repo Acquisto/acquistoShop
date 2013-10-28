@@ -59,11 +59,14 @@ class acquistoShopOrders extends \Controller {
     
     public function getOrderItems($orderId) 
     {
+        $objOrder    = $this->Database->prepare("SELECT tstamp FROM tl_shop_orders WHERE id=?")->execute($orderId);
         $objOrderItems = $this->Database->prepare("SELECT * FROM tl_shop_orders_items WHERE pid=?")->execute($orderId);
         while($objOrderItems->next()) 
         {
             $objItem = (object) $objOrderItems->row();
-            $objItem->preis = sprintf("%01.2f", $objItem->preis);  
+            $objSteuer = $this->Database->prepare("SELECT * FROM tl_shop_steuersaetze WHERE pid=? && tstamp<? ORDER  BY tstamp ASC")->limit(1)->execute($objItem->steuersatz_id, $objOrder->tstamp);                       
+
+            $objItem->preis = round($objItem->preis * ($objSteuer->satz / 100 + 1), 2) / ($objSteuer->satz / 100 + 1);
             $objItem->summe = sprintf("%01.2f", $objItem->preis * $objItem->menge);  
             
             $arrItems[] = $objItem; 
