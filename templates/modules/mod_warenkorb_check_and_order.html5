@@ -35,18 +35,18 @@
             <?php echo $this->Customer->email; ?>
         </fieldset>
     </div>
-    <?php if($this->Customer->deliver_street): ?>
+    <?php if($this->Deliver->street): ?>
     <div>
         <fieldset>
             <legend>Lieferadresse <a href="<?php echo $this->WarenkorbUrl; ?>?do=customer">&auml;ndern</a></legend>
-            <?php if($this->Customer->deliver_company): ?>
-            <?php echo $this->Customer->deliver_company; ?><br>
+            <?php if($this->Deliver->company): ?>
+            <?php echo $this->Deliver->company; ?><br>
             <?php endif; ?>
-            <?php if($this->Customer->deliver_firstname OR $this->Customer->deliver_lastname): ?>
-            <?php echo $this->Customer->deliver_firstname; ?> <?php echo $this->Customer->deliver_lastname; ?><br>
+            <?php if($this->Deliver->firstname OR $this->Deliver->lastname): ?>
+            <?php echo $this->Deliver->firstname; ?> <?php echo $this->Deliver->lastname; ?><br>
             <?php endif; ?>
-            <?php echo $this->Customer->deliver_street; ?><br>
-            <?php echo $this->Customer->deliver_postal; ?> <?php echo $this->Customer->deliver_city; ?>
+            <?php echo $this->Deliver->street; ?><br>
+            <?php echo $this->Deliver->postal; ?> <?php echo $this->Deliver->city; ?>
          </fieldset>    
     </div>
     <?php endif; ?>
