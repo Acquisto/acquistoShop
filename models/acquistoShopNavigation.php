@@ -90,6 +90,7 @@ class acquistoShopNavigation extends \Controller
 
             $arrItem['subitems'] = $subItems;
             
+            /** Trail fix **/
             if(in_array($arrItem['id'], $this->shopTrail) && $this->Input->Get('warengruppe') != $arrItem['alias']) 
             {
                 $arrItem['class'] = 'trail';
