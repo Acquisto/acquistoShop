@@ -95,7 +95,7 @@ class ModuleAcquistoBasket extends \Module
         {
             case "gewicht":
                 $this->strVersandberechnung = "gewicht";
-                $this->floatBerechnung = $this->Basket->getWeight();
+                $this->floatBerechnung = $this->Basket->getWeight();                
                 break;;
             default:
                 $this->strVersandberechnung = "preis";
@@ -485,14 +485,11 @@ class ModuleAcquistoBasket extends \Module
         $this->Template->Endpreis      = $this->Basket->getCosts(true);
         $this->Template->Produktliste  = $this->Basket->loadProducts($strUrl);
     
-        $this->Template->Bestellwert = true;
-        $this->Template->Bestellzahl = \AcquistoShop\acquistoShopCosts::costsCalculator($this->Basket->orderValue(1), \AcquistoShop\acquistoShopCosts::getDefaultCurrency(), \AcquistoShop\acquistoShopCosts::getSelectedCurrency());
-
-        if(\AcquistoShop\acquistoShopCosts::costsCalculator($this->Basket->orderValue(1), \AcquistoShop\acquistoShopCosts::getDefaultCurrency(), \AcquistoShop\acquistoShopCosts::getSelectedCurrency()) >= $this->Basket->getCosts(true)) 
-        {
-            $this->Template->Bestellwert = false;
-            $this->Template->productsInBasket = count($this->Basket->loadProducts($strUrl));
-        }     
+        $orderValue = $this->Basket->isOrderValue(1);
+    
+        $this->Template->Bestellwert      = $orderValue->isOrderValue;
+        $this->Template->Bestellzahl      = $orderValue->minOrderValue;
+        $this->Template->productsInBasket = $orderValue->productsInBasket;
     }
     
     private function basketCustomer() 
@@ -578,12 +575,21 @@ class ModuleAcquistoBasket extends \Module
             $arrVersandzonen[] = $arrItem;
         }
         
-        $floatBerechnung = \AcquistoShop\acquistoShopCosts::costsCalculator($this->floatBerechnung, \AcquistoShop\acquistoShopCosts::getSelectedCurrency(), \AcquistoShop\acquistoShopCosts::getDefaultCurrency());
+        switch(strtolower($GLOBALS['TL_CONFIG']['versandberechnung']))
+        {
+            case "gewicht":
+                $floatBerechnung = $this->floatBerechnung;
+                break;;
+            default:
+                $floatBerechnung = \AcquistoShop\acquistoShopCosts::costsCalculator($this->floatBerechnung, \AcquistoShop\acquistoShopCosts::getSelectedCurrency(), \AcquistoShop\acquistoShopCosts::getDefaultCurrency());                        
+                break;;
+        } 
+
         $objVersandarten = $this->Database->prepare("SELECT * FROM tl_shop_versandzonen_varten WHERE pid = ? && ab_einkaufpreis < ? ORDER BY ab_einkaufpreis ASC;")->execute($this->basketData['shippingMethod'], $floatBerechnung);
         
   
         while($objVersandarten->next()) 
-        {
+        {            
             if($objVersandarten->ab_einkaufpreis <= $floatBerechnung) 
             {
                 $objZahlungsarten = $this->Database->prepare("SELECT * FROM tl_shop_zahlungsarten WHERE id = ?;")->execute($objVersandarten->zahlungsart_id);
