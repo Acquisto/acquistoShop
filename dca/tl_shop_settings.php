@@ -30,7 +30,7 @@ $GLOBALS['TL_DCA']['tl_shop_settings'] = array
     // Palettes
     'palettes' => array
     (
-        'default'                     => '{shopdaten},firmentyp,firmenname,inhaber,strasse,postleitzahl,ort,telefon,telefax,bestell_email;{bankverbindung},bank,bank_inhaber,blz,kto,iban,bic;{rechnungs_format},rechnungsformat;{rechtangaben},steuernummer,umsatzsteuerindent,handelsregister;{settings},steuer,versandberechnung,agb,widerruf,versandPage;'
+        'default'                     => '{shopdaten},firmentyp,firmenname,inhaber,strasse,postleitzahl,ort,telefon,telefax,bestell_email;{bankverbindung},bank,bank_inhaber,blz,kto,iban,bic;{rechnungs_format},rechnungsformat,costs_input;{rechtangaben},steuernummer,umsatzsteuerindent,handelsregister;{settings},steuer,versandberechnung,agb,widerruf,versandPage;'
     ),
 
     // Fields
@@ -90,6 +90,15 @@ $GLOBALS['TL_DCA']['tl_shop_settings'] = array
         (
             'label'                   => &$GLOBALS['TL_LANG']['tl_shop_settings']['steuernummer'],
             'inputType'               => 'text',
+            'search'                  => false,
+            'eval'                    => array('mandatory'=>false)
+        ),
+        'costs_input' => array
+        (
+            'label'                   => &$GLOBALS['TL_LANG']['tl_shop_settings']['costs_input'],
+            'inputType'               => 'select',
+            'default'                 => '',
+            'options'                 => array('brutto' => 'brutto', 'netto' => 'netto'),
             'search'                  => false,
             'eval'                    => array('mandatory'=>false)
         ),
