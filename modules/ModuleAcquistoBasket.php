@@ -585,8 +585,7 @@ class ModuleAcquistoBasket extends \Module
                 break;;
         } 
 
-        $objVersandarten = $this->Database->prepare("SELECT * FROM tl_shop_versandzonen_varten WHERE pid = ? && ab_einkaufpreis < ? ORDER BY ab_einkaufpreis ASC;")->execute($this->basketData['shippingMethod'], $floatBerechnung);
-        
+        $objVersandarten = $this->Database->prepare("SELECT * FROM tl_shop_versandzonen_varten WHERE pid = ? && ab_einkaufpreis <= ? ORDER BY ab_einkaufpreis ASC;")->execute($this->basketData['shippingMethod'], $floatBerechnung);        
   
         while($objVersandarten->next()) 
         {            
