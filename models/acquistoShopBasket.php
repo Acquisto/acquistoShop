@@ -64,13 +64,42 @@ class acquistoShopBasket extends \Controller
                 }        
             }
         }    
-    }
+    }        
     
     public function orderValue($guests) 
     {
         $objMinverkaufwert = $this->Database->prepare("SELECT * FROM tl_shop_versandzonen_varten ORDER BY ab_einkaufpreis ASC")->limit(1)->execute();
-        return $objMinverkaufwert->ab_einkaufpreis; 
+        return $objMinverkaufwert->ab_einkaufpreis;         
+    }
+    
+    public function isOrderValue($guests) 
+    {  
+        switch(strtolower($GLOBALS['TL_CONFIG']['versandberechnung'])) 
+        {
+            case "gewicht":
+                $currentCardInside = $this->getWeight();
+                $minOrderValue     = $this->orderValue($guests); 
+                break;;
+            default:
+                $currentCardInside = $this->getCosts();
+                $minOrderValue     = \AcquistoShop\acquistoShopCosts::costsCalculator($this->orderValue($guests), \AcquistoShop\acquistoShopCosts::getDefaultCurrency(), \AcquistoShop\acquistoShopCosts::getSelectedCurrency());
+                break;;
+        }                
+
+        $isOrderValue     = true;
+        $productsInBasket = count($this->loadProducts());
         
+        if($minOrderValue > $currentCardInside) 
+        {
+            $isOrderValue = false;            
+        }
+        
+        return (object) array(
+            'isOrderValue'      => $isOrderValue,
+            'minOrderValue'     => $minOrderValue,
+            'currentCardInside' => $currentCardInside,
+            'productsInBasket'  => $productsInBasket            
+        );             
     }
 
     public function loadProducts($urlParameter = null) 
