@@ -37,6 +37,17 @@ class acquistoShopCosts extends \Controller {
      * Speichert ob die Steuer schon aufgeschlagen wurde
      */         
     private $taxAdded      = false;
+
+    
+    /**
+     * Speichert ob die Steuer schon aufgeschlagen wurde
+     */         
+    private $taxRemoved    = false;
+    
+    /**
+     * Speichert ob die Steuer schon aufgeschlagen wurde
+     */         
+    private $inputType      = 'brutto';    
     
     /**
      * Speichert die Gruppen des eingeloggten Mitglieds
@@ -50,6 +61,11 @@ class acquistoShopCosts extends \Controller {
         
         $this->defaultList = $this->Database->prepare("SELECT * FROM tl_shop_pricelists WHERE default_list = ?")->execute(1);
         $this->defaultList = (object) $this->defaultList->row();
+        
+        if(strtolower($GLOBALS['TL_CONFIG']['costs_input']) == 'netto')
+        {            
+            $this->inputType = 'netto';
+        }
         
         $this->getSelectedCurrency();                
     }
@@ -218,6 +234,29 @@ class acquistoShopCosts extends \Controller {
         return $costItem;
     }
     
+    private function removeTax($costItem) 
+    {        
+        $tax = ($costItem->tax + 100) / 100;
+        
+        if($costItem->basecosts && !$this->taxRemoved) 
+        {
+            $costItem->basecosts = $costItem->basecosts / $tax;
+        }
+
+        if($costItem->costs && !$this->taxRemoved) 
+        {
+            $costItem->costs = $costItem->costs / $tax;
+        }
+
+        if($costItem->special && !$this->taxRemoved) 
+        {
+            $costItem->special = $costItem->special / $tax;
+        }
+        
+        $this->taxRemoved = true;        
+        return $costItem;
+    }    
+    
     private function listCalculator($from, $to)    
     {
         $newCosts = new \stdClass();
@@ -377,9 +416,14 @@ class acquistoShopCosts extends \Controller {
             $returnValue = $this->listCalculator($returnValue, $this->getCurrency($_SESSION['ACQUISTO']['CONFIG']['CURRENCY']));    
         }
         
-        if($returnValue->pricelist->type == 'brutto' && $addTax)
+        if($returnValue->pricelist->type == 'brutto' && $addTax && $this->inputType == 'netto')
         {            
             $returnValue = $this->addTax($returnValue);
+        }
+
+        if($returnValue->pricelist->type == 'netto' && $addTax && $this->inputType == 'brutto')
+        {            
+            $returnValue = $this->removeTax($returnValue);
         }
 
         return $this->formatCosts($returnValue);    

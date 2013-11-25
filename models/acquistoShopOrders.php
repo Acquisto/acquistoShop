@@ -16,8 +16,10 @@
  
 namespace AcquistoShop;  
 
-class acquistoShopOrders extends \Controller {
-    public function __construct() {
+class acquistoShopOrders extends \Controller 
+{
+    public function __construct() 
+    {
         parent::__construct();
         $this->Import('Database');
         $this->Import('AcquistoShop\acquistoShopProduktLoader', 'Produkt');
@@ -64,10 +66,25 @@ class acquistoShopOrders extends \Controller {
         while($objOrderItems->next()) 
         {
             $objItem = (object) $objOrderItems->row();
-            $objSteuer = $this->Database->prepare("SELECT * FROM tl_shop_steuersaetze WHERE pid=? && tstamp<? ORDER  BY tstamp ASC")->limit(1)->execute($objItem->steuersatz_id, $objOrder->tstamp);                       
-
-            $objItem->preis = round($objItem->preis * ($objSteuer->satz / 100 + 1), 2) / ($objSteuer->satz / 100 + 1);
-            $objItem->summe = sprintf("%01.2f", $objItem->preis * $objItem->menge);
+            
+            if(trim($objItem->productnumber) == '') 
+            {
+                $objProdukt = $this->Database->prepare("SELECT produktnummer FROM tl_shop_produkte WHERE id=?")->execute($objItem->id);
+                $objItem->productnumber = $objProdukt->produktnummer;
+            }
+            
+            if($objOrder->costType == 'netto')
+            {
+                $objSteuer = $this->Database->prepare("SELECT * FROM tl_shop_steuersaetze WHERE pid=? && tstamp<? ORDER  BY tstamp ASC")->limit(1)->execute($objItem->steuersatz_id, $objOrder->tstamp);                       
+    
+                $objItem->preis = round($objItem->preis * ($objSteuer->satz / 100 + 1), 2) / ($objSteuer->satz / 100 + 1);
+                $objItem->summe = sprintf("%01.2f", $objItem->preis * $objItem->menge);
+            } 
+            else
+            {
+                $objItem->summe = $objItem->preis * $objItem->menge;
+            }
+            
             
             if($round)
             {
@@ -90,7 +107,14 @@ class acquistoShopOrders extends \Controller {
             foreach($arrData as $key => $data) 
             {
                 $arrSummary['subtotal'] = $arrSummary['subtotal'] + $data->total;
-                $arrSummary['total'] = $arrSummary['total'] + ($data->total + $data->tax);
+                if($objOrder->costType == 'netto')
+                {
+                    $arrSummary['total'] = $arrSummary['total'] + ($data->total + $data->tax);
+                }
+                else
+                {
+                    $arrSummary['total'] = $arrSummary['total'] + ($data->total);                
+                }
             }
             
             if(!$objOrder->calculate_tax)
@@ -117,15 +141,33 @@ class acquistoShopOrders extends \Controller {
             foreach($objOrderItems as $Item) 
             {
                 $objSteuer = $this->Database->prepare("SELECT * FROM tl_shop_steuersaetze WHERE pid=? && tstamp<? ORDER  BY tstamp ASC")->limit(1)->execute($Item->steuersatz_id, $objOrder->tstamp);                       
-                $arrSteuer[$objSteuer->satz]['total'] = sprintf("%01.2f", $arrSteuer[$objSteuer->satz]['total'] + ($Item->menge * $Item->preis));
-                $arrSteuer[$objSteuer->satz]['tax'] = sprintf("%01.2f", round(($arrSteuer[$objSteuer->satz]['total'] * (($objSteuer->satz + 100) / 100)) - $arrSteuer[$objSteuer->satz]['total'], 2));
+
+                if($objOrder->costType == 'netto')
+                {
+                    $arrSteuer[$objSteuer->satz]['total'] = $arrSteuer[$objSteuer->satz]['total'] + ($Item->menge * $Item->preis);
+                }
+                else
+                {
+                    $arrSteuer[$objSteuer->satz]['total'] = $arrSteuer[$objSteuer->satz]['total'] + $Item->summe; 
+                }
+                
+                foreach($arrSteuer as $key => $tax)
+                {
+                    $tax['total'] = sprintf("%01.2f", $tax['total']);
+                    if($objOrder->costType == 'netto')
+                    {                    
+                        $tax['tax']   = sprintf("%01.2f", round(($tax['total'] * ($key / 100 + 1)) - $tax['total'] , 2));                    
+                    }
+                    else
+                    {
+                        $tax['tax']   = sprintf("%01.2f", round($tax['total'] - ($tax['total'] / ($key / 100 + 1)), 2));
+                    }  
+
+                    $taxArray[$key] = (object) $tax;
+                }             
             }
-            
-            foreach($arrSteuer as $key => $tax)
-            {
-                $taxArray[$key] = (object) $tax;
-            }             
         }
+        
         
         return $taxArray;
     }    
