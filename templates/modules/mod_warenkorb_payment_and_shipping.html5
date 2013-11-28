@@ -19,6 +19,7 @@
             <input type="hidden" name="REQUEST_TOKEN" value="<?php echo REQUEST_TOKEN; ?>">
             <fieldset>
                 <legend>Versandart</legend>
+                <?php if($this->shippingError): ?><p class="error">Sie m&uuml;ssen eine Versandzone ausw&auml;hlen.</p><?php endif; ?>
                 <?php if($this->Versandzonen): ?>
                 <?php foreach($this->Versandzonen as $item): ?>
                 <p>
@@ -36,6 +37,7 @@
             <input type="hidden" name="shippingMethod" value="<?php echo $this->sel_sm; ?>">
             <fieldset>
                 <legend>Zahlungsart <?php echo $this->sel_pm; ?></legend>
+                <?php if($this->paymentError): ?><p class="error">Sie m&uuml;ssen eine Zahlungsart ausw&auml;hlen.</p><?php endif; ?>
                 <?php if($this->Zahlungsarten): ?>
                 <?php foreach($this->Zahlungsarten as $item): ?>
                 <p>
