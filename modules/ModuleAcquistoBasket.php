@@ -555,9 +555,21 @@ class ModuleAcquistoBasket extends \Module
   
             $this->Session->set('basket_data', $this->basketData);
   
-            if($this->Input->Post('action')) 
+            if($this->Input->Post('action') && ($this->Input->Post('paymentMethod') && $this->Input->Post('shippingMethod'))) 
             {
                 $this->redirect($this->getBasketUrl()  . "?do=agb");
+            }
+            elseif($this->Input->Post('action')) 
+            {
+                if(!$this->Input->Post('paymentMethod'))
+                {
+                    $paymentError = true;
+                }
+
+                if(!$this->Input->Post('shippingMethod'))
+                {
+                    $shippingError = true;
+                }                
             }
         }
   
@@ -606,6 +618,8 @@ class ModuleAcquistoBasket extends \Module
         $this->Template = new \FrontendTemplate('mod_warenkorb_payment_and_shipping');
         $this->Template->Zahlungsarten = $arrZahlungsarten;
         $this->Template->Versandzonen  = $arrVersandzonen;
+        $this->Template->paymentError  = $paymentError;    
+        $this->Template->shippingError = $shippingError;    
   
         $this->Template->sel_pm = $this->basketData['paymentMethod'];
         $this->Template->sel_sm = $this->basketData['shippingMethod'];    
@@ -695,6 +709,7 @@ class ModuleAcquistoBasket extends \Module
                     'Settings'   => $GLOBALS['TL_CONFIG'],
                     'Shipping'   => $orderObject->shipping,
                     'Payment'    => $orderObject->payment,
+                    'Complete'   => $orderObject
                 ),
                 'emailTemplate' => $this->acquistoShop_emailTemplate,
                 'emailFrom'          => array(
@@ -724,17 +739,22 @@ class ModuleAcquistoBasket extends \Module
     
     private function basketTermsAndConditions() 
     {
-        if($this->Input->Post('agb'))
+        if($this->Input->Post('agb') && $this->Input->Post('FORM_SUBMIT') == 'tl_acquisto_card_terms')
         {
             $this->basketData['agb'] = 1;
             $this->Session->set('basket_data', $this->basketData);
             $this->redirect($this->getBasketUrl()  . "?do=check-and-order");
         }
+        elseif( $this->Input->Post('FORM_SUBMIT') == 'tl_acquisto_card_terms')
+        {
+            $termsError = true;
+        }
     
         $this->Template = new \FrontendTemplate('mod_warenkorb_agb');
-        $this->Template->AGB = $GLOBALS['TL_CONFIG']['agb'];
-        $this->Template->Widerruf = $GLOBALS['TL_CONFIG']['widerruf'];
-        $this->Template->sel_agb = $this->basketData['agb'];    
+        $this->Template->AGB        = $GLOBALS['TL_CONFIG']['agb'];
+        $this->Template->Widerruf   = $GLOBALS['TL_CONFIG']['widerruf'];
+        $this->Template->termsError = $termsError;
+        $this->Template->sel_agb    = $this->basketData['agb'];    
     }
 }
 

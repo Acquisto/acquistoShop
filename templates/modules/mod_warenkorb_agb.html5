@@ -26,8 +26,10 @@
 
         <form method="post">
             <div class="formbody">
-                <input type="hidden" name="FORM_SUBMIT" value="tl_acquistoShop_warenkorb">
+                <input type="hidden" name="FORM_SUBMIT" value="tl_acquisto_card_terms">
                 <input type="hidden" name="REQUEST_TOKEN" value="<?php echo REQUEST_TOKEN; ?>">
+
+                <?php if($this->termsError): ?><p class="error">Sie m&uuml;ssen die Allgemeinen Gesch&auml;ftsbedingungen akzeptieren.</p><?php endif; ?>
 
                 <p>
                     <input type="checkbox" value="1" name="agb" id="checkbox_agb"<?php if($this->sel_agb): ?> checked="checked"<?php endif; ?>>
