@@ -712,7 +712,16 @@ class ModuleAcquistoBasket extends \Module
             $arrCardMail['sendTo']['to'] = array($GLOBALS['TL_CONFIG']['bestell_email']);
             $arrCardMail['emailSubject'] = sprintf($this->acquistoShop_emailSubject_Seller, $this->Shop->generateOrderID($orderID));
             $this->Basket->sendOrderMail($this->acquistoShop_emailTemplate_seller, $GLOBALS['TL_CONFIG']['bestell_email'], $arrCardMail);
-            
+
+            if (isset($GLOBALS['TL_HOOKS']['afterSale']) && is_array($GLOBALS['TL_HOOKS']['afterSale'])) 
+            {
+                foreach ($GLOBALS['TL_HOOKS']['afterSale'] as $callback) 
+                {
+                    $this->Import($callback[0]);
+                    $this->$callback[0]->$callback[1]($orderId);
+                }
+            }        
+                        
             $this->Template = new \FrontendTemplate('mod_warenkorb_pay');
         }    
     }
