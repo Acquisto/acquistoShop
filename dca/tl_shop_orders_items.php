@@ -92,7 +92,7 @@ $GLOBALS['TL_DCA']['tl_shop_orders_items'] = array
     // Palettes
     'palettes' => array
     (
-        'default'                     => '{settings},bezeichnung,menge,preis,steuersatz_id;',
+        'default'                     => '{settings},productnumber,bezeichnung,menge,preis,steuersatz_id;',
     ),
 
 
@@ -115,12 +115,20 @@ $GLOBALS['TL_DCA']['tl_shop_orders_items'] = array
     		(
     			'sql'                     => "int(10) NOT NULL default '0'"
     		),
-        'bezeichnung' => array
+        'productnumber' => array
         (
-            'label'                   => &$GLOBALS['TL_LANG']['tl_shop_orders_items']['satz'],
+            'label'                   => &$GLOBALS['TL_LANG']['tl_shop_orders_items']['productnumber'],
             'inputType'               => 'text',
             'search'                  => true,
-            'eval'                    => array('mandatory'=>true, 'maxlength'=>64, 'tl_class'=>'w50'),
+            'eval'                    => array('mandatory'=>true, 'maxlength'=>255, 'tl_class'=>'w50'),
+      			'sql'                     => "varchar(255) NOT NULL default ''"
+        ),
+        'bezeichnung' => array
+        (
+            'label'                   => &$GLOBALS['TL_LANG']['tl_shop_orders_items']['bezeichnung'],
+            'inputType'               => 'text',
+            'search'                  => true,
+            'eval'                    => array('mandatory'=>true, 'maxlength'=>255, 'tl_class'=>'w50'),
       			'sql'                     => "varchar(255) NOT NULL default ''"
         ),
         'steuersatz_id' => array

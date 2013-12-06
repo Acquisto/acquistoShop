@@ -92,7 +92,7 @@ $GLOBALS['TL_DCA']['tl_shop_orders'] = array
     // Palettes
     'palettes' => array
     (
-        'default'                     => '{title_legend},order_id,versandzonen_id,zahlungsart_id,payed,calculate_tax;{customer},customerData;{deliver},deliverAddress;{custom_legend},customData;',
+        'default'                     => '{title_legend},order_id,costType,state,versandzonen_id,zahlungsart_id,payed,calculate_tax;{customer},customerData;{deliver},deliverAddress;{custom_legend},customData;',
     ),
 
 
@@ -141,6 +141,14 @@ $GLOBALS['TL_DCA']['tl_shop_orders'] = array
             'eval'                    => array('mandatory'=>true, 'maxlength'=>64, 'tl_class'=>'w50'),
       			'sql'                     => "int(10) NOT NULL default '0'"
         ),
+        'state' => array
+        (
+            'label'                   => &$GLOBALS['TL_LANG']['tl_shop_orders']['state'],
+            'inputType'               => 'select',
+            'search'                  => true,
+            'eval'                    => array('mandatory'=>false,'tl_class' => 'w50', 'includeBlankOption' => true),
+      			'sql'                     => "int(10) NOT NULL default '0'"
+        ),
         'payed' => array
         (
             'label'                   => &$GLOBALS['TL_LANG']['tl_shop_orders']['payed'],
@@ -156,6 +164,15 @@ $GLOBALS['TL_DCA']['tl_shop_orders'] = array
             'search'                  => true,
             'eval'                    => array('mandatory'=>false,'tl_class' => 'w50', 'isBoolean'=>true),
       			'sql'                     => "char(1) NOT NULL default ''"
+        ),
+        'costType' => array
+        (
+            'label'                   => &$GLOBALS['TL_LANG']['tl_shop_orders']['costType'],
+            'inputType'               => 'select',
+            'search'                  => false,
+            'options'                 => array('brutto' => 'brutto', 'netto' => 'netto'),
+            'eval'                    => array('mandatory'=>true, 'maxlength'=>64, 'tl_class'=>'w50'),
+      			'sql'                     => "char(10) NOT NULL default ''"
         ),
         'customerData' => array
         (
@@ -294,6 +311,7 @@ class tl_shop_orders extends Backend {
         $html .= '        <td colspan="4"><hr></td>';
         $html .= '    </tr>';
         $html .= '    <tr>';
+        $html .= '        <td><b>Nummer</b></td>';
         $html .= '        <td><b>Bezeichnung</b></td>';
         $html .= '        <td align="right"><b>Menge</b></td>';
         $html .= '        <td align="right"><b>EP</b></td>';
@@ -304,13 +322,14 @@ class tl_shop_orders extends Backend {
         {
             foreach($objOrder->items as $Item) {
                 $Item->attribute = unserialize($Item->attribute);
-                $objProdukt  = $this->Produkt->load($Item->produkt_id, $Item->attribute);
+                $objProdukt  = $this->Produkt->load($Item->produkt_id, $Item->attribute);                                
                 
                 $html .= '    <tr>';
+                $html .= '        <td>' . $objProdukt->produktnummer . '</td>';
                 $html .= '        <td>' . $Item->bezeichnung . '</td>';
                 $html .= '        <td align="right">' . $Item->menge . '</td>';
                 $html .= '        <td align="right">' . sprintf("%01.2f", $Item->preis) . ' ' . $objOrder->currency_default->iso_code . '</td>';
-                $html .= '        <td align="right">' . sprintf("%01.2f", ($Item->menge * $Item->preis)) . ' ' . $objOrder->currency_default->iso_code . '</td>';
+                $html .= '        <td align="right">' . sprintf("%01.2f", $Item->summe) . ' ' . $objOrder->currency_default->iso_code . '</td>';
                 $html .= '    </tr>';
                 
                 if(is_array($objProdukt->attribute_list)) {
@@ -330,7 +349,7 @@ class tl_shop_orders extends Backend {
         $html .= '        <td colspan="4"><hr></td>';
         $html .= '    </tr>';
         $html .= '    <tr>';
-        $html .= '        <td align="right" colspan="3">Zwischensumme:</td>';
+        $html .= '        <td align="right" colspan="4">Zwischensumme:</td>';
         $html .= '        <td align="right">' . sprintf("%01.2f", $objSummary->subtotal) . ' ' . $objOrder->currency_default->iso_code . '</td>';
         $html .= '    </tr>';
 
@@ -341,7 +360,15 @@ class tl_shop_orders extends Backend {
                 foreach($objTaxes as $Satz => $Steuer) 
                 {
                     $html .= '    <tr>';
-                    $html .= '        <td align="right" colspan="3">zzgl. MwSt. ' . $Satz . '% auf ' . sprintf("%01.2f", $Steuer->total) .  '' . $objOrder->currency_default->iso_code . ':</td>';
+                    
+                    if($objOrder->costType == 'netto')
+                    {                    
+                        $html .= '        <td align="right" colspan="4">zzgl. MwSt. ' . $Satz . '% auf ' . sprintf("%01.2f", $Steuer->total) .  '' . $objOrder->currency_default->iso_code . ':</td>';
+                    }
+                    else
+                    {
+                        $html .= '        <td align="right" colspan="4">inkl. MwSt. ' . $Satz . '% auf ' . sprintf("%01.2f", $Steuer->total) .  '' . $objOrder->currency_default->iso_code . ':</td>';                    
+                    }
                     $html .= '        <td align="right">' . sprintf("%01.2f", $Steuer->tax) . ' ' . $objOrder->currency_default->iso_code . '</td>';
                     $html .= '    </tr>';
                 }    
@@ -350,17 +377,17 @@ class tl_shop_orders extends Backend {
         else
         {
             $html .= '    <tr>';
-            $html .= '        <td align="right" colspan="3">Es werden keine Steuern in diese Versandzone berechnet.</td>';
+            $html .= '        <td align="right" colspan="4">Es werden keine Steuern in diese Versandzone berechnet.</td>';
             $html .= '        <td align="right">' . $abzgl . sprintf("%01.2f", 0) . ' ' . $objOrder->currency_default->iso_code . '</td>';
             $html .= '    </tr>';        
         }
 
         $html .= '    <tr>';
-        $html .= '        <td align="right" colspan="3">zzgl. Versandkosten (' . $objOrder->shipping->bezeichnung . ' / ' . $objOrder->payment->bezeichnung . '):</td>';
+        $html .= '        <td align="right" colspan="4">zzgl. Versandkosten (' . $objOrder->shipping->bezeichnung . ' / ' . $objOrder->payment->bezeichnung . '):</td>';
         $html .= '        <td align="right">' . sprintf("%01.2f", $objSummary->shipping) . ' ' . $objOrder->currency_default->iso_code . '</td>';
         $html .= '    </tr>';
         $html .= '    <tr>';
-        $html .= '        <td align="right" colspan="3">Endpreis:</td>';
+        $html .= '        <td align="right" colspan="4">Endpreis:</td>';
         $html .= '        <td align="right">' . sprintf("%01.2f", $objSummary->total) . ' ' . $objOrder->currency_default->iso_code . '</td>';
         $html .= '    </tr>';
         $html .= '</table>';

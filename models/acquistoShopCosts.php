@@ -37,6 +37,17 @@ class acquistoShopCosts extends \Controller {
      * Speichert ob die Steuer schon aufgeschlagen wurde
      */         
     private $taxAdded      = false;
+
+    
+    /**
+     * Speichert ob die Steuer schon aufgeschlagen wurde
+     */         
+    private $taxRemoved    = false;
+    
+    /**
+     * Speichert ob die Steuer schon aufgeschlagen wurde
+     */         
+    private $inputType      = 'brutto';    
     
     /**
      * Speichert die Gruppen des eingeloggten Mitglieds
@@ -50,6 +61,11 @@ class acquistoShopCosts extends \Controller {
         
         $this->defaultList = $this->Database->prepare("SELECT * FROM tl_shop_pricelists WHERE default_list = ?")->execute(1);
         $this->defaultList = (object) $this->defaultList->row();
+        
+        if(strtolower($GLOBALS['TL_CONFIG']['costs_input']) == 'netto')
+        {            
+            $this->inputType = 'netto';
+        }
         
         $this->getSelectedCurrency();                
     }
@@ -199,9 +215,9 @@ class acquistoShopCosts extends \Controller {
     {        
         $tax = ($costItem->tax + 100) / 100;
         
-        if($costItem->basecots && !$this->taxAdded) 
+        if($costItem->basecosts && !$this->taxAdded) 
         {
-            $costItem->basecots = $costItem->basecots * $tax;
+            $costItem->basecosts = $costItem->basecosts * $tax;
         }
 
         if($costItem->costs && !$this->taxAdded) 
@@ -218,25 +234,48 @@ class acquistoShopCosts extends \Controller {
         return $costItem;
     }
     
+    private function removeTax($costItem) 
+    {        
+        $tax = ($costItem->tax + 100) / 100;
+        
+        if($costItem->basecosts && !$this->taxRemoved) 
+        {
+            $costItem->basecosts = $costItem->basecosts / $tax;
+        }
+
+        if($costItem->costs && !$this->taxRemoved) 
+        {
+            $costItem->costs = $costItem->costs / $tax;
+        }
+
+        if($costItem->special && !$this->taxRemoved) 
+        {
+            $costItem->special = $costItem->special / $tax;
+        }
+        
+        $this->taxRemoved = true;        
+        return $costItem;
+    }    
+    
     private function listCalculator($from, $to)    
     {
         $newCosts = new \stdClass();
                     
-        if($from->basecots) 
+        if($from->basecosts) 
         {
             if($to->default_currency) 
             {
-                $newCosts->basecots = $from->basecots / $from->pricelist->currency->exchange_ratio;
+                $newCosts->basecosts = $from->basecosts / $from->pricelist->currency->exchange_ratio;
             }
             else
             {
                 if($from->pricelist->currency->default_currency)
                 {
-                    $newCosts->basecots = $from->basecots * $to->exchange_ratio;
+                    $newCosts->basecosts = $from->basecosts * $to->exchange_ratio;
                 }            
                 else
                 {
-                    $newCosts->basecots = ($from->basecots / $from->pricelist->currency->exchange_ratio) * $to->exchange_ratio;                
+                    $newCosts->basecosts = ($from->basecosts / $from->pricelist->currency->exchange_ratio) * $to->exchange_ratio;                
                 }                
             }        
         }
@@ -291,9 +330,9 @@ class acquistoShopCosts extends \Controller {
     
     private function formatCosts($costItem)
     {
-        if($costItem->basecots) 
+        if($costItem->basecosts) 
         {
-            $costItem->basecots = sprintf("%01.2f", round($costItem->basecots, 2));
+            $costItem->basecosts = sprintf("%01.2f", round($costItem->basecosts, 2));
         }
 
         if($costItem->costs) 
@@ -363,7 +402,7 @@ class acquistoShopCosts extends \Controller {
 
             $newValue            = new \stdClass();
             $newValue->tax       = $returnValue->tax; 
-            $newValue->basecots  = $returnValue->basecots;
+            $newValue->basecosts = $returnValue->basecosts;
             $newValue->costs     = $returnValue->costs;
             $newValue->amount    = $returnValue->amount;
             $newValue->special   = $returnValue->special;
@@ -377,9 +416,14 @@ class acquistoShopCosts extends \Controller {
             $returnValue = $this->listCalculator($returnValue, $this->getCurrency($_SESSION['ACQUISTO']['CONFIG']['CURRENCY']));    
         }
         
-        if($returnValue->pricelist->type == 'brutto' && $addTax)
+        if($returnValue->pricelist->type == 'brutto' && $addTax && $this->inputType == 'netto')
         {            
             $returnValue = $this->addTax($returnValue);
+        }
+
+        if($returnValue->pricelist->type == 'netto' && $addTax && $this->inputType == 'brutto')
+        {            
+            $returnValue = $this->removeTax($returnValue);
         }
 
         return $this->formatCosts($returnValue);    

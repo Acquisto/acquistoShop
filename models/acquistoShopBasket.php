@@ -64,13 +64,42 @@ class acquistoShopBasket extends \Controller
                 }        
             }
         }    
-    }
+    }        
     
     public function orderValue($guests) 
     {
         $objMinverkaufwert = $this->Database->prepare("SELECT * FROM tl_shop_versandzonen_varten ORDER BY ab_einkaufpreis ASC")->limit(1)->execute();
-        return $objMinverkaufwert->ab_einkaufpreis; 
+        return $objMinverkaufwert->ab_einkaufpreis;         
+    }
+    
+    public function isOrderValue($guests) 
+    {  
+        switch(strtolower($GLOBALS['TL_CONFIG']['versandberechnung'])) 
+        {
+            case "gewicht":
+                $currentCardInside = $this->getWeight();
+                $minOrderValue     = $this->orderValue($guests); 
+                break;;
+            default:
+                $currentCardInside = $this->getCosts();
+                $minOrderValue     = \AcquistoShop\acquistoShopCosts::costsCalculator($this->orderValue($guests), \AcquistoShop\acquistoShopCosts::getDefaultCurrency(), \AcquistoShop\acquistoShopCosts::getSelectedCurrency());
+                break;;
+        }                
+
+        $isOrderValue     = true;
+        $productsInBasket = count($this->loadProducts());
         
+        if($minOrderValue > $currentCardInside) 
+        {
+            $isOrderValue = false;            
+        }
+        
+        return (object) array(
+            'isOrderValue'      => $isOrderValue,
+            'minOrderValue'     => $minOrderValue,
+            'currentCardInside' => $currentCardInside,
+            'productsInBasket'  => $productsInBasket            
+        );             
     }
 
     public function loadProducts($urlParameter = null) 
@@ -183,7 +212,6 @@ class acquistoShopBasket extends \Controller
         }
 
         $this->buildBasket();    
-        \AcquistoShop\acquistoShop::reload();
     }
 
     public function getWeight() 
@@ -252,9 +280,12 @@ class acquistoShopBasket extends \Controller
             if($this->cardType == 'netto' && $taxAdd) 
             {
                 $arrSteuern = $this->getTaxes();
-                foreach($arrSteuern as $taxValue) 
+                if(is_array($arrSteuern))
                 {
-                    $floatCosts = $floatCosts + $taxValue['wert'];
+                    foreach($arrSteuern as $taxValue) 
+                    {
+                        $floatCosts = $floatCosts + $taxValue['wert'];
+                    }
                 }
             }            
         }
@@ -346,16 +377,23 @@ class acquistoShopBasket extends \Controller
         return $taxSummary;
     }
 
-    public function writeOrder($memberId = 0, $shippingId = 0, $fieldsAddon = null) {
+    public function writeOrder($memberId = 0, $shippingId = 0, $fieldsAddon = null) 
+    {
         if(!$memberId)
         {
             $memberId = 0;
         }
                 
+        $costsInput = 'brutto';
+        if(strtolower($GLOBALS['TL_CONFIG']['costs_input']) == 'netto')
+        {            
+            $costsInput = 'netto';
+        }
+
         $objVersandart    = $this->Database->prepare("SELECT * FROM tl_shop_versandzonen_varten WHERE id = ?;")->execute($shippingId);
         $objVersandzone   = $this->Database->prepare("SELECT * FROM tl_shop_versandzonen WHERE id = ?;")->execute($objVersandart->pid);
         
-        $this->Database->prepare("INSERT INTO tl_shop_orders (tstamp, calculate_tax, member_id, versandzonen_id, zahlungsart_id, versandart_id, gutscheine, payed, versandpreis, customerData, customFields, customData, deliverAddress, currency_default, currency_selected) VALUES(" . time() . ", '" . $objVersandzone->calculate_tax . "', " . $memberId . ", " . $objVersandart->pid . ", " . $objVersandart->zahlungsart_id . ", " . $shippingId . ", '', '" . $payState . "', " . $objVersandart->preis . ", '" . serialize($this->Session->get('Customer')) . "', '" . serialize($this->Session->get('Custom')) . "', '" . serialize($this->Session->get('Custom')) . "', '" . serialize($this->Session->get('Deliver')) . "', '" . serialize(\AcquistoShop\acquistoShopCosts::getCurrency(\AcquistoShop\acquistoShopCosts::getDefaultCurrency())) . "', '" . serialize(\AcquistoShop\acquistoShopCosts::getCurrency(\AcquistoShop\acquistoShopCosts::getSelectedCurrency())) . "')")->execute();
+        $this->Database->prepare("INSERT INTO tl_shop_orders (tstamp, costType, calculate_tax, member_id, versandzonen_id, zahlungsart_id, versandart_id, gutscheine, payed, versandpreis, customerData, customFields, customData, deliverAddress, currency_default, currency_selected) VALUES(" . time() . ", '" . $costsInput . "', '" . $objVersandzone->calculate_tax . "', " . $memberId . ", " . $objVersandart->pid . ", " . $objVersandart->zahlungsart_id . ", " . $shippingId . ", '', '" . $payState . "', " . $objVersandart->preis . ", '" . serialize($this->Session->get('Customer')) . "', '" . serialize($this->Session->get('Custom')) . "', '" . serialize($this->Session->get('Custom')) . "', '" . serialize($this->Session->get('Deliver')) . "', '" . serialize(\AcquistoShop\acquistoShopCosts::getCurrency(\AcquistoShop\acquistoShopCosts::getDefaultCurrency())) . "', '" . serialize(\AcquistoShop\acquistoShopCosts::getCurrency(\AcquistoShop\acquistoShopCosts::getSelectedCurrency())) . "')")->execute();
         #" . serialize($this->Gutschein->Checkout($this->User->id)) . "
 
         $objOrder   = $this->Database->prepare("SELECT LAST_INSERT_ID() AS lid FROM tl_shop_orders")->execute();
@@ -384,7 +422,7 @@ class acquistoShopBasket extends \Controller
                 $itemCosts = $this->Costs->getCosts($data['menge'], false)->special;
             }
             
-            $this->Database->prepare("INSERT INTO tl_shop_orders_items (pid, tstamp, produkt_id, bezeichnung, menge, preis, attribute, steuersatz_id) VALUES(" . $objOrder->lid . ", " . time() . ", " . $data['id'] . ", '" . $data['bezeichnung'] . "', '" . $data['menge'] . "', '" . round(\AcquistoShop\acquistoShopCosts::costsCalculator($itemCosts, \AcquistoShop\acquistoShopCosts::getSelectedCurrency(), \AcquistoShop\acquistoShopCosts::getDefaultCurrency()), 2) . "', '" . serialize($data['attributes'])  . "', '" . $data['steuer'] . "')")->execute();
+            $this->Database->prepare("INSERT INTO tl_shop_orders_items (pid, tstamp, produkt_id, productnumber, bezeichnung, menge, preis, attribute, steuersatz_id) VALUES(" . $objOrder->lid . ", " . time() . ", " . $data['id'] . ", '" . $objProdukt->produktnummer . "', '" . $data['bezeichnung'] . "', '" . $data['menge'] . "', '" . round(\AcquistoShop\acquistoShopCosts::costsCalculator($itemCosts, \AcquistoShop\acquistoShopCosts::getSelectedCurrency(), \AcquistoShop\acquistoShopCosts::getDefaultCurrency()), 2) . "', '" . serialize($data['attributes'])  . "', '" . $data['steuer'] . "')")->execute();
         }
         
         $this->clear();                                        

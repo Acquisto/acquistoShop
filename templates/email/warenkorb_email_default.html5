@@ -49,6 +49,17 @@ KUNDENINFORMATIONEN
 
 E-Mail <?php echo $this->Customer->email; ?>
 
+<?php if($this->Deliver->street): ?>
+ABWEICHENDE LIEFERADRESSE
+
+<?php echo $this->Deliver->firstname; ?> <?php echo $this->Deliver->lastname; ?><br>
+
+<?php echo $this->Deliver->street; ?>
+
+<?php echo $this->Deliver->postal; ?> <?php echo $this->Deliver->city; ?>
+
+<?php endif; ?>
+
 
 BANKVERBINDUNG
 Bank: <?php echo $this->Settings['bank']; ?>
