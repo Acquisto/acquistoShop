@@ -17,7 +17,7 @@
 /**
  * Add a palette to tl_module
  */
-$GLOBALS['TL_DCA']['tl_module']['palettes']['acquisto_productdetails']   = '{title_legend},name,type;{contaoShop_image},contaoShop_imageSrc,contaoShop_imageSize,contaoShop_imageMargin,contaoShop_imageFloating,contaoShop_imageFullsize;{galerie_options:hide},acquistoShop_galerie_imageSize,acquistoShop_galerie_imageMargin,acquistoShop_galerie_imageFloating,acquistoShop_galerie_imageFullsize;{socialmedia},contaoShop_socialFacebook,contaoShop_socialTwitter;{expert_legend:hide},cssID,space';
+$GLOBALS['TL_DCA']['tl_module']['palettes']['acquisto_productdetails']   = '{title_legend},name,type;{config_legend},acquistoShop_setRedirect;{contaoShop_image},contaoShop_imageSrc,contaoShop_imageSize,contaoShop_imageMargin,contaoShop_imageFloating,contaoShop_imageFullsize;{galerie_options:hide},acquistoShop_galerie_imageSize,acquistoShop_galerie_imageMargin,acquistoShop_galerie_imageFloating,acquistoShop_galerie_imageFullsize;{socialmedia},contaoShop_socialFacebook,contaoShop_socialTwitter;{expert_legend:hide},cssID,space';
 $GLOBALS['TL_DCA']['tl_module']['palettes']['acquisto_productfilter']    = '{title_legend},name,headline,type;{config_legend};{expert_legend:hide},cssID,space;';
 $GLOBALS['TL_DCA']['tl_module']['palettes']['acquisto_basketwidget']     = '{title_legend},name,headline,type;{config_legend},contaoShop_jumpTo;{expert_legend:hide},cssID,space';
 $GLOBALS['TL_DCA']['tl_module']['palettes']['acquisto_productlist']      = '{title_legend},name,type;{config_legend},contaoShop_jumpTo,contaoShop_numberOfItems,perPage,acquistoShop_elementsPerRow,acquistoShop_listTemplate;{list_images:hide},contaoShop_imageSrc,acquistoShop_galerie_imageSize,acquistoShop_galerie_imageMargin,acquistoShop_galerie_imageFloating;{categorie_image},contaoShop_imageSize,contaoShop_imageMargin,contaoShop_imageFloating;{expert_legend:hide},cssID,space';
@@ -37,7 +37,9 @@ $GLOBALS['TL_DCA']['tl_module']['palettes']['acquisto_orderdetails']     = '{tit
 $GLOBALS['TL_DCA']['tl_module']['palettes']['acquisto_currency']         = '{title_legend},name,headline,type;{config_legend};{expert_legend:hide},cssID,space;';
 
 $GLOBALS['TL_DCA']['tl_module']['palettes']['__selector__'][] = 'acquistoShop_allowComments';
+$GLOBALS['TL_DCA']['tl_module']['palettes']['__selector__'][] = 'acquistoShop_setRedirect';
 $GLOBALS['TL_DCA']['tl_module']['subpalettes']['acquistoShop_allowComments'] = 'com_disableCaptcha,com_requireLogin,com_bbcode,com_moderate,com_template,acquistoShop_commentsPerPage,com_order,acquistoShop_commentsNotify';
+$GLOBALS['TL_DCA']['tl_module']['subpalettes']['acquistoShop_setRedirect'] = 'contaoShop_jumpTo';
 
 /**
  * Add fields to tl_module
@@ -380,6 +382,16 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['acquistoShop_allowComments'] = array
     'filter'                  => true,
     'inputType'               => 'checkbox',
     'eval'                    => array('submitOnChange'=>true),
+    'sql'                     => "char(1) NOT NULL default ''"
+);
+
+$GLOBALS['TL_DCA']['tl_module']['fields']['acquistoShop_setRedirect'] = array
+(
+    'label'                   => &$GLOBALS['TL_LANG']['tl_module']['acquistoShop_setRedirect'],    
+    'exclude'                 => true,  
+    'filter'                  => true,    
+    'inputType'               => 'checkbox',
+    'eval'                    => array('submitOnChange'=>true),    
     'sql'                     => "char(1) NOT NULL default ''"
 );
 
